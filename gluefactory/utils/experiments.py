@@ -23,6 +23,8 @@ def list_checkpoints(dir_):
     """List all valid checkpoints in a given directory."""
     checkpoints = []
     for p in dir_.glob("checkpoint_*.tar"):
+        if "best" in p.name:  # best checkpoint은 별도 관리 (skip)
+            continue
         numbers = re.findall(r"(\d+)", p.name)
         assert len(numbers) <= 2
         if len(numbers) == 0:

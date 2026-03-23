@@ -10,6 +10,7 @@ Convention for the matches: m0[i] is the index of the keypoint in image 1
 that corresponds to the keypoint i in image 0. m0[i] = -1 if i is unmatched.
 """
 
+import torch
 from omegaconf import OmegaConf
 
 from . import get_model
@@ -30,6 +31,7 @@ class TwoViewPipeline(BaseModel):
         "ground_truth": {"name": None},
         "allow_no_extract": False,
         "run_gt_in_forward": False,
+        "filter_zero_depth": False,
     }
     required_data_keys = ["view0", "view1"]
     strict_conf = False  # need to pass new confs to children models
@@ -69,9 +71,40 @@ class TwoViewPipeline(BaseModel):
             pred_i = {**pred_i, **self.extractor({**data_i, **pred_i})}
         return pred_i
 
+    def _mask_zero_depth(self, pred_i, data_i):
+        """depth=0 위치의 keypoint descriptor를 0으로 설정."""
+        image = data_i["image"]  # (B, 1, H, W)
+        kpts = pred_i["keypoints"]  # (B, N, 2) — (x, y)
+        B, N, _ = kpts.shape
+
+        # keypoint 좌표를 정수 인덱스로 변환 (x→col, y→row)
+        x = kpts[..., 0].long().clamp(0, image.shape[-1] - 1)
+        y = kpts[..., 1].long().clamp(0, image.shape[-2] - 1)
+
+        # 각 keypoint 위치의 depth 값 조회
+        depth_vals = image[:, 0, :, :][
+            torch.arange(B, device=image.device)[:, None].expand(B, N),
+            y, x
+        ]  # (B, N)
+
+        # depth=0인 keypoint의 descriptor와 score를 0으로
+        zero_mask = (depth_vals == 0.0)  # (B, N)
+        if zero_mask.any():
+            pred_i["descriptors"] = pred_i["descriptors"].clone()
+            pred_i["descriptors"][zero_mask] = 0.0
+            pred_i["keypoint_scores"] = pred_i["keypoint_scores"].clone()
+            pred_i["keypoint_scores"][zero_mask] = 0.0
+
+        return pred_i
+
     def _forward(self, data):
         pred0 = self.extract_view(data, "0")
         pred1 = self.extract_view(data, "1")
+
+        if self.conf.filter_zero_depth:
+            pred0 = self._mask_zero_depth(pred0, data["view0"])
+            pred1 = self._mask_zero_depth(pred1, data["view1"])
+
         pred = {
             **{k + "0": v for k, v in pred0.items()},
             **{k + "1": v for k, v in pred1.items()},

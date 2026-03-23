@@ -1,0 +1,43 @@
+data:
+    name: depth
+    data_dir: depth_images
+    train_size: 150000
+    val_size: 2000
+    batch_size: 32 
+    num_workers: 8
+    homography: null
+    photometric: null
+model:
+    name: two_view_pipeline
+    extractor:
+        name: extractors.superpoint_open
+        max_num_keypoints: 512
+        force_num_keypoints: True  # batch 내 keypoint 수 통일 (필수)
+        detection_threshold: 0.003
+        nms_radius: 3
+        trainable: False # SuperPoint는 학습하지 않고, LightGlue만 학습
+    ground_truth:
+        name: matchers.gt_pair_matcher
+        gt_radius: 3
+    matcher:
+        name: matchers.lightglue 
+        filter_threshold: 0.1 # 신뢰도 0.1 미만 쌍 버림. 
+        flash: false 
+        checkpointed: true
+train:
+    seed: 0
+    epochs: 40
+    log_every_iter: 1
+    eval_every_iter: 500
+    lr: 1e-4
+    lr_schedule:
+        start: 20
+        type: exp
+        on_epoch: true
+        exp_div_10: 10
+    plot: [5, 'gluefactory.visualization.visualize_batch.make_match_figures_depth']
+benchmarks:
+    hpatches:
+      eval:
+        estimator: opencv
+        ransac_th: 0.5

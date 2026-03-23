@@ -7,3 +7,12 @@
 /data/
 /outputs/
 __pycache__
+
+# datasets & cache (large files)
+gluefactory/datasets/mitsubishi/
+gluefactory/datasets/mitsubishi.zip
+gluefactory/datasets/mitsubishi/fpfh_cache_*/
+gluefactory/datasets/mitsubishi/fpfh_resample_cache_*/
+
+# results images
+/results/

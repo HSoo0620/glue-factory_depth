@@ -20,7 +20,6 @@ from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 
 from . import __module_name__, logger, settings
-from .datasets import get_dataset
 from .eval import run_benchmark
 from .models import get_model
 from .utils.experiments import get_best_checkpoint, get_last_checkpoint, save_experiment
@@ -35,8 +34,9 @@ from .utils.tools import (
     set_seed,
 )
 
-# @TODO: Fix pbar pollution in logs
-# @TODO: add plotting during evaluation
+from .datasets.mitsubishi_resample_fpfh_dataset import MitsubishiResampleFPFHDataset
+from .datasets.mitsubishi_resample_fpfh_dataset import resample_fpfh_collate_fn
+from torch.utils.data import DataLoader
 
 default_train_conf = {
     "seed": "???",  # training seed
@@ -294,26 +294,32 @@ def training(rank, conf, output_dir, args):
         device = "cuda" if torch.cuda.is_available() else "cpu"
     logger.info(f"Using device {device}")
 
-    dataset = get_dataset(data_conf.name)(data_conf)
+    fpfh_radius = conf.data.get("fpfh_radius", 1.5)
+    image_size = conf.data.get("image_size", 2880)
+    batch_size = conf.data.get("batch_size", 32)
+    num_workers = conf.data.get("num_workers", 4)
 
-    # Optionally load a different validation dataset than the training one
-    val_data_conf = conf.get("data_val", None)
-    if val_data_conf is None:
-        val_dataset = dataset
-    else:
-        val_dataset = get_dataset(val_data_conf.name)(val_data_conf)
+    dataset = MitsubishiResampleFPFHDataset(
+        split="train", fpfh_radius=fpfh_radius, image_size=image_size)
+    val_dataset = MitsubishiResampleFPFHDataset(
+        split="val", fpfh_radius=fpfh_radius, image_size=image_size)
 
-    # @TODO: add test data loader
+    train_loader = DataLoader(
+        dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        num_workers=num_workers,
+        collate_fn=resample_fpfh_collate_fn,
+    )
 
-    if args.overfit:
-        # we train and eval with the same single training batch
-        logger.info("Data in overfitting mode")
-        assert not args.distributed
-        train_loader = dataset.get_overfit_loader("train")
-        val_loader = val_dataset.get_overfit_loader("val")
-    else:
-        train_loader = dataset.get_data_loader("train", distributed=args.distributed)
-        val_loader = val_dataset.get_data_loader("val")
+    val_loader = DataLoader(
+        val_dataset,
+        batch_size=1,
+        shuffle=False,
+        num_workers=num_workers,
+        collate_fn=resample_fpfh_collate_fn,
+    )
+
     if rank == 0:
         logger.info(f"Training loader has {len(train_loader)} batches")
         logger.info(f"Validation loader has {len(val_loader)} batches")
@@ -454,6 +460,13 @@ def training(rank, conf, output_dir, args):
                         conf.train.seed + epoch
                     )
         for it, data in enumerate(train_loader):
+            # if it == 0:
+            #     print("=== DATA DEBUG ===")
+            #     print(type(data))
+            #     print(data.keys())
+            #     print(data["view0"]["image"].shape)
+            #     print(data["view1"]["image"].shape)
+
             tot_it = (len(train_loader) * epoch + it) * (
                 args.n_gpus if args.distributed else 1
             )
@@ -531,11 +544,11 @@ def training(rank, conf, output_dir, args):
                     losses[k] = torch.mean(losses[k], -1)
                     losses[k] = losses[k].item()
                 if rank == 0:
-                    str_losses = [f"{k} {v:.3E}" for k, v in losses.items()]
+                    # Compact log: key metrics only, fixed-width format
+                    _key_losses = ["total", "nll_pos", "nll_neg", "confidence", "row_norm"]
+                    _parts = [f"{k}={losses[k]:.4f}" for k in _key_losses if k in losses]
                     logger.info(
-                        "[E {} | it {}] loss {{{}}}".format(
-                            epoch, it, ", ".join(str_losses)
-                        )
+                        f"[E {epoch} | it {it:>5d}/{len(train_loader)}] {' | '.join(_parts)}"
                     )
                     write_dict_summaries(writer, "training/", losses, tot_n_samples)
                     writer.add_scalar(
@@ -579,18 +592,21 @@ def training(rank, conf, output_dir, args):
                     )
 
                 if rank == 0:
-                    str_results = [
-                        f"{k} {v:.3E}"
-                        for k, v in results.items()
-                        if isinstance(v, float)
-                    ]
-                    logger.info(f'[Validation] {{{", ".join(str_results)}}}')
+                    # Compact validation log
+                    _val_key = ["match_recall", "match_precision", "accuracy", "loss/total", "loss/nll_pos", "loss/nll_neg"]
+                    _val_parts = [f"{k}={results[k]:.4f}" for k in _val_key if k in results and isinstance(results[k], float)]
+                    _val_rest = [f"{k}={v:.4f}" for k, v in results.items() if isinstance(v, float) and k not in _val_key]
+                    logger.info(f"[Validation] {' | '.join(_val_parts)}")
+                    if _val_rest:
+                        logger.info(f"  (extras) {' | '.join(_val_rest)}")
                     write_dict_summaries(writer, "val", results, tot_n_samples)
                     write_dict_summaries(writer, "val", pr_metrics, tot_n_samples)
                     write_image_summaries(writer, "figures", figures, tot_n_samples)
                     # @TODO: optional always save checkpoint
                     if results[conf.train.best_key] < best_eval:
                         best_eval = results[conf.train.best_key]
+                        recall = results.get("match_recall", 0.0)
+                        cp_name = f"checkpoint_best_ep{epoch}_{recall:.3f}.tar"
                         save_experiment(
                             model,
                             optimizer,
@@ -603,7 +619,12 @@ def training(rank, conf, output_dir, args):
                             output_dir,
                             stop,
                             args.distributed,
-                            cp_name="checkpoint_best.tar",
+                            cp_name=cp_name,
+                        )
+                        # checkpoint_best.tar은 호환성을 위해 유지
+                        shutil.copy(
+                            str(output_dir / cp_name),
+                            str(output_dir / "checkpoint_best.tar"),
                         )
                         logger.info(f"New best val: {conf.train.best_key}={best_eval}")
                 torch.cuda.empty_cache()  # should be cleared at the first iter
@@ -720,10 +741,10 @@ if __name__ == "__main__":
             conf.train.seed = torch.initial_seed() & (2**32 - 1)
         OmegaConf.save(conf, str(output_dir / "config.yaml"))
 
-    # copy gluefactory and submodule into output dir
-    for module in conf.train.get("submodules", []) + [__module_name__]:
-        mod_dir = Path(__import__(str(module)).__file__).parent
-        shutil.copytree(mod_dir, output_dir / module, dirs_exist_ok=True)
+    # copy gluefactory and submodule into output dir (disabled to save disk space)
+    # for module in conf.train.get("submodules", []) + [__module_name__]:
+    #     mod_dir = Path(__import__(str(module)).__file__).parent
+    #     shutil.copytree(mod_dir, output_dir / module, dirs_exist_ok=True)
     if args.distributed:
         args.n_gpus = torch.cuda.device_count()
         args.lock_file = output_dir / "distributed_lock"
