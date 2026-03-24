@@ -1,0 +1,37 @@
+data:
+    name: resample_hybrid
+    fpfh_radius: 0.5
+    image_size: 2880
+    batch_size: 32
+    num_workers: 4
+model:
+    name: two_view_pipeline
+    filter_zero_depth: true
+    extractor:
+        name: extractors.superpoint_fpfh_cached
+        descriptor_dim: 289
+        trainable: False
+    ground_truth:
+        name: matchers.gt_pair_matcher
+        gt_radius: 11
+    matcher:
+        name: matchers.lightglue
+        input_dim: 289         # SP(256) + FPFH(33) = 289
+        descriptor_dim: 288    # Linear(289→288), 4 heads × 72
+        num_heads: 4
+        filter_threshold: 0.1
+        flash: false
+        checkpointed: true
+        weights: null
+train:
+    seed: 0
+    epochs: 50
+    log_every_iter: 1
+    eval_every_iter: 500
+    lr: 1e-4
+    lr_schedule:
+        start: 20
+        type: exp
+        on_epoch: true
+        exp_div_10: 10
+    plot: [5, 'gluefactory.visualization.visualize_batch.make_match_figures_depth']
