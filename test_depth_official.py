@@ -4,7 +4,7 @@
 
 사용법:
     # 기본 (test split, 10개 샘플)
-    python test_depth_official.py
+    python test_registration_resample.py --checkpoint outputs/training/resample_sp_lg/checkpoint_best.tar --indices 0 10 50 90
 
     # 샘플 수/인덱스 지정
     python test_depth_official.py --num_samples 20

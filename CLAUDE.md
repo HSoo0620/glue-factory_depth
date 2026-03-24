@@ -45,6 +45,9 @@ Dense point cloud → estimate_normals(r=2*fpfh_r) → compute_fpfh(r=fpfh_r) �
 
 FPFH는 precompute 캐시 사용 (SP frozen이라 매번 같은 keypoint).
 
+## 3. SP + Hybrid + LG (2D+3D descriptor)
+SP 256D + FPFH 33D → concat 289D → LightGlue 매칭 (input_dim=289).
+
 ---
 
 # 주요 파일
@@ -52,13 +55,18 @@ FPFH는 precompute 캐시 사용 (SP frozen이라 매번 같은 keypoint).
 ## Resample 실험 (현재 활성)
 | 파일 | 역할 |
 |---|---|
-| `train_resample.sh` | SP+LG 학습 (GPU, EXP, IMAGE_SIZE, GT_RADIUS, MAX_KP, BATCH) |
-| `train_resample_fpfh.sh` | SP+FPFH+LG 학습 (캐시 자동 생성) |
+| `train_resample.sh` | SP+LG 학습 (GPU, EXP, IMAGE_SIZE, GT_RADIUS, MAX_KP, BATCH, --restore) |
+| `train_resample_fpfh.sh` | SP+FPFH+LG 학습 (캐시 자동 생성, --restore) |
+| `train_resample_hybrid.sh` | SP+Hybrid+LG 학습 (캐시 자동 생성, --restore) |
 | `precompute_fpfh_resample.py` | Dense FPFH 캐시 생성 (2880px) |
+| `precompute_hybrid_resample.py` | Hybrid용 FPFH 캐시 생성 (2880px) |
 | `test_resample.py` | 매칭 시각화 (4색: skyblue/purple/limegreen/red) |
 | `test_registration_resample.py` | 3D Registration (RANSAC+SVD) |
 | `gluefactory/configs/resample_sp_lg.yaml` | SP+LG config (gt_radius=11) |
 | `gluefactory/configs/resample_sp_fpfh_lg.yaml` | FPFH config (input_dim=33→36) |
+| `gluefactory/configs/resample_sp_hybrid_lg.yaml` | Hybrid config (input_dim=289) |
+| `gluefactory/datasets/mitsubishi_resample_hybrid_dataset.py` | Hybrid 데이터셋 |
+| `gluefactory/train_resample_hybrid.py` | Hybrid 학습 모듈 |
 
 ## Depth 실험 (이전)
 | 파일 | 역할 |
@@ -88,8 +96,20 @@ gluefactory/datasets/mitsubishi/fpfh_resample_cache_r{r}/  # resample용
 # Resample SP+LG
 bash train_resample.sh 0 "resample_sp_lg" 2880 11 512 4
 
+# Resample SP+LG resume
+bash train_resample.sh 0 "resample_sp_lg" 2880 11 512 4 --restore
+
 # Resample FPFH (캐시 없으면 자동 생성)
-bash train_resample_fpfh.sh 0 "resample_sp_fpfh_lg_r0.5" 0.5 2880 11
+bash train_resample_fpfh.sh 0 "0323_resample_sp_fpfh_lg" 0.5 2880 11
+
+# Resample FPFH resume
+bash train_resample_fpfh.sh 0 "0323_resample_sp_fpfh_lg" 0.5 2880 11 --restore
+
+# Resample Hybrid
+bash train_resample_hybrid.sh 0 "0324_resample_sp_hybrid_lg" 0.5 2880 11
+
+# Resample Hybrid resume
+bash train_resample_hybrid.sh 0 "0324_resample_sp_hybrid_lg" 0.5 2880 11 --restore
 
 # Registration 테스트
 python3 test_registration_resample.py --experiment resample_sp_lg --indices 0 5 10
@@ -112,8 +132,9 @@ python3 test_registration_resample.py --experiment resample_sp_lg --indices 0 5 
 ## Resample (5761→2880)
 | 실험 | recall | 비고 |
 |---|---|---|
-| resample_sp_lg (SP 2D) | ~0.72 | E9 진행중, gt_radius=11 |
-| resample_sp_fpfh_lg r=0.5 | - | 캐시 생성 중 |
+| resample_sp_lg (SP 2D) | ~0.780 | E13, gt_radius=11 |
+| 0323_resample_sp_fpfh_lg (FPFH r=0.5) | ~0.145 | E5 |
+| 0324_resample_sp_hybrid_lg (Hybrid r=0.5) | ~0.263 | E0 |
 
 ### Resample 3D 거리 참고 (2880px)
 - Dense cloud: ~100만점, 1-NN ≈ 0.097
@@ -126,3 +147,6 @@ python3 test_registration_resample.py --experiment resample_sp_lg --indices 0 5 
 
 - `analyze_pointcloud.ipynb` — Dense point cloud KNN/radius 분석
 - `analyze_pointcloud_sparse.ipynb` — Sparse vs Dense 비교
+
+# 코드 관리
+- 큰 수정이나 버전관리를 위해 새로 코드를 추가할 것인지 recommand 
