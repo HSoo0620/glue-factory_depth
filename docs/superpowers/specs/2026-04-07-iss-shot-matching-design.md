@@ -37,7 +37,8 @@
 ```
 combination.csv에서 N개 이미지 쌍 샘플링 (기본 10쌍)
   ↓
-각 이미지: crop → XYZ PCD → grid mesh → pyshot.get_descriptors (336D)
+각 이미지: crop → erode_mask → XYZ grid mesh → pyshot.get_descriptors (336D)
+           + ISS keypoint 실시간 검출 (캐시 없이, validate 목적)
   ↓
 ISS keypoint (X,Y,Z) 위치에서 KDTree lookup → keypoint별 SHOT descriptor
   ↓
@@ -55,8 +56,8 @@ cosine sim 분포 출력: mean ± std, histogram
 
 ## 섹션 2: Grid Mesh 구성 + SHOT 계산
 
-**`build_grid_mesh(depth_crop_raw, fx, fy, cx, cy)` 함수**:
-1. valid pixel mask 생성 (depth > 0)
+**`build_grid_mesh(depth_crop_raw, fx, fy, cx, cy, mask=None)` 함수**:
+1. mask 사용 (None이면 depth > 0 전체; erode_mask 전달 시 경계 제외 — ISS 검출과 일관성)
 2. vertex index map: (u,v) → 정수 인덱스
 3. verts: (N, 3) — (X, Y, Z) in mm (카메라 intrinsics 사용)
 4. faces: 각 2×2 블록에서 4 corner 모두 유효 시 삼각형 2개 생성
