@@ -1,0 +1,3 @@
+[submodule "external/pyshot"]
+	path = external/pyshot
+	url = https://github.com/uhlmanngroup/pyshot
