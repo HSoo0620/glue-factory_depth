@@ -17,7 +17,7 @@
 
 ### 새 방식
 
-- RANSAC으로 T_est(4x4) 추정 후, INI의 GT 변환 T_gt와 비교
+- RANSAC으로 T_est(4x4) 추정 후, GT correspondence SVD로 유도한 T_gt와 비교
 - 포인트 클라우드 샘플링 기반 RMSE → 매칭 pair 수와 무관
 
 ---
@@ -25,51 +25,58 @@
 ## 파이프라인
 
 ```
-[모델 추론] → [매칭 pairs] → [3D back-projection (K)] → [RANSAC → T_est]
-                                                              |
-[INI 파싱] → [T_gt 계산] ──────────────────────────→ [포인트 클라우드 샘플링]
-                                                              |
-                                                    [T_est vs T_gt RMSE]
-                                                              |
-                                              [reverse pair로 반복 → 양방향 평균]
+[모델 추론] → [매칭 pairs] → [Grid 3D 변환] → [RANSAC → T_est]
+                                                     |
+[GT CSV] → [비-occluded 대응점] → [Grid 3D 변환] → [SVD → T_gt]
+                                                     |
+                                          [포인트 클라우드 30K 샘플링]
+                                                     |
+                                          [T_est vs T_gt RMSE]
+                                                     |
+                                    [reverse pair로 반복 → 양방향 평균]
 ```
 
 ---
 
-## 좌표계: 카메라 3D (Back-projection)
+## 좌표계: Grid 3D (Calibration 스케일)
 
-기존 `(u*dx, v*dy, depth_real)` 대신, K matrix로 진짜 카메라 3D 좌표 사용.
+Calibration grid 스케일 적용. RANSAC, T_gt, RMSE 모두 동일 좌표계.
 
 ```python
-Z = clip_start + (raw_uint16 / 65535.0) * (clip_end - clip_start)
-X = (u - cx) * Z / fx
-Y = (v - cy) * Z / fy
+depth_real = clip_start + (raw_uint16 / 65535.0) * (clip_end - clip_start)
+X = u * grid_dx          # u * 0.05 mm
+Y = v * grid_dy          # v * 0.05 mm
+Z = depth_real * grid_dz  # depth_real * 0.02 mm
 ```
 
-- K matrix: fx=fy=8001.39, cx=cy=2880.5 (원본 5761 기준)
-- INI의 R/t와 동일 좌표계 → T_est와 T_gt 직접 비교 가능
+- grid_dx = grid_dy = 0.05 mm/pixel, grid_dz = 0.02
+- u, v는 원본 해상도(5761) 기준
 
 ---
 
 ## GT 변환 행렬 (T_gt)
 
-각 이미지의 INI에서 `r_matrix`, `t_vector` 파싱.
+GT CSV의 비-occluded 대응점으로부터 SVD로 rigid transform 유도.
 
 ```python
-# input camera → master camera
-R_gt = R_master @ R_input.T
-t_gt = t_master - R_gt @ t_input
+# 1. GT CSV에서 비-occluded 대응점 로드
+#    (master_x, master_y) → depth lookup → Grid 3D
+#    (input_x, input_y)   → depth lookup → Grid 3D
+
+# 2. SVD로 rigid transform 추정 (input → master)
+#    centroid 제거 → H = P_input_centered.T @ P_master_centered
+#    U, S, Vt = svd(H) → R_gt = Vt.T @ U.T, t_gt = centroid_master - R_gt @ centroid_input
 ```
 
-T_gt는 4x4 homogeneous matrix로 구성.
+T_gt는 Grid 3D 좌표계에서 input→master 변환.
 
 ---
 
 ## RANSAC
 
 - Open3D `registration_ransac_based_on_correspondence` 사용 (기존과 동일)
-- 입력 좌표만 카메라 3D (X, Y, Z)로 변경
-- 매칭된 keypoint 쌍을 back-project → correspondence로 전달
+- 입력 좌표: Grid 3D (u*dx, v*dy, depth_real*dz)
+- 매칭된 keypoint 쌍을 Grid 3D로 변환 → correspondence로 전달
 - 출력: T_est (4x4)
 
 ---
@@ -77,8 +84,8 @@ T_gt는 4x4 homogeneous matrix로 구성.
 ## RMSE 평가
 
 ### 포인트 클라우드 샘플링
-- Master depth map에서 유효(depth > 0) 픽셀 중 30,000점 균일 샘플링
-- 카메라 3D로 back-project → P_master (30000, 3)
+- 소스(input/master) depth map에서 유효(depth > 0) 픽셀 중 30,000점 균일 샘플링
+- Grid 3D로 변환 → P_src (30000, 3)
 
 ### RMSE 계산
 ```python
@@ -142,4 +149,4 @@ python eval_registration_iss_shot.py \
 - CLIP_START = 0.1, CLIP_END = 1000.0
 - ORIG_SIZE = 5761
 - CROP_X0 = 1129, CROP_Y0 = 1081, CROP_SIZE = 3502
-- fx = fy = 8001.388671875, cx = cy = 2880.5
+- GRID_DX = GRID_DY = 0.05, GRID_DZ = 0.02
