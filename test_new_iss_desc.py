@@ -132,7 +132,7 @@ def main():
     p.add_argument("--checkpoint", type=str, default=None)
     p.add_argument("--experiment", type=str, default="0413_new_iss_fpfh_lg")
     p.add_argument("--descriptor_type", type=str, default="fpfh", choices=["fpfh", "shot"])
-    p.add_argument("--fpfh_radius", type=float, default=10.0)
+    p.add_argument("--fpfh_radius", type=float, default=100.0)
     p.add_argument("--device", type=str, default="cuda")
     p.add_argument("--output_dir", type=str, default=None)
     p.add_argument("--split", type=str, default="val", choices=["train", "val"])

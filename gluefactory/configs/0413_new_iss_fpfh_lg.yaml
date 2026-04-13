@@ -1,7 +1,7 @@
 data:
     name: new_dataset_iss_desc
     descriptor_type: fpfh          # fpfh | shot
-    fpfh_radius: 10.0
+    fpfh_radius: 100.0     # matches SHOT shot_r=100mm for fair comparison
     resize_factor: 0.5
     val_ratio: 0.05
     seed: 0

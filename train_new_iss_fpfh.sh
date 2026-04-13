@@ -4,7 +4,7 @@
 
 GPU_ID=${1:-0}
 EXPERIMENT=${2:-"0413_new_iss_fpfh_lg"}
-FPFH_RADIUS=${3:-10.0}
+FPFH_RADIUS=${3:-100.0}
 BATCH_SIZE=${4:-32}
 GT_RADIUS=${5:-20}
 RESTORE=${6:-""}

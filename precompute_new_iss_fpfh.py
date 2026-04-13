@@ -91,8 +91,10 @@ def main():
     p.add_argument("--gamma_32", type=float, default=0.5)
     p.add_argument("--min_neighbors", type=int, default=5)
     p.add_argument("--erode_boundary", type=int, default=5)
-    p.add_argument("--fpfh_radius", type=float, default=10.0, help="mm")
-    p.add_argument("--fpfh_normal_radius", type=float, default=20.0, help="mm (2·fpfh_radius)")
+    p.add_argument("--fpfh_radius", type=float, default=100.0,
+                   help="mm; matches SHOT shot_r=100mm for fair descriptor comparison")
+    p.add_argument("--fpfh_normal_radius", type=float, default=50.0,
+                   help="mm; matches SHOT normal_r=50mm (voxel:normal:shot = 1:5:10)")
     p.add_argument("--fpfh_max_nn", type=int, default=100)
     p.add_argument("--anomaly_dist_mm", type=float, default=1.0)
     p.add_argument("--resize_factor", type=float, default=C.RESIZE_FACTOR)
