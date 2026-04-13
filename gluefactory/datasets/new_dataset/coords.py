@@ -42,7 +42,11 @@ def load_scene_config(scene_id: int, data_root: Path) -> SceneConfig:
     return SceneConfig(zmap_shape=zmap.shape, R_cam=R, t_cam=t)
 
 
-def pixel_to_cam_xyz(u, v, raw) -> np.ndarray:
+def pixel_to_cam_xyz(
+    u: np.ndarray | float | int,
+    v: np.ndarray | float | int,
+    raw: np.ndarray | float | int,
+) -> np.ndarray:
     """(u, v, raw_uint16) → camera-frame (X, Y, Z) mm. Vectorized."""
     u = np.asarray(u, dtype=np.float64)
     v = np.asarray(v, dtype=np.float64)
@@ -51,10 +55,13 @@ def pixel_to_cam_xyz(u, v, raw) -> np.ndarray:
 
 
 def cam_to_world_xyz(xyz_cam: np.ndarray, cfg: SceneConfig) -> np.ndarray:
+    """Camera-frame XYZ (mm) → world/object-frame XYZ via R_cam @ x + t_cam."""
     return xyz_cam @ cfg.R_cam.T + cfg.t_cam
 
 
-def build_camera_frame_pcd(zmap: np.ndarray, erode_boundary: int = 0):
+def build_camera_frame_pcd(
+    zmap: np.ndarray, erode_boundary: int = 0
+) -> tuple[o3d.geometry.PointCloud, np.ndarray]:
     """All valid pixels → camera-frame PCD + erosion mask.
 
     erode_boundary applied only to `mask`; if you need a PCD that matches
