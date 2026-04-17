@@ -1,0 +1,10 @@
+# 용량 큰 ckpt 는 별도 전달
+checkpoints/iss_shot_v1_dim352_*.tar
+# SHOT 캐시는 첫 실행 시 자동 생성 (일관성 확보)
+cache/*_shot.npz
+# 파이썬 artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+# 사용자 로컬 예제 결과
+examples/_out/

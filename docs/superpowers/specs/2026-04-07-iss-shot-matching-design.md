@@ -114,7 +114,7 @@ n_iss             int
 
 | 파일 | 기반 | 변경점 |
 |---|---|---|
-| `gluefactory/configs/0407_resample2_iss_shot_lg.yaml` | `0402_resample2_iss_fpfh_lg.yaml` | `input_dim: 33 → 336` |
+| `gluefactory/configs/0407_resample2_iss_shot_lg.yaml` | `0402_resample2_iss_fpfh_lg.yaml` | `input_dim: 33 → 336`, `descriptor_dim: 36 → 336`, `num_heads: 3 → 4` (336/4=84) |
 | `gluefactory/datasets/mitsubishi_resample2_iss_shot_dataset.py` | `mitsubishi_resample2_iss_fpfh_dataset.py` | `fpfh_descriptors → shot_descriptors`, 캐시 경로 |
 | `gluefactory/train_resample2_iss_shot.py` | `gluefactory/train_resample2_iss_fpfh.py` | dataset 클래스명 |
 | `train_resample2_iss_shot_0407.sh` | `train_resample2_iss_fpfh_0331.sh` | config/experiment명 |

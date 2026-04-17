@@ -282,7 +282,7 @@ precompute_config.json                # CLI args + git hash + 시각
 | SHOT bin 누락 | precompute_shot은 SKIP + continue, FPFH 경로 무영향 |
 | `input_x/y` out-of-bounds | `in_bounds` 필터 (resized 기준) |
 | `occluded=1` | 제외 (`occluded == 0` 필터, int 타입 주의) |
-| FPFH KDTree lookup 거리 큼 | 임계(2·fpfh_r) 초과 시 zero-desc + 통계 로깅 |
+| FPFH KDTree lookup 거리 큼 | 정상 거리 ≈ 0 (pcd가 모든 valid 픽셀 포함). 거리 > 1.0 mm(surface density 0.068mm의 ~15배) 시 anomaly로 간주 → zero-desc + 카운터 로깅. smoke-test에서 비율 관측 후 임계값 조정 |
 | batch H 편차 큰 경우 pad 낭비 | 수용, 필요 시 bucketed sampler (후속) |
 | reproducibility | seed=0, split 결과 txt로 저장 |
 

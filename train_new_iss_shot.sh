@@ -4,10 +4,11 @@
 
 GPU_ID=${1:-0}
 EXPERIMENT=${2:-"0413_new_iss_shot_lg"}
-BIN_DIR=${3:-"gluefactory/datasets/new_dataset_shot_bins"}
-BATCH_SIZE=${4:-32}
-GT_RADIUS=${5:-20}
-RESTORE=${6:-""}
+SHOT_VERSION=${3:-"v5"}
+BIN_DIR=${4:-"gluefactory/datasets/Descriptor/output_shot_zmap_v5"}
+BATCH_SIZE=${5:-32}
+GT_RADIUS=${6:-20}
+RESTORE=${7:-""}
 CONF="gluefactory/configs/0413_new_iss_shot_lg.yaml"
 
 RESTORE_FLAG=""
@@ -16,10 +17,11 @@ if [ "$RESTORE" = "--restore" ]; then
     echo "=== RESUME training from last checkpoint ==="
 fi
 
-CACHE_DIR="gluefactory/datasets/new_dataset_cache/cache_new_iss_shot352"
+CACHE_DIR="gluefactory/datasets/new_dataset_cache/cache_new_iss_shot352_${SHOT_VERSION}"
 if [ ! -d "$CACHE_DIR" ] || [ -z "$(ls -A $CACHE_DIR/*.npz 2>/dev/null)" ]; then
     echo "=== SHOT cache not found. Precomputing from bins in $BIN_DIR ... ==="
-    python3 precompute_new_iss_shot.py --bin_dir "$BIN_DIR"
+    python3 precompute_new_iss_shot.py \
+        --bin_dir "$BIN_DIR" --shot_version "$SHOT_VERSION"
 fi
 
 mkdir -p "outputs/training/${EXPERIMENT}"
@@ -29,6 +31,7 @@ CUDA_VISIBLE_DEVICES=$GPU_ID python3 -m gluefactory.train_new_iss_desc "$EXPERIM
     --conf "$CONF" \
     $RESTORE_FLAG \
     --mixed_precision float16 \
+    data.shot_version="$SHOT_VERSION" \
     data.batch_size="$BATCH_SIZE" \
     model.ground_truth.gt_radius="$GT_RADIUS" \
     2>&1 | tee "outputs/training/${EXPERIMENT}/train.log"

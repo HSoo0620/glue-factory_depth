@@ -1,0 +1,20 @@
+name: depth_reg
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - pytorch
+  - pytorch-cuda=12.1   # 팀원 GPU CUDA 에 맞춰 조정
+  - numpy>=2.0
+  - opencv>=4.10
+  - pillow>=11.0
+  - open3d>=0.18
+  - omegaconf
+  - matplotlib
+  - pytest
+  - pip
+  - pip:
+      - pybind11>=3.0

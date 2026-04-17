@@ -143,15 +143,15 @@ def main():
     parser.add_argument("--checkpoint", type=str, default=None)
     parser.add_argument("--experiment", type=str, default="resample_sp_lg")
     parser.add_argument("--device", type=str, default="cuda")
-    parser.add_argument("--output_dir", type=str, default="results/resample_sp_lg")
+    parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--split", type=str, default="test", choices=["train", "val", "test"])
     parser.add_argument("--num_samples", type=int, default=10)
     parser.add_argument("--indices", type=int, nargs="*", default=None)
     parser.add_argument("--image_size", type=int, default=2880)
-    parser.add_argument("--gt_radius", type=int, default=3)
+    parser.add_argument("--gt_radius", type=int, default=11)
     args = parser.parse_args()
 
-    output_dir = Path(args.output_dir)
+    output_dir = Path(args.output_dir if args.output_dir else f"results/{args.experiment}")
     output_dir.mkdir(parents=True, exist_ok=True)
     device = args.device if torch.cuda.is_available() else "cpu"
 

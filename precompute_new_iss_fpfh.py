@@ -44,14 +44,18 @@ from gluefactory.datasets.new_dataset.iss_detection import (
 def compute_fpfh_for_keypoints(pcd_xyz: o3d.geometry.PointCloud,
                                kp_xyz: np.ndarray, n_valid: int,
                                fpfh_radius: float, fpfh_normal_radius: float,
+                               voxel_size: float = 0.0,
                                fpfh_max_nn: int = 100,
                                normal_max_nn: int = 30,
-                               anomaly_dist_mm: float = 1.0):
+                               anomaly_dist_mm: float = 10.0):
     max_n = kp_xyz.shape[0]
     out = np.zeros((max_n, 33), dtype=np.float32)
     n_anomaly = 0
     if n_valid < 3 or len(pcd_xyz.points) == 0:
         return out, n_anomaly
+
+    if voxel_size > 0:
+        pcd_xyz = pcd_xyz.voxel_down_sample(voxel_size)
 
     pcd_xyz.estimate_normals(
         search_param=o3d.geometry.KDTreeSearchParamHybrid(
@@ -91,12 +95,17 @@ def main():
     p.add_argument("--gamma_32", type=float, default=0.5)
     p.add_argument("--min_neighbors", type=int, default=5)
     p.add_argument("--erode_boundary", type=int, default=5)
-    p.add_argument("--fpfh_radius", type=float, default=100.0,
-                   help="mm; matches SHOT shot_r=100mm for fair descriptor comparison")
-    p.add_argument("--fpfh_normal_radius", type=float, default=50.0,
-                   help="mm; matches SHOT normal_r=50mm (voxel:normal:shot = 1:5:10)")
+    p.add_argument("--voxel_size", type=float, default=5.0,
+                   help="mm; 0 disables voxel downsampling. Diagnostic showed voxel=5 "
+                        "gives best discriminability (pos<neg=0.628 vs dense 0.578)")
+    p.add_argument("--fpfh_radius", type=float, default=50.0,
+                   help="mm; matches SHOT v5 shot_r=50mm (1:5:10 with voxel=5)")
+    p.add_argument("--fpfh_normal_radius", type=float, default=25.0,
+                   help="mm; matches SHOT v5 normal_r=25mm")
     p.add_argument("--fpfh_max_nn", type=int, default=100)
-    p.add_argument("--anomaly_dist_mm", type=float, default=1.0)
+    p.add_argument("--anomaly_dist_mm", type=float, default=10.0,
+                   help="mm; NN threshold from keypoint to voxel-PCD point. "
+                        "For voxel=5, expected NN ~2-5mm; 10mm allows margin.")
     p.add_argument("--resize_factor", type=float, default=C.RESIZE_FACTOR)
     p.add_argument("--max_images", type=int, default=None)
     p.add_argument("--force", action="store_true")
@@ -104,7 +113,8 @@ def main():
     args = p.parse_args()
 
     data_root = Path(args.data_root)
-    cache_dir = (Path(args.cache_root) / f"cache_new_iss_fpfh_r{args.fpfh_radius}")
+    cache_dir = (Path(args.cache_root)
+                 / f"cache_new_iss_fpfh_v{args.voxel_size}_r{args.fpfh_radius}")
     cache_dir.mkdir(parents=True, exist_ok=True)
 
     image_paths = sorted(data_root.glob("zmap_*.png"))
@@ -112,7 +122,8 @@ def main():
         image_paths = image_paths[:args.max_images]
     print(f"Found {len(image_paths)} zmaps in {data_root}")
     print(f"Cache → {cache_dir}")
-    print(f"FPFH: r={args.fpfh_radius}mm, normal_r={args.fpfh_normal_radius}mm")
+    print(f"FPFH: voxel={args.voxel_size}mm, "
+          f"normal_r={args.fpfh_normal_radius}mm, r={args.fpfh_radius}mm")
 
     rng = np.random.default_rng(args.seed)
     n_iss_list, n_valid_list, n_anom_list = [], [], []
@@ -156,6 +167,7 @@ def main():
             pcd_xyz, kp_xyz, n_valid,
             fpfh_radius=args.fpfh_radius,
             fpfh_normal_radius=args.fpfh_normal_radius,
+            voxel_size=args.voxel_size,
             fpfh_max_nn=args.fpfh_max_nn,
             anomaly_dist_mm=args.anomaly_dist_mm,
         )
@@ -177,7 +189,7 @@ def main():
         print(f"\n--- Stats ---")
         print(f"ISS    : mean={ii.mean():.1f}, min={ii.min()}, max={ii.max()}")
         print(f"n_valid: mean={vv.mean():.1f}, min={vv.min()}, max={vv.max()}")
-        print(f"anomaly kp (>1mm from nearest PCD pt): mean={aa.mean():.2f} / 512")
+        print(f"anomaly kp (>{args.anomaly_dist_mm}mm from nearest PCD pt): mean={aa.mean():.2f} / 512")
 
     with open(cache_dir / "precompute_config.json", "w") as f:
         json.dump(vars(args), f, indent=2)

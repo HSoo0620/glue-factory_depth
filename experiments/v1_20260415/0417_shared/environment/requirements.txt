@@ -1,0 +1,8 @@
+numpy>=2.0
+torch>=2.0
+opencv-python>=4.10
+pillow>=11.0
+open3d>=0.18
+omegaconf
+matplotlib
+pytest

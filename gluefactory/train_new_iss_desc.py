@@ -281,10 +281,14 @@ def training(rank, conf, output_dir, args):
 
     descriptor_type = conf.data.get("descriptor_type", "fpfh")
     if descriptor_type == "fpfh":
-        fpfh_radius = conf.data.get("fpfh_radius", 10.0)
-        cache_dir = Path("gluefactory/datasets/new_dataset_cache") / f"cache_new_iss_fpfh_r{fpfh_radius}"
+        fpfh_radius = conf.data.get("fpfh_radius", 50.0)
+        voxel_size = conf.data.get("voxel_size", 5.0)
+        cache_dir = (Path("gluefactory/datasets/new_dataset_cache")
+                     / f"cache_new_iss_fpfh_v{voxel_size}_r{fpfh_radius}")
     elif descriptor_type == "shot":
-        cache_dir = Path("gluefactory/datasets/new_dataset_cache") / "cache_new_iss_shot352"
+        shot_version = conf.data.get("shot_version", "v5")
+        cache_dir = (Path("gluefactory/datasets/new_dataset_cache")
+                     / f"cache_new_iss_shot352_{shot_version}")
     else:
         raise ValueError(f"Unknown descriptor_type: {descriptor_type!r}")
 

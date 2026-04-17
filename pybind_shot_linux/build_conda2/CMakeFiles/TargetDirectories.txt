@@ -1,0 +1,7 @@
+/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build_conda2/CMakeFiles/shot_module.dir
+/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build_conda2/CMakeFiles/edit_cache.dir
+/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build_conda2/CMakeFiles/rebuild_cache.dir
+/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build_conda2/CMakeFiles/list_install_components.dir
+/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build_conda2/CMakeFiles/install.dir
+/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build_conda2/CMakeFiles/install/local.dir
+/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build_conda2/CMakeFiles/install/strip.dir

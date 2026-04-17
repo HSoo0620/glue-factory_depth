@@ -1,7 +1,8 @@
 data:
     name: new_dataset_iss_desc
     descriptor_type: fpfh          # fpfh | shot
-    fpfh_radius: 100.0     # matches SHOT shot_r=100mm for fair comparison
+    voxel_size: 5.0        # mm; diagnostic winner (pos<neg=0.628)
+    fpfh_radius: 50.0      # mm; 1:5:10 with voxel=5, matches SHOT v5
     resize_factor: 0.5
     val_ratio: 0.05
     seed: 0

@@ -1,0 +1,95 @@
+CUDA_VISIBLE_DEVICES=5 python -m gluefactory.train_iss_v1_20260415     iss_fpfh_v1_20260415_e0 --conf gluefactory/configs/iss_fpfh_v1_20260415_lg.yaml data.batch_size=4
+[04/16/2026 08:11:02 gluefactory INFO] Starting experiment iss_fpfh_v1_20260415_e0
+[04/16/2026 08:11:03 gluefactory INFO] Using device cuda
+[04/16/2026 08:11:03 gluefactory INFO] Training loader has 14076 batches
+[04/16/2026 08:11:03 gluefactory INFO] Validation loader has 39 batches
+[04/16/2026 08:11:04 gluefactory INFO] Parameters with scaled learning rate:
+{}
+[04/16/2026 08:11:05 gluefactory INFO] Training with mixed_precision=None
+[04/16/2026 08:11:05 gluefactory INFO] Starting training with configuration:
+data:
+  name: mitsubishi_v1_20260415_iss_fpfh
+  descriptor_kind: fpfh
+  data_root: /mnt/aict_nas/snuailab_datasets/Feature_Matching/dataset_output
+  cache_dir: /home/jhs/work/Registration/glue-factory_depth/gluefactory/datasets/mitsubishi/iss_fpfh_v1_20260415_cache_vox1_nr20_fr20
+  split_json: /home/jhs/work/Registration/glue-factory_depth/gluefactory/datasets/mitsubishi/splits/v1_20260415_split.json
+  batch_size: 4
+  num_workers: 12
+model:
+  name: two_view_pipeline
+  filter_zero_depth: true
+  extractor:
+    name: extractors.superpoint_fpfh_cached
+    descriptor_dim: 33
+    trainable: false
+  ground_truth:
+    name: matchers.gt_pair_matcher
+    gt_radius: 20
+  matcher:
+    name: matchers.lightglue
+    input_dim: 33
+    descriptor_dim: 36
+    num_heads: 3
+    filter_threshold: 0.1
+    flash: false
+    checkpointed: true
+train:
+  seed: 0
+  epochs: 100
+  optimizer: adam
+  opt_regexp: null
+  optimizer_options: {}
+  lr: 0.0001
+  lr_schedule:
+    type: exp
+    start: 20
+    exp_div_10: 10
+    on_epoch: true
+    factor: 1.0
+    options: {}
+  lr_scaling:
+  - - 100
+    - - dampingnet.const
+  eval_every_iter: 500
+  save_every_iter: 5000
+  log_every_iter: 1
+  log_grad_every_iter: null
+  test_every_epoch: 1
+  keep_last_checkpoints: 3
+  load_experiment: null
+  median_metrics: []
+  recall_metrics: {}
+  pr_metrics: {}
+  best_key: match_recall
+  best_key_mode: max
+  dataset_callback_fn: null
+  dataset_callback_on_val: false
+  clip_grad: null
+  pr_curves: {}
+  plot:
+  - 5
+  - gluefactory.visualization.visualize_batch.make_match_figures_depth
+  submodules: []
+
+[04/16/2026 08:11:05 gluefactory INFO] Starting epoch 0
+[04/16/2026 08:11:22 gluefactory INFO] [E 0 | it     0/14076] total=324.6773 | nll_pos=818.1979 | nll_neg=2.8606 | confidence=5.9221 | row_norm=0.3056
+Evaluation:   0%|          | 0/39 [00:00<?, ?it/s]Evaluation:   3%|2         | 1/39 [00:03<02:01,  3.19s/it]Evaluation:   5%|5         | 2/39 [00:04<01:06,  1.80s/it]Evaluation:   8%|7         | 3/39 [00:04<00:39,  1.10s/it]Evaluation:  10%|#         | 4/39 [00:04<00:25,  1.36it/s]Evaluation:  13%|#2        | 5/39 [00:09<01:21,  2.40s/it]Evaluation:  18%|#7        | 7/39 [00:10<00:39,  1.23s/it]Evaluation:  21%|##        | 8/39 [00:10<00:29,  1.05it/s]Evaluation:  23%|##3       | 9/39 [00:10<00:22,  1.35it/s]Evaluation:  26%|##5       | 10/39 [00:10<00:16,  1.71it/s]Evaluation:  28%|##8       | 11/39 [00:10<00:12,  2.19it/s]Evaluation:  31%|###       | 12/39 [00:10<00:09,  2.71it/s]Evaluation:  33%|###3      | 13/39 [00:11<00:08,  3.14it/s]Evaluation:  36%|###5      | 14/39 [00:11<00:06,  3.70it/s]Evaluation:  38%|###8      | 15/39 [00:11<00:05,  4.48it/s]Evaluation:  44%|####3     | 17/39 [00:11<00:03,  6.76it/s]Evaluation:  49%|####8     | 19/39 [00:11<00:02,  8.60it/s]Evaluation:  54%|#####3    | 21/39 [00:11<00:01,  9.95it/s]Evaluation:  59%|#####8    | 23/39 [00:11<00:01, 11.42it/s]Evaluation:  64%|######4   | 25/39 [00:12<00:01, 10.05it/s]Evaluation:  69%|######9   | 27/39 [00:12<00:01,  9.07it/s]Evaluation:  74%|#######4  | 29/39 [00:13<00:01,  5.02it/s]Evaluation:  77%|#######6  | 30/39 [00:14<00:03,  2.66it/s]Evaluation:  82%|########2 | 32/39 [00:14<00:01,  3.62it/s]Evaluation:  85%|########4 | 33/39 [00:14<00:01,  4.03it/s]Evaluation:  87%|########7 | 34/39 [00:15<00:01,  3.40it/s]Evaluation:  90%|########9 | 35/39 [00:16<00:02,  1.52it/s]Evaluation:  92%|#########2| 36/39 [00:17<00:01,  1.90it/s]Evaluation:  95%|#########4| 37/39 [00:17<00:00,  2.39it/s]Evaluation:  97%|#########7| 38/39 [00:17<00:00,  2.93it/s]Evaluation: 100%|##########| 39/39 [00:17<00:00,  3.49it/s]Evaluation: 100%|##########| 39/39 [00:17<00:00,  2.22it/s]
+[04/16/2026 08:11:40 gluefactory INFO] [Validation] match_recall=0.0000 | match_precision=0.0000 | accuracy=0.8895 | loss/total=413.5269 | loss/nll_pos=824.3437 | loss/nll_neg=2.7100
+[04/16/2026 08:11:40 gluefactory INFO]   (extras) average_precision=0.0000 | loss/last=413.5269 | loss/assignment_nll=413.5269 | loss/num_matchable=89.0256 | loss/num_unmatchable=454.9103 | loss/row_norm=0.3549
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:51 gluefactory INFO] Caught keyboard interrupt signal, will terminate
+[04/16/2026 08:11:54 gluefactory.utils.experiments INFO] Saving checkpoint checkpoint_best_ep0_0.000.tar
+[04/16/2026 08:11:54 gluefactory INFO] New best val: match_recall=0.0
+[04/16/2026 08:11:55 gluefactory.utils.experiments INFO] Saving checkpoint checkpoint_0_0_interrupted.tar
+[04/16/2026 08:11:55 gluefactory INFO] Finished training on process 0.

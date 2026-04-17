@@ -60,8 +60,11 @@ def lookup_shot352(pts_cloud: np.ndarray, desc_cloud: np.ndarray,
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--data_root", type=str, default=str(C.DEFAULT_DATA_ROOT))
-    p.add_argument("--bin_dir", type=str, required=True,
+    p.add_argument("--bin_dir", type=str,
+                   default="gluefactory/datasets/Descriptor/output_shot_zmap_v5",
                    help="Directory with <zmap_stem>_shot352.bin files")
+    p.add_argument("--shot_version", type=str, default="v5",
+                   help="Tag used in cache dir name (cache_new_iss_shot352_{tag}).")
     p.add_argument("--cache_root", type=str,
                    default="gluefactory/datasets/new_dataset_cache")
     p.add_argument("--max_num_keypoints", type=int, default=512)
@@ -77,7 +80,7 @@ def main():
 
     data_root = Path(args.data_root)
     bin_dir = Path(args.bin_dir)
-    cache_dir = Path(args.cache_root) / "cache_new_iss_shot352"
+    cache_dir = Path(args.cache_root) / f"cache_new_iss_shot352_{args.shot_version}"
     cache_dir.mkdir(parents=True, exist_ok=True)
 
     image_paths = sorted(data_root.glob("zmap_*.png"))

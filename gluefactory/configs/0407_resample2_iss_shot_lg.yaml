@@ -1,0 +1,40 @@
+data:
+    name: resample2_iss_shot
+    cache_dir: gluefactory/datasets/mitsubishi/iss_shot352_resample2_cache
+    image_size: 1751
+    batch_size: 16
+    num_workers: 16
+
+model:
+    name: two_view_pipeline
+    filter_zero_depth: true
+    extractor:
+        name: extractors.superpoint_fpfh_cached   # pass-through extractor 재사용
+        descriptor_dim: 352
+        trainable: False
+    ground_truth:
+        name: matchers.gt_pair_matcher
+        gt_radius: 20
+    matcher:
+        name: matchers.lightglue
+        input_dim: 352
+        descriptor_dim: 352     # 줄이지 않음, input_proj = Identity
+        num_heads: 4            # 352 / 4 = 88 (head_dim)
+        filter_threshold: 0.1
+        flash: false
+        checkpointed: true
+
+train:
+    seed: 0
+    epochs: 100
+    best_key: match_recall
+    best_key_mode: max
+    log_every_iter: 1
+    eval_every_iter: 500
+    lr: 1e-4
+    lr_schedule:
+        start: 20
+        type: exp
+        on_epoch: true
+        exp_div_10: 10
+    plot: [5, 'gluefactory.visualization.visualize_batch.make_match_figures_depth']

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/jhs/work/Registration/glue-factory_depth/pybind_shot_linux/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

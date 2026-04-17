@@ -3,7 +3,7 @@
 
 사용법:
     python test_resample_fpfh.py
-    python test_resample_fpfh.py --experiment resample_sp_fpfh_lg --fpfh_radius 1.5
+    python test_resample_fpfh.py --experiment 0323_resample_sp_fpfh_lg --fpfh_radius 0.5 --indices 0 10 50 90
     python test_resample_fpfh.py --indices 0 5 10 --image_size 2880
 """
 
@@ -206,12 +206,19 @@ def visualize_pair(pred, data, idx, output_path, csv_path=None, gt_radius=3,
           f"  recall={n_correct}/{gt_pos_total} ({recall:.1f}%)")
 
 
+def run_inference(model, batch, device):
+    batch = batch_to_device(batch, device)
+    with torch.no_grad():
+        pred = model(batch)
+    return pred, batch
+
+
 def main():
     parser = argparse.ArgumentParser(description="SP+FPFH+LG resample 매칭 테스트")
     parser.add_argument("--checkpoint", type=str, default=None)
     parser.add_argument("--experiment", type=str, default="resample_sp_fpfh_lg")
     parser.add_argument("--device", type=str, default="cuda")
-    parser.add_argument("--output_dir", type=str, default="results/resample_sp_fpfh_lg")
+    parser.add_argument("--output_dir", type=str, default=None)
     parser.add_argument("--split", type=str, default="test", choices=["train", "val", "test"])
     parser.add_argument("--num_samples", type=int, default=10)
     parser.add_argument("--indices", type=int, nargs="*", default=None)
@@ -219,10 +226,10 @@ def main():
     parser.add_argument("--fpfh_radius", type=float, default=1.5)
     parser.add_argument("--detection_threshold", type=float, default=0.001)
     parser.add_argument("--max_num_keypoints", type=int, default=512)
-    parser.add_argument("--gt_radius", type=int, default=3)
+    parser.add_argument("--gt_radius", type=int, default=11)
     args = parser.parse_args()
 
-    output_dir = Path(args.output_dir)
+    output_dir = Path(args.output_dir if args.output_dir else f"results/{args.experiment}")
     output_dir.mkdir(parents=True, exist_ok=True)
     device = args.device if torch.cuda.is_available() else "cpu"
 
@@ -283,7 +290,7 @@ def main():
         img_idx = master_path.stem.replace("depth_raw_", "")
         K0, clip_start, clip_end = parse_calib_ini(master_path.parent / f"calib_{img_idx}.ini")
         img_idx1 = input_path.stem.replace("depth_raw_", "")
-        K1, _, _ = parse_calib_ini(input_path.parent / f"calib_{img_idx1}.ini")
+        K1, clip_start1, clip_end1 = parse_calib_ini(input_path.parent / f"calib_{img_idx1}.ini")
 
         # SuperPoint on resized
         with torch.no_grad():
@@ -308,7 +315,7 @@ def main():
         depth_real0 = clip_start + depth_real0 * (clip_end - clip_start)
         depth_real0[master_raw == 0] = 0.0
         depth_real1 = input_raw.astype(np.float64) / 65535.0
-        depth_real1 = clip_start + depth_real1 * (clip_end - clip_start)
+        depth_real1 = clip_start1 + depth_real1 * (clip_end1 - clip_start1)
         depth_real1[input_raw == 0] = 0.0
 
         kp0_orig = kp0_f.copy()

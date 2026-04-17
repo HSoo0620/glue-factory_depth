@@ -7,9 +7,9 @@
   red      = no-GT         (no master-side GT keypoint within gt_radius)
 
 Usage:
-    python test_new_iss_desc.py --experiment 0413_new_iss_fpfh_lg --num_samples 10
-    python test_new_iss_desc.py --checkpoint outputs/training/0413_new_iss_fpfh_lg/checkpoint_best.tar --indices 0 5 10
-    python test_new_iss_desc.py --experiment 0413_new_iss_shot_lg --descriptor_type shot --num_samples 5
+    python test_new_iss_desc.py --checkpoint outputs/training/0413_new_iss_fpfh_v5_lg/checkpoint_best.tar --indices 0 10 50 90 --descriptor_type fpfh --experiment 0413_new_iss_fpfh_v5_lg
+    python test_new_iss_desc.py --checkpoint outputs/training/0413_new_iss_shot_v5_lg/checkpoint_best.tar --indices 0 10 50 90 --descriptor_type shot --experiment 0413_new_iss_shot_v5_lg
+    
 """
 import argparse
 from pathlib import Path
@@ -132,7 +132,9 @@ def main():
     p.add_argument("--checkpoint", type=str, default=None)
     p.add_argument("--experiment", type=str, default="0413_new_iss_fpfh_lg")
     p.add_argument("--descriptor_type", type=str, default="fpfh", choices=["fpfh", "shot"])
-    p.add_argument("--fpfh_radius", type=float, default=100.0)
+    p.add_argument("--fpfh_radius", type=float, default=50.0)
+    p.add_argument("--voxel_size", type=float, default=5.0)
+    p.add_argument("--shot_version", type=str, default="v5")
     p.add_argument("--device", type=str, default="cuda")
     p.add_argument("--output_dir", type=str, default=None)
     p.add_argument("--split", type=str, default="val", choices=["train", "val"])
@@ -157,9 +159,11 @@ def main():
     model, _ = load_model(cp_path, device)
 
     if args.descriptor_type == "fpfh":
-        cache_dir = Path("gluefactory/datasets/new_dataset_cache") / f"cache_new_iss_fpfh_r{args.fpfh_radius}"
+        cache_dir = (Path("gluefactory/datasets/new_dataset_cache")
+                     / f"cache_new_iss_fpfh_v{args.voxel_size}_r{args.fpfh_radius}")
     else:
-        cache_dir = Path("gluefactory/datasets/new_dataset_cache") / "cache_new_iss_shot352"
+        cache_dir = (Path("gluefactory/datasets/new_dataset_cache")
+                     / f"cache_new_iss_shot352_{args.shot_version}")
 
     dataset = NewDatasetISSDescDataset(
         split=args.split, cache_dir=cache_dir,

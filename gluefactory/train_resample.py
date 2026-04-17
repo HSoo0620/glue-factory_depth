@@ -64,7 +64,8 @@ default_train_conf = {
     "median_metrics": [],  # add the median of some metrics
     "recall_metrics": {},  # add the recall of some metrics
     "pr_metrics": {},  # add pr curves, set labels/predictions/mask keys
-    "best_key": "loss/total",  # key to use to select the best checkpoint
+    "best_key": "match_recall",  # key to use to select the best checkpoint
+    "best_key_mode": "max",  # "min" for loss, "max" for recall
     "dataset_callback_fn": None,  # data func called at the start of each epoch
     "dataset_callback_on_val": False,  # call data func on val data?
     "clip_grad": None,
@@ -243,7 +244,7 @@ def training(rank, conf, output_dir, args):
         # we start a new, fresh training
         conf.train = OmegaConf.merge(default_train_conf, conf.train)
         epoch = 0
-        best_eval = float("inf")
+        best_eval = float("inf") if conf.train.best_key_mode == "min" else -float("inf")
         if conf.train.load_experiment:
             logger.info(f"Will fine-tune from weights of {conf.train.load_experiment}")
             # the user has to make sure that the weights are compatible
@@ -434,13 +435,7 @@ def training(rank, conf, output_dir, args):
         # set the seed
         set_seed(conf.train.seed + epoch)
 
-        # update learning rate
-        if conf.train.lr_schedule.on_epoch and epoch > 0:
-            old_lr = optimizer.param_groups[0]["lr"]
-            lr_scheduler.step()
-            logger.info(
-                f'lr changed from {old_lr} to {optimizer.param_groups[0]["lr"]}'
-            )
+        # learning rate는 epoch 끝에서 업데이트 (lr_scheduler warning 방지)
         if args.distributed:
             train_loader.sampler.set_epoch(epoch)
         if epoch > 0 and conf.train.dataset_callback_fn and not args.overfit:
@@ -601,7 +596,10 @@ def training(rank, conf, output_dir, args):
                     write_dict_summaries(writer, "val", pr_metrics, tot_n_samples)
                     write_image_summaries(writer, "figures", figures, tot_n_samples)
                     # @TODO: optional always save checkpoint
-                    if results[conf.train.best_key] < best_eval:
+                    is_best = (results[conf.train.best_key] > best_eval
+                               if conf.train.best_key_mode == "max"
+                               else results[conf.train.best_key] < best_eval)
+                    if is_best:
                         best_eval = results[conf.train.best_key]
                         recall = results.get("match_recall", 0.0)
                         cp_name = f"checkpoint_best_ep{epoch}_{recall:.3f}.tar"
@@ -667,6 +665,14 @@ def training(rank, conf, output_dir, args):
                 output_dir=output_dir,
                 stop=stop,
                 distributed=args.distributed,
+            )
+
+        # update learning rate at end of epoch
+        if conf.train.lr_schedule.on_epoch and epoch > 0:
+            old_lr = optimizer.param_groups[0]["lr"]
+            lr_scheduler.step()
+            logger.info(
+                f'lr changed from {old_lr} to {optimizer.param_groups[0]["lr"]}'
             )
 
         results = None  # free memory

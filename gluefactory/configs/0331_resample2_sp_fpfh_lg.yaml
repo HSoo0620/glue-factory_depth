@@ -1,0 +1,38 @@
+data:
+    name: resample2_fpfh
+    fpfh_radius: 5.0
+    image_size: 1751  # 3502 / 2
+    batch_size: 32    # FPFH cached → SP forward 불필요 → 큰 배치 가능
+    num_workers: 4
+model:
+    name: two_view_pipeline
+    filter_zero_depth: true
+    extractor:
+        name: extractors.superpoint_fpfh_cached
+        descriptor_dim: 33
+        trainable: False
+    ground_truth:
+        name: matchers.gt_pair_matcher
+        gt_radius: 6
+    matcher:
+        name: matchers.lightglue
+        input_dim: 33
+        descriptor_dim: 36
+        num_heads: 3
+        filter_threshold: 0.1
+        flash: false
+        checkpointed: true
+train:
+    seed: 0
+    epochs: 100
+    best_key: match_recall
+    best_key_mode: max
+    log_every_iter: 1
+    eval_every_iter: 500
+    lr: 1e-4
+    lr_schedule:
+        start: 20
+        type: exp
+        on_epoch: true
+        exp_div_10: 10
+    plot: [5, 'gluefactory.visualization.visualize_batch.make_match_figures_depth']

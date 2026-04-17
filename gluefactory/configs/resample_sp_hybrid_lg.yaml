@@ -26,6 +26,8 @@ model:
 train:
     seed: 0
     epochs: 50
+    best_key: match_recall
+    best_key_mode: max
     log_every_iter: 1
     eval_every_iter: 500
     lr: 1e-4

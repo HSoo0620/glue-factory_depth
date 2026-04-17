@@ -1,0 +1,1285 @@
+Cache dir : /home/jhs/work/Registration/glue-factory_depth/gluefactory/datasets/mitsubishi/iss_shot_v1_20260415_cache_vox1_nr20_sr40
+Targets   : 641 zmap
+precompute SHOT:   0%|          | 0/641 [00:00<?, ?it/s]  Input points: 22323, keypoints: 512
+  Voxel: 22323 -> 16709 (voxel=1mm)
+precompute SHOT:   0%|          | 2/641 [00:00<04:59,  2.13it/s]  Input points: 17726, keypoints: 512
+  Voxel: 17726 -> 13540 (voxel=1mm)
+precompute SHOT:   0%|          | 3/641 [00:01<05:31,  1.92it/s]  Input points: 22156, keypoints: 512
+  Voxel: 22156 -> 13987 (voxel=1mm)
+precompute SHOT:   1%|          | 4/641 [00:02<05:52,  1.81it/s]  Input points: 24149, keypoints: 512
+  Voxel: 24149 -> 17422 (voxel=1mm)
+precompute SHOT:   1%|          | 5/641 [00:02<06:42,  1.58it/s]  Input points: 20528, keypoints: 512
+  Voxel: 20528 -> 14428 (voxel=1mm)
+precompute SHOT:   1%|          | 6/641 [00:03<06:58,  1.52it/s]  Input points: 22625, keypoints: 512
+  Voxel: 22625 -> 16806 (voxel=1mm)
+precompute SHOT:   1%|          | 7/641 [00:04<07:45,  1.36it/s]  Input points: 21002, keypoints: 512
+  Voxel: 21002 -> 16650 (voxel=1mm)
+precompute SHOT:   1%|          | 8/641 [00:05<07:44,  1.36it/s]  Input points: 20013, keypoints: 512
+  Voxel: 20013 -> 12155 (voxel=1mm)
+precompute SHOT:   1%|▏         | 9/641 [00:05<07:21,  1.43it/s]  Input points: 22114, keypoints: 512
+  Voxel: 22114 -> 16244 (voxel=1mm)
+precompute SHOT:   2%|▏         | 10/641 [00:06<07:26,  1.41it/s]  Input points: 24346, keypoints: 512
+  Voxel: 24346 -> 16933 (voxel=1mm)
+precompute SHOT:   2%|▏         | 11/641 [00:07<07:48,  1.34it/s]  Input points: 21864, keypoints: 512
+  Voxel: 21864 -> 16566 (voxel=1mm)
+precompute SHOT:   2%|▏         | 12/641 [00:08<07:48,  1.34it/s]  Input points: 17083, keypoints: 512
+  Voxel: 17083 -> 11960 (voxel=1mm)
+precompute SHOT:   2%|▏         | 13/641 [00:08<07:31,  1.39it/s]  Input points: 18989, keypoints: 512
+  Voxel: 18989 -> 14277 (voxel=1mm)
+precompute SHOT:   2%|▏         | 14/641 [00:09<07:09,  1.46it/s]  Input points: 20830, keypoints: 512
+  Voxel: 20830 -> 15350 (voxel=1mm)
+precompute SHOT:   2%|▏         | 15/641 [00:10<07:16,  1.44it/s]  Input points: 19103, keypoints: 512
+  Voxel: 19103 -> 13707 (voxel=1mm)
+precompute SHOT:   2%|▏         | 16/641 [00:10<07:24,  1.41it/s]  Input points: 24643, keypoints: 512
+  Voxel: 24643 -> 16622 (voxel=1mm)
+precompute SHOT:   3%|▎         | 17/641 [00:11<07:21,  1.41it/s]  Input points: 22630, keypoints: 512
+  Voxel: 22630 -> 14662 (voxel=1mm)
+precompute SHOT:   3%|▎         | 18/641 [00:12<07:08,  1.45it/s]  Input points: 19884, keypoints: 512
+  Voxel: 19884 -> 14062 (voxel=1mm)
+precompute SHOT:   3%|▎         | 19/641 [00:12<06:55,  1.50it/s]  Input points: 18145, keypoints: 512
+  Voxel: 18145 -> 13882 (voxel=1mm)
+precompute SHOT:   3%|▎         | 20/641 [00:13<06:53,  1.50it/s]  Input points: 18769, keypoints: 512
+  Voxel: 18769 -> 13177 (voxel=1mm)
+precompute SHOT:   3%|▎         | 21/641 [00:14<06:32,  1.58it/s]  Input points: 17721, keypoints: 512
+  Voxel: 17721 -> 12778 (voxel=1mm)
+precompute SHOT:   3%|▎         | 22/641 [00:14<06:19,  1.63it/s]  Input points: 21155, keypoints: 512
+  Voxel: 21155 -> 14813 (voxel=1mm)
+precompute SHOT:   4%|▎         | 23/641 [00:15<06:49,  1.51it/s]  Input points: 19649, keypoints: 512
+  Voxel: 19649 -> 17402 (voxel=1mm)
+precompute SHOT:   4%|▎         | 24/641 [00:16<07:04,  1.45it/s]  Input points: 19963, keypoints: 512
+  Voxel: 19963 -> 14788 (voxel=1mm)
+precompute SHOT:   4%|▍         | 25/641 [00:16<07:02,  1.46it/s]  Input points: 19259, keypoints: 512
+  Voxel: 19259 -> 12642 (voxel=1mm)
+precompute SHOT:   4%|▍         | 26/641 [00:17<07:09,  1.43it/s]  Input points: 22025, keypoints: 512
+  Voxel: 22025 -> 16723 (voxel=1mm)
+precompute SHOT:   4%|▍         | 27/641 [00:18<07:41,  1.33it/s]  Input points: 20711, keypoints: 512
+  Voxel: 20711 -> 13865 (voxel=1mm)
+precompute SHOT:   4%|▍         | 28/641 [00:19<07:32,  1.36it/s]  Input points: 18283, keypoints: 512
+  Voxel: 18283 -> 11867 (voxel=1mm)
+precompute SHOT:   5%|▍         | 29/641 [00:19<07:08,  1.43it/s]  Input points: 21589, keypoints: 512
+  Voxel: 21589 -> 14971 (voxel=1mm)
+precompute SHOT:   5%|▍         | 30/641 [00:20<07:32,  1.35it/s]  Input points: 17622, keypoints: 512
+  Voxel: 17622 -> 13203 (voxel=1mm)
+precompute SHOT:   5%|▍         | 31/641 [00:21<07:18,  1.39it/s]  Input points: 24364, keypoints: 512
+  Voxel: 24364 -> 15939 (voxel=1mm)
+precompute SHOT:   5%|▍         | 32/641 [00:22<07:42,  1.32it/s]  Input points: 20337, keypoints: 512
+  Voxel: 20337 -> 14698 (voxel=1mm)
+precompute SHOT:   5%|▌         | 33/641 [00:22<07:42,  1.31it/s]  Input points: 21184, keypoints: 512
+  Voxel: 21184 -> 14243 (voxel=1mm)
+precompute SHOT:   5%|▌         | 34/641 [00:23<07:46,  1.30it/s]  Input points: 23205, keypoints: 512
+  Voxel: 23205 -> 15883 (voxel=1mm)
+precompute SHOT:   5%|▌         | 35/641 [00:24<08:55,  1.13it/s]  Input points: 20407, keypoints: 512
+  Voxel: 20407 -> 14548 (voxel=1mm)
+precompute SHOT:   6%|▌         | 36/641 [00:25<08:26,  1.20it/s]  Input points: 21488, keypoints: 512
+  Voxel: 21488 -> 14821 (voxel=1mm)
+precompute SHOT:   6%|▌         | 37/641 [00:26<08:14,  1.22it/s]  Input points: 18900, keypoints: 512
+  Voxel: 18900 -> 13362 (voxel=1mm)
+precompute SHOT:   6%|▌         | 38/641 [00:27<08:30,  1.18it/s]  Input points: 24748, keypoints: 512
+  Voxel: 24748 -> 19290 (voxel=1mm)
+precompute SHOT:   6%|▌         | 39/641 [00:28<09:01,  1.11it/s]  Input points: 18258, keypoints: 512
+  Voxel: 18258 -> 12505 (voxel=1mm)
+precompute SHOT:   6%|▌         | 40/641 [00:29<08:59,  1.11it/s]  Input points: 18709, keypoints: 512
+  Voxel: 18709 -> 12833 (voxel=1mm)
+precompute SHOT:   6%|▋         | 41/641 [00:30<08:51,  1.13it/s]  Input points: 24023, keypoints: 512
+  Voxel: 24023 -> 16893 (voxel=1mm)
+precompute SHOT:   7%|▋         | 42/641 [00:31<09:18,  1.07it/s]  Input points: 19225, keypoints: 512
+  Voxel: 19225 -> 13622 (voxel=1mm)
+precompute SHOT:   7%|▋         | 43/641 [00:31<08:43,  1.14it/s]  Input points: 22478, keypoints: 512
+  Voxel: 22478 -> 17501 (voxel=1mm)
+precompute SHOT:   7%|▋         | 44/641 [00:32<08:28,  1.17it/s]  Input points: 22536, keypoints: 512
+  Voxel: 22536 -> 17515 (voxel=1mm)
+precompute SHOT:   7%|▋         | 45/641 [00:33<08:05,  1.23it/s]  Input points: 22014, keypoints: 512
+  Voxel: 22014 -> 15735 (voxel=1mm)
+precompute SHOT:   7%|▋         | 46/641 [00:34<08:10,  1.21it/s]  Input points: 23195, keypoints: 512
+  Voxel: 23195 -> 18251 (voxel=1mm)
+precompute SHOT:   7%|▋         | 47/641 [00:35<08:33,  1.16it/s]  Input points: 18662, keypoints: 512
+  Voxel: 18662 -> 13997 (voxel=1mm)
+precompute SHOT:   7%|▋         | 48/641 [00:35<07:44,  1.28it/s]  Input points: 20731, keypoints: 512
+  Voxel: 20731 -> 13674 (voxel=1mm)
+precompute SHOT:   8%|▊         | 49/641 [00:36<07:12,  1.37it/s]  Input points: 23713, keypoints: 512
+  Voxel: 23713 -> 15905 (voxel=1mm)
+precompute SHOT:   8%|▊         | 50/641 [00:37<07:34,  1.30it/s]  Input points: 19327, keypoints: 512
+  Voxel: 19327 -> 13932 (voxel=1mm)
+precompute SHOT:   8%|▊         | 51/641 [00:38<07:54,  1.24it/s]  Input points: 24609, keypoints: 512
+  Voxel: 24609 -> 18370 (voxel=1mm)
+precompute SHOT:   8%|▊         | 52/641 [00:38<07:30,  1.31it/s]  Input points: 22160, keypoints: 512
+  Voxel: 22160 -> 14970 (voxel=1mm)
+precompute SHOT:   8%|▊         | 53/641 [00:39<07:18,  1.34it/s]  Input points: 23771, keypoints: 512
+  Voxel: 23771 -> 17635 (voxel=1mm)
+precompute SHOT:   8%|▊         | 54/641 [00:40<08:54,  1.10it/s]  Input points: 18654, keypoints: 512
+  Voxel: 18654 -> 12561 (voxel=1mm)
+precompute SHOT:   9%|▊         | 55/641 [00:41<08:41,  1.12it/s]  Input points: 20182, keypoints: 512
+  Voxel: 20182 -> 12337 (voxel=1mm)
+precompute SHOT:   9%|▊         | 56/641 [00:42<08:35,  1.14it/s]  Input points: 18994, keypoints: 512
+  Voxel: 18994 -> 16488 (voxel=1mm)
+precompute SHOT:   9%|▉         | 57/641 [00:43<08:31,  1.14it/s]  Input points: 22180, keypoints: 512
+  Voxel: 22180 -> 15248 (voxel=1mm)
+precompute SHOT:   9%|▉         | 58/641 [00:44<08:22,  1.16it/s]  Input points: 19661, keypoints: 512
+  Voxel: 19661 -> 13477 (voxel=1mm)
+precompute SHOT:   9%|▉         | 59/641 [00:44<07:37,  1.27it/s]  Input points: 21651, keypoints: 512
+  Voxel: 21651 -> 15515 (voxel=1mm)
+precompute SHOT:   9%|▉         | 60/641 [00:45<07:09,  1.35it/s]  Input points: 21123, keypoints: 512
+  Voxel: 21123 -> 15814 (voxel=1mm)
+precompute SHOT:  10%|▉         | 61/641 [00:45<06:44,  1.43it/s]  Input points: 22316, keypoints: 512
+  Voxel: 22316 -> 15935 (voxel=1mm)
+precompute SHOT:  10%|▉         | 62/641 [00:46<06:40,  1.44it/s]  Input points: 20867, keypoints: 512
+  Voxel: 20867 -> 15352 (voxel=1mm)
+precompute SHOT:  10%|▉         | 63/641 [00:47<06:27,  1.49it/s]  Input points: 20103, keypoints: 512
+  Voxel: 20103 -> 12184 (voxel=1mm)
+precompute SHOT:  10%|▉         | 64/641 [00:47<06:19,  1.52it/s]  Input points: 24142, keypoints: 512
+  Voxel: 24142 -> 15897 (voxel=1mm)
+precompute SHOT:  10%|█         | 65/641 [00:48<06:28,  1.48it/s]  Input points: 26545, keypoints: 512
+  Voxel: 26545 -> 19396 (voxel=1mm)
+precompute SHOT:  10%|█         | 66/641 [00:49<07:26,  1.29it/s]  Input points: 22385, keypoints: 512
+  Voxel: 22385 -> 14319 (voxel=1mm)
+precompute SHOT:  10%|█         | 67/641 [00:50<07:12,  1.33it/s]  Input points: 22247, keypoints: 512
+  Voxel: 22247 -> 15072 (voxel=1mm)
+precompute SHOT:  11%|█         | 68/641 [00:51<07:17,  1.31it/s]  Input points: 22902, keypoints: 512
+  Voxel: 22902 -> 18038 (voxel=1mm)
+precompute SHOT:  11%|█         | 69/641 [00:52<08:18,  1.15it/s]  Input points: 23419, keypoints: 512
+  Voxel: 23419 -> 17093 (voxel=1mm)
+precompute SHOT:  11%|█         | 70/641 [00:52<07:53,  1.21it/s]  Input points: 22441, keypoints: 512
+  Voxel: 22441 -> 15521 (voxel=1mm)
+precompute SHOT:  11%|█         | 71/641 [00:53<08:01,  1.18it/s]  Input points: 17924, keypoints: 512
+  Voxel: 17924 -> 14513 (voxel=1mm)
+precompute SHOT:  11%|█         | 72/641 [00:54<07:40,  1.24it/s]  Input points: 22784, keypoints: 512
+  Voxel: 22784 -> 16508 (voxel=1mm)
+precompute SHOT:  11%|█▏        | 73/641 [00:55<08:08,  1.16it/s]  Input points: 21716, keypoints: 512
+  Voxel: 21716 -> 15415 (voxel=1mm)
+precompute SHOT:  12%|█▏        | 74/641 [00:56<07:32,  1.25it/s]  Input points: 22983, keypoints: 512
+  Voxel: 22983 -> 17028 (voxel=1mm)
+precompute SHOT:  12%|█▏        | 75/641 [00:57<07:38,  1.23it/s]  Input points: 19433, keypoints: 512
+  Voxel: 19433 -> 14038 (voxel=1mm)
+precompute SHOT:  12%|█▏        | 76/641 [00:57<07:21,  1.28it/s]  Input points: 17345, keypoints: 512
+  Voxel: 17345 -> 13737 (voxel=1mm)
+precompute SHOT:  12%|█▏        | 77/641 [00:58<07:08,  1.31it/s]  Input points: 19063, keypoints: 512
+  Voxel: 19063 -> 12811 (voxel=1mm)
+precompute SHOT:  12%|█▏        | 78/641 [00:59<07:22,  1.27it/s]  Input points: 24646, keypoints: 512
+  Voxel: 24646 -> 15352 (voxel=1mm)
+precompute SHOT:  12%|█▏        | 79/641 [01:00<07:50,  1.19it/s]  Input points: 25091, keypoints: 512
+  Voxel: 25091 -> 18316 (voxel=1mm)
+precompute SHOT:  12%|█▏        | 80/641 [01:01<08:23,  1.11it/s]  Input points: 18568, keypoints: 512
+  Voxel: 18568 -> 15355 (voxel=1mm)
+precompute SHOT:  13%|█▎        | 81/641 [01:02<07:50,  1.19it/s]  Input points: 21672, keypoints: 512
+  Voxel: 21672 -> 14314 (voxel=1mm)
+precompute SHOT:  13%|█▎        | 82/641 [01:02<07:59,  1.17it/s]  Input points: 23791, keypoints: 512
+  Voxel: 23791 -> 16147 (voxel=1mm)
+precompute SHOT:  13%|█▎        | 83/641 [01:04<08:40,  1.07it/s]  Input points: 20463, keypoints: 512
+  Voxel: 20463 -> 14301 (voxel=1mm)
+precompute SHOT:  13%|█▎        | 84/641 [01:04<08:19,  1.12it/s]  Input points: 17124, keypoints: 512
+  Voxel: 17124 -> 13596 (voxel=1mm)
+precompute SHOT:  13%|█▎        | 85/641 [01:05<08:00,  1.16it/s]  Input points: 23644, keypoints: 512
+  Voxel: 23644 -> 17813 (voxel=1mm)
+precompute SHOT:  13%|█▎        | 86/641 [01:06<07:44,  1.20it/s]  Input points: 22269, keypoints: 512
+  Voxel: 22269 -> 15354 (voxel=1mm)
+precompute SHOT:  14%|█▎        | 87/641 [01:07<07:13,  1.28it/s]  Input points: 19229, keypoints: 512
+  Voxel: 19229 -> 12512 (voxel=1mm)
+precompute SHOT:  14%|█▎        | 88/641 [01:07<06:50,  1.35it/s]  Input points: 19709, keypoints: 512
+  Voxel: 19709 -> 12866 (voxel=1mm)
+precompute SHOT:  14%|█▍        | 89/641 [01:08<06:23,  1.44it/s]  Input points: 20294, keypoints: 512
+  Voxel: 20294 -> 15396 (voxel=1mm)
+precompute SHOT:  14%|█▍        | 90/641 [01:08<06:10,  1.49it/s]  Input points: 22456, keypoints: 512
+  Voxel: 22456 -> 15699 (voxel=1mm)
+precompute SHOT:  14%|█▍        | 91/641 [01:09<06:14,  1.47it/s]  Input points: 16204, keypoints: 512
+  Voxel: 16204 -> 10818 (voxel=1mm)
+precompute SHOT:  14%|█▍        | 92/641 [01:10<05:40,  1.61it/s]  Input points: 23332, keypoints: 512
+  Voxel: 23332 -> 17177 (voxel=1mm)
+precompute SHOT:  15%|█▍        | 93/641 [01:10<05:42,  1.60it/s]  Input points: 24103, keypoints: 512
+  Voxel: 24103 -> 17822 (voxel=1mm)
+precompute SHOT:  15%|█▍        | 94/641 [01:11<05:53,  1.55it/s]  Input points: 16247, keypoints: 512
+  Voxel: 16247 -> 12160 (voxel=1mm)
+precompute SHOT:  15%|█▍        | 95/641 [01:11<05:31,  1.64it/s]  Input points: 20613, keypoints: 512
+  Voxel: 20613 -> 13123 (voxel=1mm)
+precompute SHOT:  15%|█▍        | 96/641 [01:12<06:37,  1.37it/s]  Input points: 17726, keypoints: 512
+  Voxel: 17726 -> 12137 (voxel=1mm)
+precompute SHOT:  15%|█▌        | 97/641 [01:13<06:12,  1.46it/s]  Input points: 19525, keypoints: 512
+  Voxel: 19525 -> 14445 (voxel=1mm)
+precompute SHOT:  15%|█▌        | 98/641 [01:14<06:02,  1.50it/s]  Input points: 22404, keypoints: 512
+  Voxel: 22404 -> 15709 (voxel=1mm)
+precompute SHOT:  15%|█▌        | 99/641 [01:14<06:07,  1.47it/s]  Input points: 21155, keypoints: 512
+  Voxel: 21155 -> 16623 (voxel=1mm)
+precompute SHOT:  16%|█▌        | 100/641 [01:15<05:58,  1.51it/s]  Input points: 21537, keypoints: 512
+  Voxel: 21537 -> 15243 (voxel=1mm)
+precompute SHOT:  16%|█▌        | 101/641 [01:16<05:51,  1.54it/s]  Input points: 22546, keypoints: 512
+  Voxel: 22546 -> 15939 (voxel=1mm)
+precompute SHOT:  16%|█▌        | 102/641 [01:16<05:49,  1.54it/s]  Input points: 21680, keypoints: 512
+  Voxel: 21680 -> 15893 (voxel=1mm)
+precompute SHOT:  16%|█▌        | 103/641 [01:17<05:45,  1.56it/s]  Input points: 22263, keypoints: 512
+  Voxel: 22263 -> 16413 (voxel=1mm)
+precompute SHOT:  16%|█▌        | 104/641 [01:17<05:32,  1.62it/s]  Input points: 20986, keypoints: 512
+  Voxel: 20986 -> 14192 (voxel=1mm)
+precompute SHOT:  16%|█▋        | 105/641 [01:18<05:36,  1.59it/s]  Input points: 20787, keypoints: 512
+  Voxel: 20787 -> 14929 (voxel=1mm)
+precompute SHOT:  17%|█▋        | 106/641 [01:19<05:42,  1.56it/s]  Input points: 23281, keypoints: 512
+  Voxel: 23281 -> 18881 (voxel=1mm)
+precompute SHOT:  17%|█▋        | 107/641 [01:19<05:43,  1.55it/s]  Input points: 21622, keypoints: 512
+  Voxel: 21622 -> 16264 (voxel=1mm)
+precompute SHOT:  17%|█▋        | 108/641 [01:20<05:28,  1.62it/s]  Input points: 22329, keypoints: 512
+  Voxel: 22329 -> 13633 (voxel=1mm)
+precompute SHOT:  17%|█▋        | 109/641 [01:21<05:37,  1.58it/s]  Input points: 23082, keypoints: 512
+  Voxel: 23082 -> 15363 (voxel=1mm)
+precompute SHOT:  17%|█▋        | 110/641 [01:21<05:45,  1.54it/s]  Input points: 20726, keypoints: 512
+  Voxel: 20726 -> 14800 (voxel=1mm)
+precompute SHOT:  17%|█▋        | 111/641 [01:22<05:39,  1.56it/s]  Input points: 21158, keypoints: 512
+  Voxel: 21158 -> 15113 (voxel=1mm)
+precompute SHOT:  17%|█▋        | 112/641 [01:23<05:20,  1.65it/s]  Input points: 18954, keypoints: 512
+  Voxel: 18954 -> 12069 (voxel=1mm)
+precompute SHOT:  18%|█▊        | 113/641 [01:23<05:06,  1.72it/s]  Input points: 21409, keypoints: 512
+  Voxel: 21409 -> 15571 (voxel=1mm)
+precompute SHOT:  18%|█▊        | 114/641 [01:24<05:22,  1.63it/s]  Input points: 18518, keypoints: 512
+  Voxel: 18518 -> 15265 (voxel=1mm)
+precompute SHOT:  18%|█▊        | 115/641 [01:24<05:06,  1.71it/s]  Input points: 21081, keypoints: 512
+  Voxel: 21081 -> 15189 (voxel=1mm)
+precompute SHOT:  18%|█▊        | 116/641 [01:25<05:06,  1.71it/s]  Input points: 16533, keypoints: 512
+  Voxel: 16533 -> 10910 (voxel=1mm)
+precompute SHOT:  18%|█▊        | 117/641 [01:25<04:59,  1.75it/s]  Input points: 22233, keypoints: 512
+  Voxel: 22233 -> 18161 (voxel=1mm)
+precompute SHOT:  18%|█▊        | 118/641 [01:26<05:06,  1.71it/s]  Input points: 21185, keypoints: 512
+  Voxel: 21185 -> 14438 (voxel=1mm)
+precompute SHOT:  19%|█▊        | 119/641 [01:27<05:13,  1.67it/s]  Input points: 20338, keypoints: 512
+  Voxel: 20338 -> 13825 (voxel=1mm)
+precompute SHOT:  19%|█▊        | 120/641 [01:27<05:29,  1.58it/s]  Input points: 22531, keypoints: 512
+  Voxel: 22531 -> 14803 (voxel=1mm)
+precompute SHOT:  19%|█▉        | 121/641 [01:28<05:25,  1.60it/s]  Input points: 21854, keypoints: 512
+  Voxel: 21854 -> 16089 (voxel=1mm)
+precompute SHOT:  19%|█▉        | 122/641 [01:29<05:19,  1.62it/s]  Input points: 19484, keypoints: 512
+  Voxel: 19484 -> 13777 (voxel=1mm)
+precompute SHOT:  19%|█▉        | 123/641 [01:29<05:04,  1.70it/s]  Input points: 20488, keypoints: 512
+  Voxel: 20488 -> 15763 (voxel=1mm)
+precompute SHOT:  19%|█▉        | 124/641 [01:30<05:07,  1.68it/s]  Input points: 18938, keypoints: 512
+  Voxel: 18938 -> 12519 (voxel=1mm)
+precompute SHOT:  20%|█▉        | 125/641 [01:30<05:13,  1.65it/s]  Input points: 21919, keypoints: 512
+  Voxel: 21919 -> 15105 (voxel=1mm)
+precompute SHOT:  20%|█▉        | 126/641 [01:31<05:23,  1.59it/s]  Input points: 22877, keypoints: 512
+  Voxel: 22877 -> 15061 (voxel=1mm)
+precompute SHOT:  20%|█▉        | 127/641 [01:32<05:28,  1.57it/s]  Input points: 23438, keypoints: 512
+  Voxel: 23438 -> 16137 (voxel=1mm)
+precompute SHOT:  20%|█▉        | 128/641 [01:32<05:16,  1.62it/s]  Input points: 20803, keypoints: 512
+  Voxel: 20803 -> 13304 (voxel=1mm)
+precompute SHOT:  20%|██        | 129/641 [01:33<06:07,  1.39it/s]  Input points: 20737, keypoints: 512
+  Voxel: 20737 -> 15417 (voxel=1mm)
+precompute SHOT:  20%|██        | 130/641 [01:34<05:53,  1.44it/s]  Input points: 22466, keypoints: 512
+  Voxel: 22466 -> 16952 (voxel=1mm)
+precompute SHOT:  20%|██        | 131/641 [01:34<05:45,  1.48it/s]  Input points: 19689, keypoints: 512
+  Voxel: 19689 -> 13884 (voxel=1mm)
+precompute SHOT:  21%|██        | 132/641 [01:35<05:31,  1.53it/s]  Input points: 19618, keypoints: 512
+  Voxel: 19618 -> 14023 (voxel=1mm)
+precompute SHOT:  21%|██        | 133/641 [01:36<05:19,  1.59it/s]  Input points: 22890, keypoints: 512
+  Voxel: 22890 -> 15929 (voxel=1mm)
+precompute SHOT:  21%|██        | 134/641 [01:36<05:24,  1.56it/s]  Input points: 20434, keypoints: 512
+  Voxel: 20434 -> 14821 (voxel=1mm)
+precompute SHOT:  21%|██        | 135/641 [01:37<05:21,  1.57it/s]  Input points: 25601, keypoints: 512
+  Voxel: 25601 -> 16992 (voxel=1mm)
+precompute SHOT:  21%|██        | 136/641 [01:37<05:16,  1.60it/s]  Input points: 21385, keypoints: 512
+  Voxel: 21385 -> 17688 (voxel=1mm)
+precompute SHOT:  21%|██▏       | 137/641 [01:38<05:06,  1.64it/s]  Input points: 21664, keypoints: 512
+  Voxel: 21664 -> 13817 (voxel=1mm)
+precompute SHOT:  22%|██▏       | 138/641 [01:39<05:03,  1.66it/s]  Input points: 25326, keypoints: 512
+  Voxel: 25326 -> 16187 (voxel=1mm)
+precompute SHOT:  22%|██▏       | 139/641 [01:39<05:07,  1.63it/s]  Input points: 22464, keypoints: 512
+  Voxel: 22464 -> 13535 (voxel=1mm)
+precompute SHOT:  22%|██▏       | 140/641 [01:40<05:04,  1.64it/s]  Input points: 20483, keypoints: 512
+  Voxel: 20483 -> 15125 (voxel=1mm)
+precompute SHOT:  22%|██▏       | 141/641 [01:41<05:10,  1.61it/s]  Input points: 16574, keypoints: 512
+  Voxel: 16574 -> 14351 (voxel=1mm)
+precompute SHOT:  22%|██▏       | 142/641 [01:41<04:46,  1.74it/s]  Input points: 22013, keypoints: 512
+  Voxel: 22013 -> 16881 (voxel=1mm)
+precompute SHOT:  22%|██▏       | 143/641 [01:42<04:58,  1.67it/s]  Input points: 24494, keypoints: 512
+  Voxel: 24494 -> 15637 (voxel=1mm)
+precompute SHOT:  22%|██▏       | 144/641 [01:42<05:05,  1.63it/s]  Input points: 19327, keypoints: 512
+  Voxel: 19327 -> 13963 (voxel=1mm)
+precompute SHOT:  23%|██▎       | 145/641 [01:43<04:58,  1.66it/s]  Input points: 22744, keypoints: 512
+  Voxel: 22744 -> 16628 (voxel=1mm)
+precompute SHOT:  23%|██▎       | 146/641 [01:44<05:05,  1.62it/s]  Input points: 21228, keypoints: 512
+  Voxel: 21228 -> 16040 (voxel=1mm)
+precompute SHOT:  23%|██▎       | 147/641 [01:44<04:59,  1.65it/s]  Input points: 21692, keypoints: 512
+  Voxel: 21692 -> 16835 (voxel=1mm)
+precompute SHOT:  23%|██▎       | 148/641 [01:45<05:11,  1.58it/s]  Input points: 20592, keypoints: 512
+  Voxel: 20592 -> 14320 (voxel=1mm)
+precompute SHOT:  23%|██▎       | 149/641 [01:45<05:14,  1.56it/s]  Input points: 23592, keypoints: 512
+  Voxel: 23592 -> 14903 (voxel=1mm)
+precompute SHOT:  23%|██▎       | 150/641 [01:46<05:05,  1.61it/s]  Input points: 21277, keypoints: 512
+  Voxel: 21277 -> 12746 (voxel=1mm)
+precompute SHOT:  24%|██▎       | 151/641 [01:47<05:02,  1.62it/s]  Input points: 25344, keypoints: 512
+  Voxel: 25344 -> 19395 (voxel=1mm)
+precompute SHOT:  24%|██▎       | 152/641 [01:47<05:28,  1.49it/s]  Input points: 18463, keypoints: 512
+  Voxel: 18463 -> 14345 (voxel=1mm)
+precompute SHOT:  24%|██▍       | 153/641 [01:48<05:06,  1.59it/s]  Input points: 23071, keypoints: 512
+  Voxel: 23071 -> 14089 (voxel=1mm)
+precompute SHOT:  24%|██▍       | 154/641 [01:49<05:03,  1.60it/s]  Input points: 20911, keypoints: 512
+  Voxel: 20911 -> 13388 (voxel=1mm)
+precompute SHOT:  24%|██▍       | 155/641 [01:49<05:05,  1.59it/s]  Input points: 20503, keypoints: 512
+  Voxel: 20503 -> 14186 (voxel=1mm)
+precompute SHOT:  24%|██▍       | 156/641 [01:50<04:55,  1.64it/s]  Input points: 19742, keypoints: 512
+  Voxel: 19742 -> 12641 (voxel=1mm)
+precompute SHOT:  24%|██▍       | 157/641 [01:50<04:53,  1.65it/s]  Input points: 16759, keypoints: 512
+  Voxel: 16759 -> 13065 (voxel=1mm)
+precompute SHOT:  25%|██▍       | 158/641 [01:51<04:36,  1.75it/s]  Input points: 21484, keypoints: 512
+  Voxel: 21484 -> 15409 (voxel=1mm)
+precompute SHOT:  25%|██▍       | 159/641 [01:52<04:44,  1.69it/s]  Input points: 20353, keypoints: 512
+  Voxel: 20353 -> 12940 (voxel=1mm)
+precompute SHOT:  25%|██▍       | 160/641 [01:52<04:41,  1.71it/s]  Input points: 22762, keypoints: 512
+  Voxel: 22762 -> 15342 (voxel=1mm)
+precompute SHOT:  25%|██▌       | 161/641 [01:53<04:37,  1.73it/s]  Input points: 22300, keypoints: 512
+  Voxel: 22300 -> 16176 (voxel=1mm)
+precompute SHOT:  25%|██▌       | 162/641 [01:53<04:50,  1.65it/s]  Input points: 23372, keypoints: 512
+  Voxel: 23372 -> 17356 (voxel=1mm)
+precompute SHOT:  25%|██▌       | 163/641 [01:54<04:48,  1.66it/s]  Input points: 19323, keypoints: 512
+  Voxel: 19323 -> 14339 (voxel=1mm)
+precompute SHOT:  26%|██▌       | 164/641 [01:54<04:41,  1.70it/s]  Input points: 23267, keypoints: 512
+  Voxel: 23267 -> 16141 (voxel=1mm)
+precompute SHOT:  26%|██▌       | 165/641 [01:55<04:41,  1.69it/s]  Input points: 25305, keypoints: 512
+  Voxel: 25305 -> 16668 (voxel=1mm)
+precompute SHOT:  26%|██▌       | 166/641 [01:56<05:05,  1.55it/s]  Input points: 19885, keypoints: 512
+  Voxel: 19885 -> 15255 (voxel=1mm)
+precompute SHOT:  26%|██▌       | 167/641 [01:56<05:00,  1.58it/s]  Input points: 23159, keypoints: 512
+  Voxel: 23159 -> 17077 (voxel=1mm)
+precompute SHOT:  26%|██▌       | 168/641 [01:57<04:58,  1.59it/s]  Input points: 18964, keypoints: 512
+  Voxel: 18964 -> 15460 (voxel=1mm)
+precompute SHOT:  26%|██▋       | 169/641 [01:58<04:36,  1.70it/s]  Input points: 22834, keypoints: 512
+  Voxel: 22834 -> 16699 (voxel=1mm)
+precompute SHOT:  27%|██▋       | 170/641 [01:58<04:51,  1.61it/s]  Input points: 18412, keypoints: 512
+  Voxel: 18412 -> 12336 (voxel=1mm)
+precompute SHOT:  27%|██▋       | 171/641 [01:59<04:41,  1.67it/s]  Input points: 24318, keypoints: 512
+  Voxel: 24318 -> 18659 (voxel=1mm)
+precompute SHOT:  27%|██▋       | 172/641 [01:59<04:53,  1.60it/s]  Input points: 20091, keypoints: 512
+  Voxel: 20091 -> 14149 (voxel=1mm)
+precompute SHOT:  27%|██▋       | 173/641 [02:00<04:46,  1.64it/s]  Input points: 25062, keypoints: 512
+  Voxel: 25062 -> 17500 (voxel=1mm)
+precompute SHOT:  27%|██▋       | 174/641 [02:01<04:58,  1.56it/s]  Input points: 21671, keypoints: 512
+  Voxel: 21671 -> 13810 (voxel=1mm)
+precompute SHOT:  27%|██▋       | 175/641 [02:01<04:48,  1.61it/s]  Input points: 23765, keypoints: 512
+  Voxel: 23765 -> 16020 (voxel=1mm)
+precompute SHOT:  27%|██▋       | 176/641 [02:02<04:52,  1.59it/s]  Input points: 23348, keypoints: 512
+  Voxel: 23348 -> 17791 (voxel=1mm)
+precompute SHOT:  28%|██▊       | 177/641 [02:03<04:53,  1.58it/s]  Input points: 25021, keypoints: 512
+  Voxel: 25021 -> 20812 (voxel=1mm)
+precompute SHOT:  28%|██▊       | 178/641 [02:03<04:50,  1.59it/s]  Input points: 17676, keypoints: 512
+  Voxel: 17676 -> 13507 (voxel=1mm)
+precompute SHOT:  28%|██▊       | 179/641 [02:04<04:28,  1.72it/s]  Input points: 21124, keypoints: 512
+  Voxel: 21124 -> 13913 (voxel=1mm)
+precompute SHOT:  28%|██▊       | 180/641 [02:04<04:35,  1.67it/s]  Input points: 25642, keypoints: 512
+  Voxel: 25642 -> 16719 (voxel=1mm)
+precompute SHOT:  28%|██▊       | 181/641 [02:05<04:44,  1.62it/s]  Input points: 20005, keypoints: 512
+  Voxel: 20005 -> 14182 (voxel=1mm)
+precompute SHOT:  28%|██▊       | 182/641 [02:06<04:36,  1.66it/s]  Input points: 22859, keypoints: 512
+  Voxel: 22859 -> 17462 (voxel=1mm)
+precompute SHOT:  29%|██▊       | 183/641 [02:06<04:38,  1.65it/s]  Input points: 22341, keypoints: 512
+  Voxel: 22341 -> 16820 (voxel=1mm)
+precompute SHOT:  29%|██▊       | 184/641 [02:07<04:46,  1.60it/s]  Input points: 22659, keypoints: 512
+  Voxel: 22659 -> 14955 (voxel=1mm)
+precompute SHOT:  29%|██▉       | 185/641 [02:08<04:46,  1.59it/s]  Input points: 18723, keypoints: 512
+  Voxel: 18723 -> 14407 (voxel=1mm)
+precompute SHOT:  29%|██▉       | 186/641 [02:08<04:27,  1.70it/s]  Input points: 23542, keypoints: 512
+  Voxel: 23542 -> 15634 (voxel=1mm)
+precompute SHOT:  29%|██▉       | 187/641 [02:09<04:37,  1.64it/s]  Input points: 18143, keypoints: 512
+  Voxel: 18143 -> 14662 (voxel=1mm)
+precompute SHOT:  29%|██▉       | 188/641 [02:09<04:28,  1.69it/s]  Input points: 21451, keypoints: 512
+  Voxel: 21451 -> 12626 (voxel=1mm)
+precompute SHOT:  29%|██▉       | 189/641 [02:10<04:33,  1.65it/s]  Input points: 22138, keypoints: 512
+  Voxel: 22138 -> 17700 (voxel=1mm)
+precompute SHOT:  30%|██▉       | 190/641 [02:11<04:48,  1.56it/s]  Input points: 24190, keypoints: 512
+  Voxel: 24190 -> 17656 (voxel=1mm)
+precompute SHOT:  30%|██▉       | 191/641 [02:11<04:47,  1.57it/s]  Input points: 23022, keypoints: 512
+  Voxel: 23022 -> 14481 (voxel=1mm)
+precompute SHOT:  30%|██▉       | 192/641 [02:12<05:17,  1.42it/s]  Input points: 20728, keypoints: 512
+  Voxel: 20728 -> 14617 (voxel=1mm)
+precompute SHOT:  30%|███       | 193/641 [02:13<05:07,  1.46it/s]  Input points: 25393, keypoints: 512
+  Voxel: 25393 -> 18617 (voxel=1mm)
+precompute SHOT:  30%|███       | 194/641 [02:14<05:28,  1.36it/s]  Input points: 21549, keypoints: 512
+  Voxel: 21549 -> 12619 (voxel=1mm)
+precompute SHOT:  30%|███       | 195/641 [02:14<05:15,  1.42it/s]  Input points: 21968, keypoints: 512
+  Voxel: 21968 -> 16241 (voxel=1mm)
+precompute SHOT:  31%|███       | 196/641 [02:15<05:04,  1.46it/s]  Input points: 21952, keypoints: 512
+  Voxel: 21952 -> 16700 (voxel=1mm)
+precompute SHOT:  31%|███       | 197/641 [02:16<05:06,  1.45it/s]  Input points: 18884, keypoints: 512
+  Voxel: 18884 -> 13702 (voxel=1mm)
+precompute SHOT:  31%|███       | 198/641 [02:16<04:59,  1.48it/s]  Input points: 18522, keypoints: 512
+  Voxel: 18522 -> 12011 (voxel=1mm)
+precompute SHOT:  31%|███       | 199/641 [02:17<04:37,  1.59it/s]  Input points: 19967, keypoints: 512
+  Voxel: 19967 -> 15602 (voxel=1mm)
+precompute SHOT:  31%|███       | 200/641 [02:17<04:36,  1.59it/s]  Input points: 21283, keypoints: 512
+  Voxel: 21283 -> 14705 (voxel=1mm)
+precompute SHOT:  31%|███▏      | 201/641 [02:18<04:46,  1.54it/s]  Input points: 21885, keypoints: 512
+  Voxel: 21885 -> 17384 (voxel=1mm)
+precompute SHOT:  32%|███▏      | 202/641 [02:19<04:38,  1.58it/s]  Input points: 19922, keypoints: 512
+  Voxel: 19922 -> 15519 (voxel=1mm)
+precompute SHOT:  32%|███▏      | 203/641 [02:19<04:29,  1.62it/s]  Input points: 18120, keypoints: 512
+  Voxel: 18120 -> 13062 (voxel=1mm)
+precompute SHOT:  32%|███▏      | 204/641 [02:20<04:17,  1.70it/s]  Input points: 24734, keypoints: 512
+  Voxel: 24734 -> 15046 (voxel=1mm)
+precompute SHOT:  32%|███▏      | 205/641 [02:21<04:41,  1.55it/s]  Input points: 24216, keypoints: 512
+  Voxel: 24216 -> 17094 (voxel=1mm)
+precompute SHOT:  32%|███▏      | 206/641 [02:21<04:42,  1.54it/s]  Input points: 21928, keypoints: 512
+  Voxel: 21928 -> 15356 (voxel=1mm)
+precompute SHOT:  32%|███▏      | 207/641 [02:22<04:32,  1.59it/s]  Input points: 18595, keypoints: 512
+  Voxel: 18595 -> 14239 (voxel=1mm)
+precompute SHOT:  32%|███▏      | 208/641 [02:22<04:34,  1.58it/s]  Input points: 23848, keypoints: 512
+  Voxel: 23848 -> 16764 (voxel=1mm)
+precompute SHOT:  33%|███▎      | 209/641 [02:23<04:46,  1.51it/s]  Input points: 17246, keypoints: 512
+  Voxel: 17246 -> 13234 (voxel=1mm)
+precompute SHOT:  33%|███▎      | 210/641 [02:24<04:19,  1.66it/s]  Input points: 18035, keypoints: 512
+  Voxel: 18035 -> 12722 (voxel=1mm)
+precompute SHOT:  33%|███▎      | 211/641 [02:24<04:17,  1.67it/s]  Input points: 22124, keypoints: 512
+  Voxel: 22124 -> 14048 (voxel=1mm)
+precompute SHOT:  33%|███▎      | 212/641 [02:25<04:24,  1.62it/s]  Input points: 22897, keypoints: 512
+  Voxel: 22897 -> 15643 (voxel=1mm)
+precompute SHOT:  33%|███▎      | 213/641 [02:25<04:21,  1.64it/s]  Input points: 22140, keypoints: 512
+  Voxel: 22140 -> 14370 (voxel=1mm)
+precompute SHOT:  33%|███▎      | 214/641 [02:26<04:17,  1.66it/s]  Input points: 20245, keypoints: 512
+  Voxel: 20245 -> 12420 (voxel=1mm)
+precompute SHOT:  34%|███▎      | 215/641 [02:27<04:14,  1.67it/s]  Input points: 23574, keypoints: 512
+  Voxel: 23574 -> 17447 (voxel=1mm)
+precompute SHOT:  34%|███▎      | 216/641 [02:27<04:19,  1.63it/s]  Input points: 23841, keypoints: 512
+  Voxel: 23841 -> 14141 (voxel=1mm)
+precompute SHOT:  34%|███▍      | 217/641 [02:28<04:19,  1.63it/s]  Input points: 19238, keypoints: 512
+  Voxel: 19238 -> 13099 (voxel=1mm)
+precompute SHOT:  34%|███▍      | 218/641 [02:28<04:19,  1.63it/s]  Input points: 20645, keypoints: 512
+  Voxel: 20645 -> 15089 (voxel=1mm)
+precompute SHOT:  34%|███▍      | 219/641 [02:29<04:17,  1.64it/s]  Input points: 18895, keypoints: 512
+  Voxel: 18895 -> 13054 (voxel=1mm)
+precompute SHOT:  34%|███▍      | 220/641 [02:30<04:05,  1.71it/s]  Input points: 22718, keypoints: 512
+  Voxel: 22718 -> 16945 (voxel=1mm)
+precompute SHOT:  34%|███▍      | 221/641 [02:30<04:17,  1.63it/s]  Input points: 21389, keypoints: 512
+  Voxel: 21389 -> 16725 (voxel=1mm)
+precompute SHOT:  35%|███▍      | 222/641 [02:31<04:14,  1.65it/s]  Input points: 22029, keypoints: 512
+  Voxel: 22029 -> 13909 (voxel=1mm)
+precompute SHOT:  35%|███▍      | 223/641 [02:32<04:22,  1.60it/s]  Input points: 21412, keypoints: 512
+  Voxel: 21412 -> 16336 (voxel=1mm)
+precompute SHOT:  35%|███▍      | 224/641 [02:32<04:21,  1.59it/s]  Input points: 26127, keypoints: 512
+  Voxel: 26127 -> 21009 (voxel=1mm)
+precompute SHOT:  35%|███▌      | 225/641 [02:33<04:27,  1.56it/s]  Input points: 22018, keypoints: 512
+  Voxel: 22018 -> 16298 (voxel=1mm)
+precompute SHOT:  35%|███▌      | 226/641 [02:34<04:27,  1.55it/s]  Input points: 21516, keypoints: 512
+  Voxel: 21516 -> 13678 (voxel=1mm)
+precompute SHOT:  35%|███▌      | 227/641 [02:34<04:24,  1.57it/s]  Input points: 22265, keypoints: 512
+  Voxel: 22265 -> 17320 (voxel=1mm)
+precompute SHOT:  36%|███▌      | 228/641 [02:35<04:19,  1.59it/s]  Input points: 21329, keypoints: 512
+  Voxel: 21329 -> 16243 (voxel=1mm)
+precompute SHOT:  36%|███▌      | 229/641 [02:35<04:09,  1.65it/s]  Input points: 20299, keypoints: 512
+  Voxel: 20299 -> 12378 (voxel=1mm)
+precompute SHOT:  36%|███▌      | 230/641 [02:36<04:02,  1.69it/s]  Input points: 20270, keypoints: 512
+  Voxel: 20270 -> 15633 (voxel=1mm)
+precompute SHOT:  36%|███▌      | 231/641 [02:36<03:53,  1.75it/s]  Input points: 18738, keypoints: 512
+  Voxel: 18738 -> 13766 (voxel=1mm)
+precompute SHOT:  36%|███▌      | 232/641 [02:37<04:01,  1.69it/s]  Input points: 25834, keypoints: 512
+  Voxel: 25834 -> 17827 (voxel=1mm)
+precompute SHOT:  36%|███▋      | 233/641 [02:38<04:02,  1.68it/s]  Input points: 19767, keypoints: 512
+  Voxel: 19767 -> 12155 (voxel=1mm)
+precompute SHOT:  37%|███▋      | 234/641 [02:38<03:51,  1.76it/s]  Input points: 19999, keypoints: 512
+  Voxel: 19999 -> 14150 (voxel=1mm)
+precompute SHOT:  37%|███▋      | 235/641 [02:39<03:45,  1.80it/s]  Input points: 21113, keypoints: 512
+  Voxel: 21113 -> 16938 (voxel=1mm)
+precompute SHOT:  37%|███▋      | 236/641 [02:39<03:53,  1.73it/s]  Input points: 20852, keypoints: 512
+  Voxel: 20852 -> 15420 (voxel=1mm)
+precompute SHOT:  37%|███▋      | 237/641 [02:40<03:56,  1.71it/s]  Input points: 21495, keypoints: 512
+  Voxel: 21495 -> 16152 (voxel=1mm)
+precompute SHOT:  37%|███▋      | 238/641 [02:40<04:01,  1.67it/s]  Input points: 18888, keypoints: 512
+  Voxel: 18888 -> 11820 (voxel=1mm)
+precompute SHOT:  37%|███▋      | 239/641 [02:41<03:53,  1.72it/s]  Input points: 21357, keypoints: 512
+  Voxel: 21357 -> 16484 (voxel=1mm)
+precompute SHOT:  37%|███▋      | 240/641 [02:42<04:13,  1.58it/s]  Input points: 23061, keypoints: 512
+  Voxel: 23061 -> 16102 (voxel=1mm)
+precompute SHOT:  38%|███▊      | 241/641 [02:42<04:10,  1.59it/s]  Input points: 19030, keypoints: 512
+  Voxel: 19030 -> 13563 (voxel=1mm)
+precompute SHOT:  38%|███▊      | 242/641 [02:43<04:01,  1.65it/s]  Input points: 21687, keypoints: 512
+  Voxel: 21687 -> 14492 (voxel=1mm)
+precompute SHOT:  38%|███▊      | 243/641 [02:44<04:02,  1.64it/s]  Input points: 21911, keypoints: 512
+  Voxel: 21911 -> 13510 (voxel=1mm)
+precompute SHOT:  38%|███▊      | 244/641 [02:44<04:24,  1.50it/s]  Input points: 24675, keypoints: 512
+  Voxel: 24675 -> 17360 (voxel=1mm)
+precompute SHOT:  38%|███▊      | 245/641 [02:45<04:24,  1.49it/s]  Input points: 21800, keypoints: 512
+  Voxel: 21800 -> 14905 (voxel=1mm)
+precompute SHOT:  38%|███▊      | 246/641 [02:46<04:16,  1.54it/s]  Input points: 18289, keypoints: 512
+  Voxel: 18289 -> 14627 (voxel=1mm)
+precompute SHOT:  39%|███▊      | 247/641 [02:46<04:06,  1.60it/s]  Input points: 17179, keypoints: 512
+  Voxel: 17179 -> 13519 (voxel=1mm)
+precompute SHOT:  39%|███▊      | 248/641 [02:47<03:57,  1.65it/s]  Input points: 21292, keypoints: 512
+  Voxel: 21292 -> 13568 (voxel=1mm)
+precompute SHOT:  39%|███▉      | 249/641 [02:47<03:51,  1.69it/s]  Input points: 19523, keypoints: 512
+  Voxel: 19523 -> 12865 (voxel=1mm)
+precompute SHOT:  39%|███▉      | 250/641 [02:48<03:45,  1.73it/s]  Input points: 17186, keypoints: 512
+  Voxel: 17186 -> 11588 (voxel=1mm)
+precompute SHOT:  39%|███▉      | 251/641 [02:48<03:34,  1.82it/s]  Input points: 20835, keypoints: 512
+  Voxel: 20835 -> 14658 (voxel=1mm)
+precompute SHOT:  39%|███▉      | 252/641 [02:49<03:42,  1.75it/s]  Input points: 23925, keypoints: 512
+  Voxel: 23925 -> 15838 (voxel=1mm)
+precompute SHOT:  39%|███▉      | 253/641 [02:50<03:58,  1.63it/s]  Input points: 17477, keypoints: 512
+  Voxel: 17477 -> 12803 (voxel=1mm)
+precompute SHOT:  40%|███▉      | 254/641 [02:50<03:49,  1.69it/s]  Input points: 25035, keypoints: 512
+  Voxel: 25035 -> 15863 (voxel=1mm)
+precompute SHOT:  40%|███▉      | 255/641 [02:51<03:59,  1.61it/s]  Input points: 19060, keypoints: 512
+  Voxel: 19060 -> 14454 (voxel=1mm)
+precompute SHOT:  40%|███▉      | 256/641 [02:52<03:58,  1.61it/s]  Input points: 18904, keypoints: 512
+  Voxel: 18904 -> 13716 (voxel=1mm)
+precompute SHOT:  40%|████      | 257/641 [02:52<04:03,  1.58it/s]  Input points: 19206, keypoints: 512
+  Voxel: 19206 -> 13064 (voxel=1mm)
+precompute SHOT:  40%|████      | 258/641 [02:53<03:52,  1.65it/s]  Input points: 17516, keypoints: 512
+  Voxel: 17516 -> 10178 (voxel=1mm)
+precompute SHOT:  40%|████      | 259/641 [02:53<03:39,  1.74it/s]  Input points: 23029, keypoints: 512
+  Voxel: 23029 -> 17076 (voxel=1mm)
+precompute SHOT:  41%|████      | 260/641 [02:54<03:49,  1.66it/s]  Input points: 22618, keypoints: 512
+  Voxel: 22618 -> 16103 (voxel=1mm)
+precompute SHOT:  41%|████      | 261/641 [02:55<04:04,  1.56it/s]  Input points: 19607, keypoints: 512
+  Voxel: 19607 -> 13795 (voxel=1mm)
+precompute SHOT:  41%|████      | 262/641 [02:55<03:41,  1.71it/s]  Input points: 21566, keypoints: 512
+  Voxel: 21566 -> 13375 (voxel=1mm)
+precompute SHOT:  41%|████      | 263/641 [02:56<03:39,  1.73it/s]  Input points: 19898, keypoints: 512
+  Voxel: 19898 -> 12815 (voxel=1mm)
+precompute SHOT:  41%|████      | 264/641 [02:56<03:27,  1.82it/s]  Input points: 21531, keypoints: 512
+  Voxel: 21531 -> 15931 (voxel=1mm)
+precompute SHOT:  41%|████▏     | 265/641 [02:57<03:35,  1.74it/s]  Input points: 20309, keypoints: 512
+  Voxel: 20309 -> 14629 (voxel=1mm)
+precompute SHOT:  41%|████▏     | 266/641 [02:57<03:30,  1.78it/s]  Input points: 20598, keypoints: 512
+  Voxel: 20598 -> 14015 (voxel=1mm)
+precompute SHOT:  42%|████▏     | 267/641 [02:58<03:31,  1.76it/s]  Input points: 23342, keypoints: 512
+  Voxel: 23342 -> 16290 (voxel=1mm)
+precompute SHOT:  42%|████▏     | 268/641 [02:59<03:41,  1.68it/s]  Input points: 22065, keypoints: 512
+  Voxel: 22065 -> 15333 (voxel=1mm)
+precompute SHOT:  42%|████▏     | 269/641 [02:59<03:48,  1.63it/s]  Input points: 18964, keypoints: 512
+  Voxel: 18964 -> 14111 (voxel=1mm)
+precompute SHOT:  42%|████▏     | 270/641 [03:00<03:36,  1.72it/s]  Input points: 24338, keypoints: 512
+  Voxel: 24338 -> 17883 (voxel=1mm)
+precompute SHOT:  42%|████▏     | 271/641 [03:00<03:45,  1.64it/s]  Input points: 19149, keypoints: 512
+  Voxel: 19149 -> 12465 (voxel=1mm)
+precompute SHOT:  42%|████▏     | 272/641 [03:01<03:41,  1.66it/s]  Input points: 24495, keypoints: 512
+  Voxel: 24495 -> 18490 (voxel=1mm)
+precompute SHOT:  43%|████▎     | 273/641 [03:02<03:50,  1.60it/s]  Input points: 19401, keypoints: 512
+  Voxel: 19401 -> 12682 (voxel=1mm)
+precompute SHOT:  43%|████▎     | 274/641 [03:02<03:43,  1.64it/s]  Input points: 24857, keypoints: 512
+  Voxel: 24857 -> 19730 (voxel=1mm)
+precompute SHOT:  43%|████▎     | 275/641 [03:03<03:57,  1.54it/s]  Input points: 21322, keypoints: 512
+  Voxel: 21322 -> 12912 (voxel=1mm)
+precompute SHOT:  43%|████▎     | 276/641 [03:04<03:53,  1.56it/s]  Input points: 19861, keypoints: 512
+  Voxel: 19861 -> 14848 (voxel=1mm)
+precompute SHOT:  43%|████▎     | 277/641 [03:04<03:47,  1.60it/s]  Input points: 22201, keypoints: 512
+  Voxel: 22201 -> 17777 (voxel=1mm)
+precompute SHOT:  43%|████▎     | 278/641 [03:05<03:56,  1.53it/s]  Input points: 19386, keypoints: 512
+  Voxel: 19386 -> 15151 (voxel=1mm)
+precompute SHOT:  44%|████▎     | 279/641 [03:05<03:44,  1.61it/s]  Input points: 19466, keypoints: 512
+  Voxel: 19466 -> 13839 (voxel=1mm)
+precompute SHOT:  44%|████▎     | 280/641 [03:06<03:44,  1.61it/s]  Input points: 21554, keypoints: 512
+  Voxel: 21554 -> 16371 (voxel=1mm)
+precompute SHOT:  44%|████▍     | 281/641 [03:07<04:05,  1.47it/s]  Input points: 21565, keypoints: 512
+  Voxel: 21565 -> 15171 (voxel=1mm)
+precompute SHOT:  44%|████▍     | 282/641 [03:08<03:59,  1.50it/s]  Input points: 21988, keypoints: 512
+  Voxel: 21988 -> 14830 (voxel=1mm)
+precompute SHOT:  44%|████▍     | 283/641 [03:08<03:50,  1.55it/s]  Input points: 18541, keypoints: 512
+  Voxel: 18541 -> 15596 (voxel=1mm)
+precompute SHOT:  44%|████▍     | 284/641 [03:09<03:32,  1.68it/s]  Input points: 21582, keypoints: 512
+  Voxel: 21582 -> 16960 (voxel=1mm)
+precompute SHOT:  44%|████▍     | 285/641 [03:09<03:37,  1.64it/s]  Input points: 21077, keypoints: 512
+  Voxel: 21077 -> 14829 (voxel=1mm)
+precompute SHOT:  45%|████▍     | 286/641 [03:10<03:33,  1.66it/s]  Input points: 20286, keypoints: 512
+  Voxel: 20286 -> 12661 (voxel=1mm)
+precompute SHOT:  45%|████▍     | 287/641 [03:10<03:28,  1.69it/s]  Input points: 20153, keypoints: 512
+  Voxel: 20153 -> 12315 (voxel=1mm)
+precompute SHOT:  45%|████▍     | 288/641 [03:11<03:21,  1.75it/s]  Input points: 19681, keypoints: 512
+  Voxel: 19681 -> 14986 (voxel=1mm)
+precompute SHOT:  45%|████▌     | 289/641 [03:11<03:20,  1.75it/s]  Input points: 22676, keypoints: 512
+  Voxel: 22676 -> 14765 (voxel=1mm)
+precompute SHOT:  45%|████▌     | 290/641 [03:12<03:28,  1.68it/s]  Input points: 22774, keypoints: 512
+  Voxel: 22774 -> 17563 (voxel=1mm)
+precompute SHOT:  45%|████▌     | 291/641 [03:13<03:25,  1.70it/s]  Input points: 20934, keypoints: 512
+  Voxel: 20934 -> 14751 (voxel=1mm)
+precompute SHOT:  46%|████▌     | 292/641 [03:13<03:23,  1.71it/s]  Input points: 18074, keypoints: 512
+  Voxel: 18074 -> 13236 (voxel=1mm)
+precompute SHOT:  46%|████▌     | 293/641 [03:14<03:25,  1.69it/s]  Input points: 16340, keypoints: 512
+  Voxel: 16340 -> 10149 (voxel=1mm)
+precompute SHOT:  46%|████▌     | 294/641 [03:14<03:20,  1.73it/s]  Input points: 22918, keypoints: 512
+  Voxel: 22918 -> 15428 (voxel=1mm)
+precompute SHOT:  46%|████▌     | 295/641 [03:15<03:31,  1.64it/s]  Input points: 21733, keypoints: 512
+  Voxel: 21733 -> 15496 (voxel=1mm)
+precompute SHOT:  46%|████▌     | 296/641 [03:16<03:23,  1.69it/s]  Input points: 19989, keypoints: 512
+  Voxel: 19989 -> 12575 (voxel=1mm)
+precompute SHOT:  46%|████▋     | 297/641 [03:16<03:23,  1.69it/s]  Input points: 23549, keypoints: 512
+  Voxel: 23549 -> 17066 (voxel=1mm)
+precompute SHOT:  46%|████▋     | 298/641 [03:17<03:27,  1.66it/s]  Input points: 21356, keypoints: 512
+  Voxel: 21356 -> 16672 (voxel=1mm)
+precompute SHOT:  47%|████▋     | 299/641 [03:18<03:31,  1.62it/s]  Input points: 20062, keypoints: 512
+  Voxel: 20062 -> 14521 (voxel=1mm)
+precompute SHOT:  47%|████▋     | 300/641 [03:18<03:32,  1.60it/s]  Input points: 21040, keypoints: 512
+  Voxel: 21040 -> 14664 (voxel=1mm)
+precompute SHOT:  47%|████▋     | 301/641 [03:19<03:32,  1.60it/s]  Input points: 22752, keypoints: 512
+  Voxel: 22752 -> 16457 (voxel=1mm)
+precompute SHOT:  47%|████▋     | 302/641 [03:19<03:31,  1.60it/s]  Input points: 17422, keypoints: 512
+  Voxel: 17422 -> 13696 (voxel=1mm)
+precompute SHOT:  47%|████▋     | 303/641 [03:20<03:24,  1.65it/s]  Input points: 20043, keypoints: 512
+  Voxel: 20043 -> 15211 (voxel=1mm)
+precompute SHOT:  47%|████▋     | 304/641 [03:21<03:25,  1.64it/s]  Input points: 19349, keypoints: 512
+  Voxel: 19349 -> 14684 (voxel=1mm)
+precompute SHOT:  48%|████▊     | 305/641 [03:21<03:34,  1.57it/s]  Input points: 18395, keypoints: 512
+  Voxel: 18395 -> 13257 (voxel=1mm)
+precompute SHOT:  48%|████▊     | 306/641 [03:22<03:31,  1.59it/s]  Input points: 21984, keypoints: 512
+  Voxel: 21984 -> 15660 (voxel=1mm)
+precompute SHOT:  48%|████▊     | 307/641 [03:23<03:39,  1.52it/s]  Input points: 22614, keypoints: 512
+  Voxel: 22614 -> 14586 (voxel=1mm)
+precompute SHOT:  48%|████▊     | 308/641 [03:23<03:45,  1.48it/s]  Input points: 22182, keypoints: 512
+  Voxel: 22182 -> 15565 (voxel=1mm)
+precompute SHOT:  48%|████▊     | 309/641 [03:24<03:32,  1.56it/s]  Input points: 18630, keypoints: 512
+  Voxel: 18630 -> 14613 (voxel=1mm)
+precompute SHOT:  48%|████▊     | 310/641 [03:24<03:19,  1.66it/s]  Input points: 21999, keypoints: 512
+  Voxel: 21999 -> 16386 (voxel=1mm)
+precompute SHOT:  49%|████▊     | 311/641 [03:25<03:25,  1.60it/s]  Input points: 21092, keypoints: 512
+  Voxel: 21092 -> 12725 (voxel=1mm)
+precompute SHOT:  49%|████▊     | 312/641 [03:26<03:22,  1.62it/s]  Input points: 22724, keypoints: 512
+  Voxel: 22724 -> 17258 (voxel=1mm)
+precompute SHOT:  49%|████▉     | 313/641 [03:26<03:29,  1.57it/s]  Input points: 22748, keypoints: 512
+  Voxel: 22748 -> 16658 (voxel=1mm)
+precompute SHOT:  49%|████▉     | 314/641 [03:27<03:37,  1.51it/s]  Input points: 20515, keypoints: 512
+  Voxel: 20515 -> 13651 (voxel=1mm)
+precompute SHOT:  49%|████▉     | 315/641 [03:28<03:39,  1.48it/s]  Input points: 17917, keypoints: 512
+  Voxel: 17917 -> 13205 (voxel=1mm)
+precompute SHOT:  49%|████▉     | 316/641 [03:28<03:19,  1.63it/s]  Input points: 21059, keypoints: 512
+  Voxel: 21059 -> 17394 (voxel=1mm)
+precompute SHOT:  49%|████▉     | 317/641 [03:29<03:28,  1.55it/s]  Input points: 24591, keypoints: 512
+  Voxel: 24591 -> 17059 (voxel=1mm)
+precompute SHOT:  50%|████▉     | 318/641 [03:30<03:36,  1.49it/s]  Input points: 21414, keypoints: 512
+  Voxel: 21414 -> 14144 (voxel=1mm)
+precompute SHOT:  50%|████▉     | 319/641 [03:30<03:40,  1.46it/s]  Input points: 14909, keypoints: 512
+  Voxel: 14909 -> 9800 (voxel=1mm)
+precompute SHOT:  50%|████▉     | 320/641 [03:31<03:20,  1.60it/s]  Input points: 20923, keypoints: 512
+  Voxel: 20923 -> 13090 (voxel=1mm)
+precompute SHOT:  50%|█████     | 321/641 [03:32<03:25,  1.55it/s]  Input points: 20248, keypoints: 512
+  Voxel: 20248 -> 15074 (voxel=1mm)
+precompute SHOT:  50%|█████     | 322/641 [03:32<03:22,  1.58it/s]  Input points: 20245, keypoints: 512
+  Voxel: 20245 -> 13185 (voxel=1mm)
+precompute SHOT:  50%|█████     | 323/641 [03:33<03:11,  1.66it/s]  Input points: 17296, keypoints: 512
+  Voxel: 17296 -> 13837 (voxel=1mm)
+precompute SHOT:  51%|█████     | 324/641 [03:33<03:11,  1.65it/s]  Input points: 16570, keypoints: 512
+  Voxel: 16570 -> 11946 (voxel=1mm)
+precompute SHOT:  51%|█████     | 325/641 [03:34<03:09,  1.67it/s]  Input points: 26346, keypoints: 512
+  Voxel: 26346 -> 20088 (voxel=1mm)
+precompute SHOT:  51%|█████     | 326/641 [03:35<03:24,  1.54it/s]  Input points: 21905, keypoints: 512
+  Voxel: 21905 -> 14991 (voxel=1mm)
+precompute SHOT:  51%|█████     | 327/641 [03:35<03:32,  1.48it/s]  Input points: 23025, keypoints: 512
+  Voxel: 23025 -> 18529 (voxel=1mm)
+precompute SHOT:  51%|█████     | 328/641 [03:36<03:32,  1.48it/s]  Input points: 22833, keypoints: 512
+  Voxel: 22833 -> 15518 (voxel=1mm)
+precompute SHOT:  51%|█████▏    | 329/641 [03:37<03:25,  1.51it/s]  Input points: 17856, keypoints: 512
+  Voxel: 17856 -> 13711 (voxel=1mm)
+precompute SHOT:  51%|█████▏    | 330/641 [03:37<03:09,  1.64it/s]  Input points: 21765, keypoints: 512
+  Voxel: 21765 -> 15385 (voxel=1mm)
+precompute SHOT:  52%|█████▏    | 331/641 [03:38<03:25,  1.51it/s]  Input points: 22444, keypoints: 512
+  Voxel: 22444 -> 14176 (voxel=1mm)
+precompute SHOT:  52%|█████▏    | 332/641 [03:39<03:21,  1.53it/s]  Input points: 21646, keypoints: 512
+  Voxel: 21646 -> 12754 (voxel=1mm)
+precompute SHOT:  52%|█████▏    | 333/641 [03:39<03:32,  1.45it/s]  Input points: 21659, keypoints: 512
+  Voxel: 21659 -> 14140 (voxel=1mm)
+precompute SHOT:  52%|█████▏    | 334/641 [03:40<03:27,  1.48it/s]  Input points: 22166, keypoints: 512
+  Voxel: 22166 -> 15235 (voxel=1mm)
+precompute SHOT:  52%|█████▏    | 335/641 [03:41<03:24,  1.50it/s]  Input points: 19502, keypoints: 512
+  Voxel: 19502 -> 13146 (voxel=1mm)
+precompute SHOT:  52%|█████▏    | 336/641 [03:41<03:12,  1.59it/s]  Input points: 24630, keypoints: 512
+  Voxel: 24630 -> 16136 (voxel=1mm)
+precompute SHOT:  53%|█████▎    | 337/641 [03:42<03:19,  1.53it/s]  Input points: 21613, keypoints: 512
+  Voxel: 21613 -> 15601 (voxel=1mm)
+precompute SHOT:  53%|█████▎    | 338/641 [03:43<03:33,  1.42it/s]  Input points: 19591, keypoints: 512
+  Voxel: 19591 -> 16008 (voxel=1mm)
+precompute SHOT:  53%|█████▎    | 339/641 [03:43<03:26,  1.46it/s]  Input points: 16321, keypoints: 512
+  Voxel: 16321 -> 10508 (voxel=1mm)
+precompute SHOT:  53%|█████▎    | 340/641 [03:44<03:09,  1.59it/s]  Input points: 19447, keypoints: 512
+  Voxel: 19447 -> 12669 (voxel=1mm)
+precompute SHOT:  53%|█████▎    | 341/641 [03:45<03:08,  1.59it/s]  Input points: 23675, keypoints: 512
+  Voxel: 23675 -> 15854 (voxel=1mm)
+precompute SHOT:  53%|█████▎    | 342/641 [03:45<03:15,  1.53it/s]  Input points: 22846, keypoints: 512
+  Voxel: 22846 -> 17198 (voxel=1mm)
+precompute SHOT:  54%|█████▎    | 343/641 [03:46<03:16,  1.52it/s]  Input points: 19052, keypoints: 512
+  Voxel: 19052 -> 15342 (voxel=1mm)
+precompute SHOT:  54%|█████▎    | 344/641 [03:47<03:09,  1.57it/s]  Input points: 20131, keypoints: 512
+  Voxel: 20131 -> 16934 (voxel=1mm)
+precompute SHOT:  54%|█████▍    | 345/641 [03:47<03:09,  1.56it/s]  Input points: 21082, keypoints: 512
+  Voxel: 21082 -> 13265 (voxel=1mm)
+precompute SHOT:  54%|█████▍    | 346/641 [03:48<03:06,  1.58it/s]  Input points: 17997, keypoints: 512
+  Voxel: 17997 -> 13041 (voxel=1mm)
+precompute SHOT:  54%|█████▍    | 347/641 [03:48<03:08,  1.56it/s]  Input points: 17539, keypoints: 512
+  Voxel: 17539 -> 12925 (voxel=1mm)
+precompute SHOT:  54%|█████▍    | 348/641 [03:49<02:57,  1.65it/s]  Input points: 19864, keypoints: 512
+  Voxel: 19864 -> 13689 (voxel=1mm)
+precompute SHOT:  54%|█████▍    | 349/641 [03:50<02:53,  1.69it/s]  Input points: 19629, keypoints: 512
+  Voxel: 19629 -> 10695 (voxel=1mm)
+precompute SHOT:  55%|█████▍    | 350/641 [03:50<02:53,  1.67it/s]  Input points: 23454, keypoints: 512
+  Voxel: 23454 -> 17992 (voxel=1mm)
+precompute SHOT:  55%|█████▍    | 351/641 [03:51<03:08,  1.54it/s]  Input points: 22321, keypoints: 512
+  Voxel: 22321 -> 15896 (voxel=1mm)
+precompute SHOT:  55%|█████▍    | 352/641 [03:52<03:07,  1.54it/s]  Input points: 17860, keypoints: 512
+  Voxel: 17860 -> 12585 (voxel=1mm)
+precompute SHOT:  55%|█████▌    | 353/641 [03:52<02:54,  1.65it/s]  Input points: 19342, keypoints: 512
+  Voxel: 19342 -> 15839 (voxel=1mm)
+precompute SHOT:  55%|█████▌    | 354/641 [03:53<02:54,  1.64it/s]  Input points: 21986, keypoints: 512
+  Voxel: 21986 -> 13195 (voxel=1mm)
+precompute SHOT:  55%|█████▌    | 355/641 [03:54<03:12,  1.49it/s]  Input points: 19674, keypoints: 512
+  Voxel: 19674 -> 14690 (voxel=1mm)
+precompute SHOT:  56%|█████▌    | 356/641 [03:54<03:14,  1.47it/s]  Input points: 18679, keypoints: 512
+  Voxel: 18679 -> 14210 (voxel=1mm)
+precompute SHOT:  56%|█████▌    | 357/641 [03:55<03:01,  1.57it/s]  Input points: 18906, keypoints: 512
+  Voxel: 18906 -> 13773 (voxel=1mm)
+precompute SHOT:  56%|█████▌    | 358/641 [03:55<02:53,  1.63it/s]  Input points: 23419, keypoints: 512
+  Voxel: 23419 -> 16104 (voxel=1mm)
+precompute SHOT:  56%|█████▌    | 359/641 [03:56<03:05,  1.52it/s]  Input points: 21009, keypoints: 512
+  Voxel: 21009 -> 14459 (voxel=1mm)
+precompute SHOT:  56%|█████▌    | 360/641 [03:57<03:08,  1.49it/s]  Input points: 20914, keypoints: 512
+  Voxel: 20914 -> 14063 (voxel=1mm)
+precompute SHOT:  56%|█████▋    | 361/641 [03:57<03:04,  1.52it/s]  Input points: 20894, keypoints: 512
+  Voxel: 20894 -> 11920 (voxel=1mm)
+precompute SHOT:  56%|█████▋    | 362/641 [03:58<02:57,  1.57it/s]  Input points: 19031, keypoints: 512
+  Voxel: 19031 -> 12413 (voxel=1mm)
+precompute SHOT:  57%|█████▋    | 363/641 [03:59<02:55,  1.58it/s]  Input points: 22714, keypoints: 512
+  Voxel: 22714 -> 17455 (voxel=1mm)
+precompute SHOT:  57%|█████▋    | 364/641 [03:59<03:08,  1.47it/s]  Input points: 19204, keypoints: 512
+  Voxel: 19204 -> 13297 (voxel=1mm)
+precompute SHOT:  57%|█████▋    | 365/641 [04:00<02:58,  1.55it/s]  Input points: 18728, keypoints: 512
+  Voxel: 18728 -> 12643 (voxel=1mm)
+precompute SHOT:  57%|█████▋    | 366/641 [04:01<02:55,  1.56it/s]  Input points: 19495, keypoints: 512
+  Voxel: 19495 -> 12101 (voxel=1mm)
+precompute SHOT:  57%|█████▋    | 367/641 [04:01<02:47,  1.63it/s]  Input points: 20181, keypoints: 512
+  Voxel: 20181 -> 14040 (voxel=1mm)
+precompute SHOT:  57%|█████▋    | 368/641 [04:02<02:54,  1.57it/s]  Input points: 20982, keypoints: 512
+  Voxel: 20982 -> 13494 (voxel=1mm)
+precompute SHOT:  58%|█████▊    | 369/641 [04:02<02:51,  1.59it/s]  Input points: 21176, keypoints: 512
+  Voxel: 21176 -> 14990 (voxel=1mm)
+precompute SHOT:  58%|█████▊    | 370/641 [04:03<02:46,  1.63it/s]  Input points: 20982, keypoints: 512
+  Voxel: 20982 -> 14883 (voxel=1mm)
+precompute SHOT:  58%|█████▊    | 371/641 [04:04<02:53,  1.55it/s]  Input points: 19950, keypoints: 512
+  Voxel: 19950 -> 13572 (voxel=1mm)
+precompute SHOT:  58%|█████▊    | 372/641 [04:04<02:44,  1.63it/s]  Input points: 19169, keypoints: 512
+  Voxel: 19169 -> 12913 (voxel=1mm)
+precompute SHOT:  58%|█████▊    | 373/641 [04:05<02:44,  1.63it/s]  Input points: 20188, keypoints: 512
+  Voxel: 20188 -> 14164 (voxel=1mm)
+precompute SHOT:  58%|█████▊    | 374/641 [04:06<02:41,  1.65it/s]  Input points: 20395, keypoints: 512
+  Voxel: 20395 -> 12435 (voxel=1mm)
+precompute SHOT:  59%|█████▊    | 375/641 [04:06<02:40,  1.66it/s]  Input points: 19575, keypoints: 512
+  Voxel: 19575 -> 13456 (voxel=1mm)
+precompute SHOT:  59%|█████▊    | 376/641 [04:07<02:42,  1.63it/s]  Input points: 21675, keypoints: 512
+  Voxel: 21675 -> 14485 (voxel=1mm)
+precompute SHOT:  59%|█████▉    | 377/641 [04:07<02:43,  1.62it/s]  Input points: 20768, keypoints: 512
+  Voxel: 20768 -> 14731 (voxel=1mm)
+precompute SHOT:  59%|█████▉    | 378/641 [04:08<02:41,  1.63it/s]  Input points: 24057, keypoints: 512
+  Voxel: 24057 -> 18130 (voxel=1mm)
+precompute SHOT:  59%|█████▉    | 379/641 [04:09<02:51,  1.53it/s]  Input points: 23406, keypoints: 512
+  Voxel: 23406 -> 15728 (voxel=1mm)
+precompute SHOT:  59%|█████▉    | 380/641 [04:09<02:51,  1.52it/s]  Input points: 19506, keypoints: 512
+  Voxel: 19506 -> 14839 (voxel=1mm)
+precompute SHOT:  59%|█████▉    | 381/641 [04:10<02:43,  1.59it/s]  Input points: 19010, keypoints: 512
+  Voxel: 19010 -> 12511 (voxel=1mm)
+precompute SHOT:  60%|█████▉    | 382/641 [04:11<02:39,  1.62it/s]  Input points: 18550, keypoints: 512
+  Voxel: 18550 -> 13214 (voxel=1mm)
+precompute SHOT:  60%|█████▉    | 383/641 [04:11<02:41,  1.60it/s]  Input points: 21934, keypoints: 512
+  Voxel: 21934 -> 14828 (voxel=1mm)
+precompute SHOT:  60%|█████▉    | 384/641 [04:12<02:42,  1.58it/s]  Input points: 23326, keypoints: 512
+  Voxel: 23326 -> 14668 (voxel=1mm)
+precompute SHOT:  60%|██████    | 385/641 [04:13<02:44,  1.55it/s]  Input points: 19551, keypoints: 512
+  Voxel: 19551 -> 14744 (voxel=1mm)
+precompute SHOT:  60%|██████    | 386/641 [04:13<02:38,  1.61it/s]  Input points: 18488, keypoints: 512
+  Voxel: 18488 -> 13709 (voxel=1mm)
+precompute SHOT:  60%|██████    | 387/641 [04:14<02:35,  1.63it/s]  Input points: 22935, keypoints: 512
+  Voxel: 22935 -> 18239 (voxel=1mm)
+precompute SHOT:  61%|██████    | 388/641 [04:14<02:38,  1.59it/s]  Input points: 19235, keypoints: 512
+  Voxel: 19235 -> 11708 (voxel=1mm)
+precompute SHOT:  61%|██████    | 389/641 [04:15<02:31,  1.66it/s]  Input points: 23434, keypoints: 512
+  Voxel: 23434 -> 17231 (voxel=1mm)
+precompute SHOT:  61%|██████    | 390/641 [04:16<02:34,  1.62it/s]  Input points: 21856, keypoints: 512
+  Voxel: 21856 -> 14207 (voxel=1mm)
+precompute SHOT:  61%|██████    | 391/641 [04:16<02:39,  1.57it/s]  Input points: 23320, keypoints: 512
+  Voxel: 23320 -> 17849 (voxel=1mm)
+precompute SHOT:  61%|██████    | 392/641 [04:17<02:43,  1.52it/s]  Input points: 18042, keypoints: 512
+  Voxel: 18042 -> 13522 (voxel=1mm)
+precompute SHOT:  61%|██████▏   | 393/641 [04:17<02:35,  1.59it/s]  Input points: 20893, keypoints: 512
+  Voxel: 20893 -> 15587 (voxel=1mm)
+precompute SHOT:  61%|██████▏   | 394/641 [04:18<02:36,  1.58it/s]  Input points: 18442, keypoints: 512
+  Voxel: 18442 -> 13852 (voxel=1mm)
+precompute SHOT:  62%|██████▏   | 395/641 [04:19<02:23,  1.71it/s]  Input points: 21189, keypoints: 512
+  Voxel: 21189 -> 13459 (voxel=1mm)
+precompute SHOT:  62%|██████▏   | 396/641 [04:19<02:22,  1.72it/s]  Input points: 20729, keypoints: 512
+  Voxel: 20729 -> 16363 (voxel=1mm)
+precompute SHOT:  62%|██████▏   | 397/641 [04:20<02:22,  1.71it/s]  Input points: 24425, keypoints: 512
+  Voxel: 24425 -> 18209 (voxel=1mm)
+precompute SHOT:  62%|██████▏   | 398/641 [04:21<02:39,  1.52it/s]  Input points: 21510, keypoints: 512
+  Voxel: 21510 -> 15299 (voxel=1mm)
+precompute SHOT:  62%|██████▏   | 399/641 [04:21<02:30,  1.61it/s]  Input points: 19250, keypoints: 512
+  Voxel: 19250 -> 13938 (voxel=1mm)
+precompute SHOT:  62%|██████▏   | 400/641 [04:22<02:22,  1.69it/s]  Input points: 19346, keypoints: 512
+  Voxel: 19346 -> 14287 (voxel=1mm)
+precompute SHOT:  63%|██████▎   | 401/641 [04:22<02:17,  1.74it/s]  Input points: 21179, keypoints: 512
+  Voxel: 21179 -> 15392 (voxel=1mm)
+precompute SHOT:  63%|██████▎   | 402/641 [04:23<02:20,  1.70it/s]  Input points: 17080, keypoints: 512
+  Voxel: 17080 -> 12577 (voxel=1mm)
+precompute SHOT:  63%|██████▎   | 403/641 [04:23<02:15,  1.76it/s]  Input points: 16915, keypoints: 512
+  Voxel: 16915 -> 12664 (voxel=1mm)
+precompute SHOT:  63%|██████▎   | 404/641 [04:24<02:11,  1.80it/s]  Input points: 20374, keypoints: 512
+  Voxel: 20374 -> 13402 (voxel=1mm)
+precompute SHOT:  63%|██████▎   | 405/641 [04:24<02:14,  1.76it/s]  Input points: 22564, keypoints: 512
+  Voxel: 22564 -> 14973 (voxel=1mm)
+precompute SHOT:  63%|██████▎   | 406/641 [04:25<02:19,  1.69it/s]  Input points: 21551, keypoints: 512
+  Voxel: 21551 -> 15491 (voxel=1mm)
+precompute SHOT:  63%|██████▎   | 407/641 [04:26<02:16,  1.72it/s]  Input points: 20127, keypoints: 512
+  Voxel: 20127 -> 14658 (voxel=1mm)
+precompute SHOT:  64%|██████▎   | 408/641 [04:26<02:15,  1.72it/s]  Input points: 23401, keypoints: 512
+  Voxel: 23401 -> 17731 (voxel=1mm)
+precompute SHOT:  64%|██████▍   | 409/641 [04:27<02:20,  1.66it/s]  Input points: 20324, keypoints: 512
+  Voxel: 20324 -> 15334 (voxel=1mm)
+precompute SHOT:  64%|██████▍   | 410/641 [04:27<02:16,  1.69it/s]  Input points: 23526, keypoints: 512
+  Voxel: 23526 -> 15910 (voxel=1mm)
+precompute SHOT:  64%|██████▍   | 411/641 [04:28<02:21,  1.63it/s]  Input points: 17616, keypoints: 512
+  Voxel: 17616 -> 12183 (voxel=1mm)
+precompute SHOT:  64%|██████▍   | 412/641 [04:29<02:13,  1.71it/s]  Input points: 19660, keypoints: 512
+  Voxel: 19660 -> 14635 (voxel=1mm)
+precompute SHOT:  64%|██████▍   | 413/641 [04:29<02:15,  1.68it/s]  Input points: 19943, keypoints: 512
+  Voxel: 19943 -> 13923 (voxel=1mm)
+precompute SHOT:  65%|██████▍   | 414/641 [04:30<02:13,  1.70it/s]  Input points: 24206, keypoints: 512
+  Voxel: 24206 -> 18584 (voxel=1mm)
+precompute SHOT:  65%|██████▍   | 415/641 [04:31<02:20,  1.61it/s]  Input points: 18262, keypoints: 512
+  Voxel: 18262 -> 11993 (voxel=1mm)
+precompute SHOT:  65%|██████▍   | 416/641 [04:31<02:16,  1.65it/s]  Input points: 25357, keypoints: 512
+  Voxel: 25357 -> 19901 (voxel=1mm)
+precompute SHOT:  65%|██████▌   | 417/641 [04:32<02:36,  1.43it/s]  Input points: 22183, keypoints: 512
+  Voxel: 22183 -> 15257 (voxel=1mm)
+precompute SHOT:  65%|██████▌   | 418/641 [04:33<02:32,  1.46it/s]  Input points: 19118, keypoints: 512
+  Voxel: 19118 -> 13586 (voxel=1mm)
+precompute SHOT:  65%|██████▌   | 419/641 [04:33<02:25,  1.53it/s]  Input points: 24657, keypoints: 512
+  Voxel: 24657 -> 18619 (voxel=1mm)
+precompute SHOT:  66%|██████▌   | 420/641 [04:34<02:41,  1.37it/s]  Input points: 18202, keypoints: 512
+  Voxel: 18202 -> 13813 (voxel=1mm)
+precompute SHOT:  66%|██████▌   | 421/641 [04:35<02:28,  1.49it/s]  Input points: 19945, keypoints: 512
+  Voxel: 19945 -> 14568 (voxel=1mm)
+precompute SHOT:  66%|██████▌   | 422/641 [04:35<02:19,  1.57it/s]  Input points: 22326, keypoints: 512
+  Voxel: 22326 -> 14495 (voxel=1mm)
+precompute SHOT:  66%|██████▌   | 423/641 [04:36<02:19,  1.57it/s]  Input points: 22694, keypoints: 512
+  Voxel: 22694 -> 13089 (voxel=1mm)
+precompute SHOT:  66%|██████▌   | 424/641 [04:37<02:19,  1.55it/s]  Input points: 18042, keypoints: 512
+  Voxel: 18042 -> 14897 (voxel=1mm)
+precompute SHOT:  66%|██████▋   | 425/641 [04:37<02:15,  1.59it/s]  Input points: 21571, keypoints: 512
+  Voxel: 21571 -> 13771 (voxel=1mm)
+precompute SHOT:  66%|██████▋   | 426/641 [04:38<02:17,  1.56it/s]  Input points: 24340, keypoints: 512
+  Voxel: 24340 -> 17599 (voxel=1mm)
+precompute SHOT:  67%|██████▋   | 427/641 [04:39<02:24,  1.48it/s]  Input points: 23688, keypoints: 512
+  Voxel: 23688 -> 16789 (voxel=1mm)
+precompute SHOT:  67%|██████▋   | 428/641 [04:39<02:31,  1.41it/s]  Input points: 21925, keypoints: 512
+  Voxel: 21925 -> 15324 (voxel=1mm)
+precompute SHOT:  67%|██████▋   | 429/641 [04:40<02:23,  1.48it/s]  Input points: 25513, keypoints: 512
+  Voxel: 25513 -> 18382 (voxel=1mm)
+precompute SHOT:  67%|██████▋   | 430/641 [04:41<02:20,  1.50it/s]  Input points: 18066, keypoints: 512
+  Voxel: 18066 -> 13890 (voxel=1mm)
+precompute SHOT:  67%|██████▋   | 431/641 [04:41<02:14,  1.57it/s]  Input points: 23467, keypoints: 512
+  Voxel: 23467 -> 15509 (voxel=1mm)
+precompute SHOT:  67%|██████▋   | 432/641 [04:42<02:13,  1.56it/s]  Input points: 21558, keypoints: 512
+  Voxel: 21558 -> 15719 (voxel=1mm)
+precompute SHOT:  68%|██████▊   | 433/641 [04:42<02:13,  1.56it/s]  Input points: 20934, keypoints: 512
+  Voxel: 20934 -> 14139 (voxel=1mm)
+precompute SHOT:  68%|██████▊   | 434/641 [04:43<02:09,  1.60it/s]  Input points: 17926, keypoints: 512
+  Voxel: 17926 -> 14838 (voxel=1mm)
+precompute SHOT:  68%|██████▊   | 435/641 [04:44<02:02,  1.68it/s]  Input points: 18555, keypoints: 512
+  Voxel: 18555 -> 13592 (voxel=1mm)
+precompute SHOT:  68%|██████▊   | 436/641 [04:44<02:05,  1.63it/s]  Input points: 17240, keypoints: 512
+  Voxel: 17240 -> 13335 (voxel=1mm)
+precompute SHOT:  68%|██████▊   | 437/641 [04:45<02:01,  1.68it/s]  Input points: 18218, keypoints: 512
+  Voxel: 18218 -> 12780 (voxel=1mm)
+precompute SHOT:  68%|██████▊   | 438/641 [04:45<01:55,  1.75it/s]  Input points: 18722, keypoints: 512
+  Voxel: 18722 -> 11433 (voxel=1mm)
+precompute SHOT:  68%|██████▊   | 439/641 [04:46<01:58,  1.71it/s]  Input points: 21486, keypoints: 512
+  Voxel: 21486 -> 14499 (voxel=1mm)
+precompute SHOT:  69%|██████▊   | 440/641 [04:47<02:00,  1.67it/s]  Input points: 24464, keypoints: 512
+  Voxel: 24464 -> 18651 (voxel=1mm)
+precompute SHOT:  69%|██████▉   | 441/641 [04:47<02:03,  1.62it/s]  Input points: 18745, keypoints: 512
+  Voxel: 18745 -> 13151 (voxel=1mm)
+precompute SHOT:  69%|██████▉   | 442/641 [04:48<01:57,  1.70it/s]  Input points: 21207, keypoints: 512
+  Voxel: 21207 -> 12903 (voxel=1mm)
+precompute SHOT:  69%|██████▉   | 443/641 [04:48<01:58,  1.67it/s]  Input points: 23564, keypoints: 512
+  Voxel: 23564 -> 16985 (voxel=1mm)
+precompute SHOT:  69%|██████▉   | 444/641 [04:49<02:02,  1.60it/s]  Input points: 21731, keypoints: 512
+  Voxel: 21731 -> 16269 (voxel=1mm)
+precompute SHOT:  69%|██████▉   | 445/641 [04:50<02:01,  1.61it/s]  Input points: 23648, keypoints: 512
+  Voxel: 23648 -> 17923 (voxel=1mm)
+precompute SHOT:  70%|██████▉   | 446/641 [04:50<02:06,  1.54it/s]  Input points: 17475, keypoints: 512
+  Voxel: 17475 -> 13501 (voxel=1mm)
+precompute SHOT:  70%|██████▉   | 447/641 [04:51<02:05,  1.55it/s]  Input points: 23425, keypoints: 512
+  Voxel: 23425 -> 13989 (voxel=1mm)
+precompute SHOT:  70%|██████▉   | 448/641 [04:52<02:05,  1.54it/s]  Input points: 22627, keypoints: 512
+  Voxel: 22627 -> 16322 (voxel=1mm)
+precompute SHOT:  70%|███████   | 449/641 [04:52<02:06,  1.52it/s]  Input points: 22923, keypoints: 512
+  Voxel: 22923 -> 16092 (voxel=1mm)
+precompute SHOT:  70%|███████   | 450/641 [04:53<02:07,  1.49it/s]  Input points: 21417, keypoints: 512
+  Voxel: 21417 -> 18458 (voxel=1mm)
+precompute SHOT:  70%|███████   | 451/641 [04:54<02:07,  1.49it/s]  Input points: 21509, keypoints: 512
+  Voxel: 21509 -> 13377 (voxel=1mm)
+precompute SHOT:  71%|███████   | 452/641 [04:54<02:08,  1.47it/s]  Input points: 24842, keypoints: 512
+  Voxel: 24842 -> 19835 (voxel=1mm)
+precompute SHOT:  71%|███████   | 453/641 [04:55<02:09,  1.45it/s]  Input points: 20750, keypoints: 512
+  Voxel: 20750 -> 14575 (voxel=1mm)
+precompute SHOT:  71%|███████   | 454/641 [04:56<02:07,  1.47it/s]  Input points: 21549, keypoints: 512
+  Voxel: 21549 -> 16052 (voxel=1mm)
+precompute SHOT:  71%|███████   | 455/641 [04:56<02:03,  1.50it/s]  Input points: 18838, keypoints: 512
+  Voxel: 18838 -> 11215 (voxel=1mm)
+precompute SHOT:  71%|███████   | 456/641 [04:57<01:55,  1.60it/s]  Input points: 23761, keypoints: 512
+  Voxel: 23761 -> 17940 (voxel=1mm)
+precompute SHOT:  71%|███████▏  | 457/641 [04:58<01:56,  1.58it/s]  Input points: 18861, keypoints: 512
+  Voxel: 18861 -> 12528 (voxel=1mm)
+precompute SHOT:  71%|███████▏  | 458/641 [04:58<01:51,  1.64it/s]  Input points: 23018, keypoints: 512
+  Voxel: 23018 -> 16037 (voxel=1mm)
+precompute SHOT:  72%|███████▏  | 459/641 [04:59<01:53,  1.61it/s]  Input points: 22435, keypoints: 512
+  Voxel: 22435 -> 15267 (voxel=1mm)
+precompute SHOT:  72%|███████▏  | 460/641 [04:59<01:50,  1.64it/s]  Input points: 19307, keypoints: 512
+  Voxel: 19307 -> 12147 (voxel=1mm)
+precompute SHOT:  72%|███████▏  | 461/641 [05:00<01:49,  1.64it/s]  Input points: 21401, keypoints: 512
+  Voxel: 21401 -> 14678 (voxel=1mm)
+precompute SHOT:  72%|███████▏  | 462/641 [05:01<01:49,  1.63it/s]  Input points: 23729, keypoints: 512
+  Voxel: 23729 -> 18247 (voxel=1mm)
+precompute SHOT:  72%|███████▏  | 463/641 [05:01<01:51,  1.59it/s]  Input points: 22186, keypoints: 512
+  Voxel: 22186 -> 17404 (voxel=1mm)
+precompute SHOT:  72%|███████▏  | 464/641 [05:02<01:53,  1.56it/s]  Input points: 24407, keypoints: 512
+  Voxel: 24407 -> 17028 (voxel=1mm)
+precompute SHOT:  73%|███████▎  | 465/641 [05:03<01:53,  1.55it/s]  Input points: 22640, keypoints: 512
+  Voxel: 22640 -> 17502 (voxel=1mm)
+precompute SHOT:  73%|███████▎  | 466/641 [05:03<01:52,  1.55it/s]  Input points: 21991, keypoints: 512
+  Voxel: 21991 -> 15074 (voxel=1mm)
+precompute SHOT:  73%|███████▎  | 467/641 [05:04<01:47,  1.62it/s]  Input points: 24513, keypoints: 512
+  Voxel: 24513 -> 17073 (voxel=1mm)
+precompute SHOT:  73%|███████▎  | 468/641 [05:05<01:57,  1.47it/s]  Input points: 17161, keypoints: 512
+  Voxel: 17161 -> 11865 (voxel=1mm)
+precompute SHOT:  73%|███████▎  | 469/641 [05:05<01:52,  1.53it/s]  Input points: 20108, keypoints: 512
+  Voxel: 20108 -> 13671 (voxel=1mm)
+precompute SHOT:  73%|███████▎  | 470/641 [05:06<01:55,  1.48it/s]  Input points: 22112, keypoints: 512
+  Voxel: 22112 -> 16162 (voxel=1mm)
+precompute SHOT:  73%|███████▎  | 471/641 [05:07<02:03,  1.37it/s]  Input points: 22075, keypoints: 512
+  Voxel: 22075 -> 17307 (voxel=1mm)
+precompute SHOT:  74%|███████▎  | 472/641 [05:07<01:57,  1.44it/s]  Input points: 24159, keypoints: 512
+  Voxel: 24159 -> 17578 (voxel=1mm)
+precompute SHOT:  74%|███████▍  | 473/641 [05:08<02:05,  1.34it/s]  Input points: 20129, keypoints: 512
+  Voxel: 20129 -> 16398 (voxel=1mm)
+precompute SHOT:  74%|███████▍  | 474/641 [05:09<02:03,  1.35it/s]  Input points: 20412, keypoints: 512
+  Voxel: 20412 -> 16128 (voxel=1mm)
+precompute SHOT:  74%|███████▍  | 475/641 [05:10<01:55,  1.44it/s]  Input points: 20970, keypoints: 512
+  Voxel: 20970 -> 13919 (voxel=1mm)
+precompute SHOT:  74%|███████▍  | 476/641 [05:10<01:49,  1.51it/s]  Input points: 20645, keypoints: 512
+  Voxel: 20645 -> 14120 (voxel=1mm)
+precompute SHOT:  74%|███████▍  | 477/641 [05:11<01:44,  1.57it/s]  Input points: 21639, keypoints: 512
+  Voxel: 21639 -> 13419 (voxel=1mm)
+precompute SHOT:  75%|███████▍  | 478/641 [05:11<01:42,  1.60it/s]  Input points: 22412, keypoints: 512
+  Voxel: 22412 -> 14796 (voxel=1mm)
+precompute SHOT:  75%|███████▍  | 479/641 [05:12<01:41,  1.60it/s]  Input points: 17419, keypoints: 512
+  Voxel: 17419 -> 14122 (voxel=1mm)
+precompute SHOT:  75%|███████▍  | 480/641 [05:13<01:36,  1.68it/s]  Input points: 18383, keypoints: 512
+  Voxel: 18383 -> 14513 (voxel=1mm)
+precompute SHOT:  75%|███████▌  | 481/641 [05:13<01:32,  1.73it/s]  Input points: 23561, keypoints: 512
+  Voxel: 23561 -> 17003 (voxel=1mm)
+precompute SHOT:  75%|███████▌  | 482/641 [05:14<01:37,  1.63it/s]  Input points: 19330, keypoints: 512
+  Voxel: 19330 -> 15077 (voxel=1mm)
+precompute SHOT:  75%|███████▌  | 483/641 [05:14<01:34,  1.67it/s]  Input points: 24822, keypoints: 512
+  Voxel: 24822 -> 18908 (voxel=1mm)
+precompute SHOT:  76%|███████▌  | 484/641 [05:15<01:36,  1.63it/s]  Input points: 20290, keypoints: 512
+  Voxel: 20290 -> 12212 (voxel=1mm)
+precompute SHOT:  76%|███████▌  | 485/641 [05:16<01:33,  1.68it/s]  Input points: 22286, keypoints: 512
+  Voxel: 22286 -> 15418 (voxel=1mm)
+precompute SHOT:  76%|███████▌  | 486/641 [05:16<01:34,  1.65it/s]  Input points: 18663, keypoints: 512
+  Voxel: 18663 -> 12295 (voxel=1mm)
+precompute SHOT:  76%|███████▌  | 487/641 [05:17<01:30,  1.70it/s]  Input points: 26339, keypoints: 512
+  Voxel: 26339 -> 19451 (voxel=1mm)
+precompute SHOT:  76%|███████▌  | 488/641 [05:17<01:35,  1.61it/s]  Input points: 21673, keypoints: 512
+  Voxel: 21673 -> 17058 (voxel=1mm)
+precompute SHOT:  76%|███████▋  | 489/641 [05:18<01:38,  1.54it/s]  Input points: 23284, keypoints: 512
+  Voxel: 23284 -> 17012 (voxel=1mm)
+precompute SHOT:  76%|███████▋  | 490/641 [05:19<01:39,  1.52it/s]  Input points: 19019, keypoints: 512
+  Voxel: 19019 -> 13043 (voxel=1mm)
+precompute SHOT:  77%|███████▋  | 491/641 [05:19<01:32,  1.63it/s]  Input points: 17218, keypoints: 512
+  Voxel: 17218 -> 11814 (voxel=1mm)
+precompute SHOT:  77%|███████▋  | 492/641 [05:20<01:27,  1.71it/s]  Input points: 24410, keypoints: 512
+  Voxel: 24410 -> 16560 (voxel=1mm)
+precompute SHOT:  77%|███████▋  | 493/641 [05:20<01:31,  1.63it/s]  Input points: 20814, keypoints: 512
+  Voxel: 20814 -> 13366 (voxel=1mm)
+precompute SHOT:  77%|███████▋  | 494/641 [05:21<01:28,  1.66it/s]  Input points: 21086, keypoints: 512
+  Voxel: 21086 -> 12856 (voxel=1mm)
+precompute SHOT:  77%|███████▋  | 495/641 [05:22<01:27,  1.68it/s]  Input points: 24066, keypoints: 512
+  Voxel: 24066 -> 14402 (voxel=1mm)
+precompute SHOT:  77%|███████▋  | 496/641 [05:22<01:28,  1.64it/s]  Input points: 22607, keypoints: 512
+  Voxel: 22607 -> 15692 (voxel=1mm)
+precompute SHOT:  78%|███████▊  | 497/641 [05:23<01:30,  1.60it/s]  Input points: 24827, keypoints: 512
+  Voxel: 24827 -> 18343 (voxel=1mm)
+precompute SHOT:  78%|███████▊  | 498/641 [05:24<01:35,  1.49it/s]  Input points: 18686, keypoints: 512
+  Voxel: 18686 -> 13808 (voxel=1mm)
+precompute SHOT:  78%|███████▊  | 499/641 [05:24<01:32,  1.54it/s]  Input points: 23620, keypoints: 512
+  Voxel: 23620 -> 15847 (voxel=1mm)
+precompute SHOT:  78%|███████▊  | 500/641 [05:25<01:33,  1.51it/s]  Input points: 24333, keypoints: 512
+  Voxel: 24333 -> 15142 (voxel=1mm)
+precompute SHOT:  78%|███████▊  | 501/641 [05:26<01:32,  1.51it/s]  Input points: 25044, keypoints: 512
+  Voxel: 25044 -> 19347 (voxel=1mm)
+precompute SHOT:  78%|███████▊  | 502/641 [05:26<01:34,  1.47it/s]  Input points: 21300, keypoints: 512
+  Voxel: 21300 -> 15304 (voxel=1mm)
+precompute SHOT:  78%|███████▊  | 503/641 [05:27<01:32,  1.50it/s]  Input points: 24215, keypoints: 512
+  Voxel: 24215 -> 18070 (voxel=1mm)
+precompute SHOT:  79%|███████▊  | 504/641 [05:28<01:28,  1.54it/s]  Input points: 21225, keypoints: 512
+  Voxel: 21225 -> 17214 (voxel=1mm)
+precompute SHOT:  79%|███████▉  | 505/641 [05:28<01:31,  1.49it/s]  Input points: 20591, keypoints: 512
+  Voxel: 20591 -> 12465 (voxel=1mm)
+precompute SHOT:  79%|███████▉  | 506/641 [05:29<01:29,  1.51it/s]  Input points: 20613, keypoints: 512
+  Voxel: 20613 -> 14594 (voxel=1mm)
+precompute SHOT:  79%|███████▉  | 507/641 [05:30<01:24,  1.59it/s]  Input points: 19901, keypoints: 512
+  Voxel: 19901 -> 15318 (voxel=1mm)
+precompute SHOT:  79%|███████▉  | 508/641 [05:30<01:22,  1.61it/s]  Input points: 21230, keypoints: 512
+  Voxel: 21230 -> 12996 (voxel=1mm)
+precompute SHOT:  79%|███████▉  | 509/641 [05:31<01:24,  1.56it/s]  Input points: 24855, keypoints: 512
+  Voxel: 24855 -> 20095 (voxel=1mm)
+precompute SHOT:  80%|███████▉  | 510/641 [05:32<01:27,  1.50it/s]  Input points: 23350, keypoints: 512
+  Voxel: 23350 -> 17794 (voxel=1mm)
+precompute SHOT:  80%|███████▉  | 511/641 [05:32<01:24,  1.54it/s]  Input points: 23010, keypoints: 512
+  Voxel: 23010 -> 17619 (voxel=1mm)
+precompute SHOT:  80%|███████▉  | 512/641 [05:33<01:23,  1.54it/s]  Input points: 16028, keypoints: 512
+  Voxel: 16028 -> 11916 (voxel=1mm)
+precompute SHOT:  80%|████████  | 513/641 [05:33<01:16,  1.66it/s]  Input points: 22637, keypoints: 512
+  Voxel: 22637 -> 15360 (voxel=1mm)
+precompute SHOT:  80%|████████  | 514/641 [05:34<01:17,  1.64it/s]  Input points: 19791, keypoints: 512
+  Voxel: 19791 -> 12279 (voxel=1mm)
+precompute SHOT:  80%|████████  | 515/641 [05:35<01:17,  1.63it/s]  Input points: 21884, keypoints: 512
+  Voxel: 21884 -> 16637 (voxel=1mm)
+precompute SHOT:  80%|████████  | 516/641 [05:35<01:17,  1.62it/s]  Input points: 20268, keypoints: 512
+  Voxel: 20268 -> 15748 (voxel=1mm)
+precompute SHOT:  81%|████████  | 517/641 [05:36<01:14,  1.66it/s]  Input points: 20416, keypoints: 512
+  Voxel: 20416 -> 15190 (voxel=1mm)
+precompute SHOT:  81%|████████  | 518/641 [05:36<01:13,  1.67it/s]  Input points: 21196, keypoints: 512
+  Voxel: 21196 -> 14049 (voxel=1mm)
+precompute SHOT:  81%|████████  | 519/641 [05:37<01:20,  1.52it/s]  Input points: 18447, keypoints: 512
+  Voxel: 18447 -> 13730 (voxel=1mm)
+precompute SHOT:  81%|████████  | 520/641 [05:38<01:14,  1.62it/s]  Input points: 18780, keypoints: 512
+  Voxel: 18780 -> 13490 (voxel=1mm)
+precompute SHOT:  81%|████████▏ | 521/641 [05:38<01:14,  1.62it/s]  Input points: 18757, keypoints: 512
+  Voxel: 18757 -> 14006 (voxel=1mm)
+precompute SHOT:  81%|████████▏ | 522/641 [05:39<01:08,  1.74it/s]  Input points: 19858, keypoints: 512
+  Voxel: 19858 -> 13318 (voxel=1mm)
+precompute SHOT:  82%|████████▏ | 523/641 [05:39<01:09,  1.71it/s]  Input points: 22264, keypoints: 512
+  Voxel: 22264 -> 16494 (voxel=1mm)
+precompute SHOT:  82%|████████▏ | 524/641 [05:40<01:13,  1.59it/s]  Input points: 24242, keypoints: 512
+  Voxel: 24242 -> 17433 (voxel=1mm)
+precompute SHOT:  82%|████████▏ | 525/641 [05:41<01:12,  1.61it/s]  Input points: 17386, keypoints: 512
+  Voxel: 17386 -> 14380 (voxel=1mm)
+precompute SHOT:  82%|████████▏ | 526/641 [05:41<01:08,  1.69it/s]  Input points: 20051, keypoints: 512
+  Voxel: 20051 -> 13333 (voxel=1mm)
+precompute SHOT:  82%|████████▏ | 527/641 [05:42<01:06,  1.72it/s]  Input points: 21533, keypoints: 512
+  Voxel: 21533 -> 17421 (voxel=1mm)
+precompute SHOT:  82%|████████▏ | 528/641 [05:42<01:07,  1.66it/s]  Input points: 22225, keypoints: 512
+  Voxel: 22225 -> 17060 (voxel=1mm)
+precompute SHOT:  83%|████████▎ | 529/641 [05:43<01:07,  1.67it/s]  Input points: 20597, keypoints: 512
+  Voxel: 20597 -> 14106 (voxel=1mm)
+precompute SHOT:  83%|████████▎ | 530/641 [05:44<01:06,  1.67it/s]  Input points: 21598, keypoints: 512
+  Voxel: 21598 -> 13831 (voxel=1mm)
+precompute SHOT:  83%|████████▎ | 531/641 [05:44<01:06,  1.66it/s]  Input points: 20167, keypoints: 512
+  Voxel: 20167 -> 15049 (voxel=1mm)
+precompute SHOT:  83%|████████▎ | 532/641 [05:45<01:04,  1.70it/s]  Input points: 19573, keypoints: 512
+  Voxel: 19573 -> 14596 (voxel=1mm)
+precompute SHOT:  83%|████████▎ | 533/641 [05:45<01:02,  1.72it/s]  Input points: 23872, keypoints: 512
+  Voxel: 23872 -> 15882 (voxel=1mm)
+precompute SHOT:  83%|████████▎ | 534/641 [05:46<01:06,  1.62it/s]  Input points: 22456, keypoints: 512
+  Voxel: 22456 -> 14302 (voxel=1mm)
+precompute SHOT:  83%|████████▎ | 535/641 [05:47<01:10,  1.50it/s]  Input points: 25850, keypoints: 512
+  Voxel: 25850 -> 19723 (voxel=1mm)
+precompute SHOT:  84%|████████▎ | 536/641 [05:48<01:14,  1.40it/s]  Input points: 19606, keypoints: 512
+  Voxel: 19606 -> 13931 (voxel=1mm)
+precompute SHOT:  84%|████████▍ | 537/641 [05:48<01:08,  1.52it/s]  Input points: 22321, keypoints: 512
+  Voxel: 22321 -> 16683 (voxel=1mm)
+precompute SHOT:  84%|████████▍ | 538/641 [05:49<01:08,  1.51it/s]  Input points: 23869, keypoints: 512
+  Voxel: 23869 -> 15696 (voxel=1mm)
+precompute SHOT:  84%|████████▍ | 539/641 [05:50<01:11,  1.43it/s]  Input points: 23692, keypoints: 512
+  Voxel: 23692 -> 16971 (voxel=1mm)
+precompute SHOT:  84%|████████▍ | 540/641 [05:50<01:11,  1.41it/s]  Input points: 18370, keypoints: 512
+  Voxel: 18370 -> 14324 (voxel=1mm)
+precompute SHOT:  84%|████████▍ | 541/641 [05:51<01:06,  1.51it/s]  Input points: 19101, keypoints: 512
+  Voxel: 19101 -> 16147 (voxel=1mm)
+precompute SHOT:  85%|████████▍ | 542/641 [05:52<01:04,  1.53it/s]  Input points: 20752, keypoints: 512
+  Voxel: 20752 -> 13684 (voxel=1mm)
+precompute SHOT:  85%|████████▍ | 543/641 [05:52<01:07,  1.45it/s]  Input points: 21225, keypoints: 512
+  Voxel: 21225 -> 15870 (voxel=1mm)
+precompute SHOT:  85%|████████▍ | 544/641 [05:53<01:08,  1.41it/s]  Input points: 20397, keypoints: 512
+  Voxel: 20397 -> 12710 (voxel=1mm)
+precompute SHOT:  85%|████████▌ | 545/641 [05:54<01:11,  1.34it/s]  Input points: 19818, keypoints: 512
+  Voxel: 19818 -> 14577 (voxel=1mm)
+precompute SHOT:  85%|████████▌ | 546/641 [05:55<01:05,  1.45it/s]  Input points: 17462, keypoints: 512
+  Voxel: 17462 -> 13667 (voxel=1mm)
+precompute SHOT:  85%|████████▌ | 547/641 [05:55<01:06,  1.41it/s]  Input points: 19158, keypoints: 512
+  Voxel: 19158 -> 13578 (voxel=1mm)
+precompute SHOT:  85%|████████▌ | 548/641 [05:56<01:03,  1.47it/s]  Input points: 20497, keypoints: 512
+  Voxel: 20497 -> 15060 (voxel=1mm)
+precompute SHOT:  86%|████████▌ | 549/641 [05:56<01:01,  1.50it/s]  Input points: 21984, keypoints: 512
+  Voxel: 21984 -> 14880 (voxel=1mm)
+precompute SHOT:  86%|████████▌ | 550/641 [05:57<00:59,  1.53it/s]  Input points: 15689, keypoints: 512
+  Voxel: 15689 -> 10608 (voxel=1mm)
+precompute SHOT:  86%|████████▌ | 551/641 [05:58<00:54,  1.64it/s]  Input points: 22903, keypoints: 512
+  Voxel: 22903 -> 16959 (voxel=1mm)
+precompute SHOT:  86%|████████▌ | 552/641 [05:58<00:57,  1.55it/s]  Input points: 22852, keypoints: 512
+  Voxel: 22852 -> 14574 (voxel=1mm)
+precompute SHOT:  86%|████████▋ | 553/641 [05:59<00:56,  1.55it/s]  Input points: 18066, keypoints: 512
+  Voxel: 18066 -> 12344 (voxel=1mm)
+precompute SHOT:  86%|████████▋ | 554/641 [06:00<00:53,  1.62it/s]  Input points: 25444, keypoints: 512
+  Voxel: 25444 -> 17763 (voxel=1mm)
+precompute SHOT:  87%|████████▋ | 555/641 [06:00<00:55,  1.56it/s]  Input points: 19024, keypoints: 512
+  Voxel: 19024 -> 14476 (voxel=1mm)
+precompute SHOT:  87%|████████▋ | 556/641 [06:01<00:50,  1.67it/s]  Input points: 18712, keypoints: 512
+  Voxel: 18712 -> 14494 (voxel=1mm)
+precompute SHOT:  87%|████████▋ | 557/641 [06:01<00:50,  1.65it/s]  Input points: 21220, keypoints: 512
+  Voxel: 21220 -> 13740 (voxel=1mm)
+precompute SHOT:  87%|████████▋ | 558/641 [06:02<00:49,  1.66it/s]  Input points: 21963, keypoints: 512
+  Voxel: 21963 -> 18277 (voxel=1mm)
+precompute SHOT:  87%|████████▋ | 559/641 [06:03<00:51,  1.61it/s]  Input points: 19818, keypoints: 512
+  Voxel: 19818 -> 15451 (voxel=1mm)
+precompute SHOT:  87%|████████▋ | 560/641 [06:03<00:49,  1.64it/s]  Input points: 21959, keypoints: 512
+  Voxel: 21959 -> 17386 (voxel=1mm)
+precompute SHOT:  88%|████████▊ | 561/641 [06:04<00:51,  1.55it/s]  Input points: 19669, keypoints: 512
+  Voxel: 19669 -> 12316 (voxel=1mm)
+precompute SHOT:  88%|████████▊ | 562/641 [06:05<00:50,  1.56it/s]  Input points: 22145, keypoints: 512
+  Voxel: 22145 -> 17000 (voxel=1mm)
+precompute SHOT:  88%|████████▊ | 563/641 [06:05<00:51,  1.51it/s]  Input points: 18993, keypoints: 512
+  Voxel: 18993 -> 13461 (voxel=1mm)
+precompute SHOT:  88%|████████▊ | 564/641 [06:06<00:48,  1.60it/s]  Input points: 21264, keypoints: 512
+  Voxel: 21264 -> 15834 (voxel=1mm)
+precompute SHOT:  88%|████████▊ | 565/641 [06:06<00:46,  1.62it/s]  Input points: 20146, keypoints: 512
+  Voxel: 20146 -> 15404 (voxel=1mm)
+precompute SHOT:  88%|████████▊ | 566/641 [06:07<00:46,  1.61it/s]  Input points: 23335, keypoints: 512
+  Voxel: 23335 -> 16345 (voxel=1mm)
+precompute SHOT:  88%|████████▊ | 567/641 [06:08<00:46,  1.59it/s]  Input points: 18782, keypoints: 512
+  Voxel: 18782 -> 12446 (voxel=1mm)
+precompute SHOT:  89%|████████▊ | 568/641 [06:08<00:44,  1.65it/s]  Input points: 17357, keypoints: 512
+  Voxel: 17357 -> 11858 (voxel=1mm)
+precompute SHOT:  89%|████████▉ | 569/641 [06:09<00:44,  1.63it/s]  Input points: 20218, keypoints: 512
+  Voxel: 20218 -> 14498 (voxel=1mm)
+precompute SHOT:  89%|████████▉ | 570/641 [06:09<00:43,  1.65it/s]  Input points: 17794, keypoints: 512
+  Voxel: 17794 -> 14643 (voxel=1mm)
+precompute SHOT:  89%|████████▉ | 571/641 [06:10<00:40,  1.73it/s]  Input points: 20346, keypoints: 512
+  Voxel: 20346 -> 15361 (voxel=1mm)
+precompute SHOT:  89%|████████▉ | 572/641 [06:11<00:39,  1.76it/s]  Input points: 23431, keypoints: 512
+  Voxel: 23431 -> 13638 (voxel=1mm)
+precompute SHOT:  89%|████████▉ | 573/641 [06:11<00:38,  1.75it/s]  Input points: 19313, keypoints: 512
+  Voxel: 19313 -> 11431 (voxel=1mm)
+precompute SHOT:  90%|████████▉ | 574/641 [06:12<00:36,  1.82it/s]  Input points: 21139, keypoints: 512
+  Voxel: 21139 -> 14417 (voxel=1mm)
+precompute SHOT:  90%|████████▉ | 575/641 [06:12<00:36,  1.80it/s]  Input points: 22577, keypoints: 512
+  Voxel: 22577 -> 14427 (voxel=1mm)
+precompute SHOT:  90%|████████▉ | 576/641 [06:13<00:36,  1.77it/s]  Input points: 18224, keypoints: 512
+  Voxel: 18224 -> 13269 (voxel=1mm)
+precompute SHOT:  90%|█████████ | 577/641 [06:13<00:37,  1.73it/s]  Input points: 21843, keypoints: 512
+  Voxel: 21843 -> 14733 (voxel=1mm)
+precompute SHOT:  90%|█████████ | 578/641 [06:14<00:36,  1.72it/s]  Input points: 21516, keypoints: 512
+  Voxel: 21516 -> 14179 (voxel=1mm)
+precompute SHOT:  90%|█████████ | 579/641 [06:15<00:36,  1.71it/s]  Input points: 16904, keypoints: 512
+  Voxel: 16904 -> 11157 (voxel=1mm)
+precompute SHOT:  90%|█████████ | 580/641 [06:15<00:34,  1.77it/s]  Input points: 21885, keypoints: 512
+  Voxel: 21885 -> 15892 (voxel=1mm)
+precompute SHOT:  91%|█████████ | 581/641 [06:16<00:36,  1.66it/s]  Input points: 25037, keypoints: 512
+  Voxel: 25037 -> 18383 (voxel=1mm)
+precompute SHOT:  91%|█████████ | 582/641 [06:16<00:35,  1.65it/s]  Input points: 18599, keypoints: 512
+  Voxel: 18599 -> 14578 (voxel=1mm)
+precompute SHOT:  91%|█████████ | 583/641 [06:17<00:34,  1.70it/s]  Input points: 22710, keypoints: 512
+  Voxel: 22710 -> 15914 (voxel=1mm)
+precompute SHOT:  91%|█████████ | 584/641 [06:18<00:34,  1.65it/s]  Input points: 21576, keypoints: 512
+  Voxel: 21576 -> 16205 (voxel=1mm)
+precompute SHOT:  91%|█████████▏| 585/641 [06:18<00:33,  1.67it/s]  Input points: 19906, keypoints: 512
+  Voxel: 19906 -> 14553 (voxel=1mm)
+precompute SHOT:  91%|█████████▏| 586/641 [06:19<00:32,  1.69it/s]  Input points: 16278, keypoints: 512
+  Voxel: 16278 -> 14383 (voxel=1mm)
+precompute SHOT:  92%|█████████▏| 587/641 [06:19<00:30,  1.77it/s]  Input points: 20519, keypoints: 512
+  Voxel: 20519 -> 15110 (voxel=1mm)
+precompute SHOT:  92%|█████████▏| 588/641 [06:20<00:29,  1.77it/s]  Input points: 20983, keypoints: 512
+  Voxel: 20983 -> 16479 (voxel=1mm)
+precompute SHOT:  92%|█████████▏| 589/641 [06:20<00:30,  1.72it/s]  Input points: 22503, keypoints: 512
+  Voxel: 22503 -> 17186 (voxel=1mm)
+precompute SHOT:  92%|█████████▏| 590/641 [06:21<00:30,  1.68it/s]  Input points: 19954, keypoints: 512
+  Voxel: 19954 -> 14177 (voxel=1mm)
+precompute SHOT:  92%|█████████▏| 591/641 [06:22<00:29,  1.72it/s]  Input points: 19263, keypoints: 512
+  Voxel: 19263 -> 13905 (voxel=1mm)
+precompute SHOT:  92%|█████████▏| 592/641 [06:22<00:28,  1.74it/s]  Input points: 21656, keypoints: 512
+  Voxel: 21656 -> 15706 (voxel=1mm)
+precompute SHOT:  93%|█████████▎| 593/641 [06:23<00:27,  1.72it/s]  Input points: 20072, keypoints: 512
+  Voxel: 20072 -> 12501 (voxel=1mm)
+precompute SHOT:  93%|█████████▎| 594/641 [06:23<00:27,  1.70it/s]  Input points: 18246, keypoints: 512
+  Voxel: 18246 -> 14410 (voxel=1mm)
+precompute SHOT:  93%|█████████▎| 595/641 [06:24<00:26,  1.74it/s]  Input points: 21288, keypoints: 512
+  Voxel: 21288 -> 14028 (voxel=1mm)
+precompute SHOT:  93%|█████████▎| 596/641 [06:24<00:26,  1.72it/s]  Input points: 21854, keypoints: 512
+  Voxel: 21854 -> 14270 (voxel=1mm)
+precompute SHOT:  93%|█████████▎| 597/641 [06:25<00:25,  1.71it/s]  Input points: 17782, keypoints: 512
+  Voxel: 17782 -> 13008 (voxel=1mm)
+precompute SHOT:  93%|█████████▎| 598/641 [06:26<00:24,  1.75it/s]  Input points: 22797, keypoints: 512
+  Voxel: 22797 -> 16936 (voxel=1mm)
+precompute SHOT:  93%|█████████▎| 599/641 [06:26<00:24,  1.68it/s]  Input points: 18619, keypoints: 512
+  Voxel: 18619 -> 13029 (voxel=1mm)
+precompute SHOT:  94%|█████████▎| 600/641 [06:27<00:24,  1.69it/s]  Input points: 18783, keypoints: 512
+  Voxel: 18783 -> 14645 (voxel=1mm)
+precompute SHOT:  94%|█████████▍| 601/641 [06:27<00:22,  1.78it/s]  Input points: 20898, keypoints: 512
+  Voxel: 20898 -> 16225 (voxel=1mm)
+precompute SHOT:  94%|█████████▍| 602/641 [06:28<00:22,  1.77it/s]  Input points: 16330, keypoints: 512
+  Voxel: 16330 -> 11079 (voxel=1mm)
+precompute SHOT:  94%|█████████▍| 603/641 [06:28<00:20,  1.85it/s]  Input points: 18140, keypoints: 512
+  Voxel: 18140 -> 12475 (voxel=1mm)
+precompute SHOT:  94%|█████████▍| 604/641 [06:29<00:19,  1.88it/s]  Input points: 18408, keypoints: 512
+  Voxel: 18408 -> 14271 (voxel=1mm)
+precompute SHOT:  94%|█████████▍| 605/641 [06:29<00:19,  1.87it/s]  Input points: 23674, keypoints: 512
+  Voxel: 23674 -> 17198 (voxel=1mm)
+precompute SHOT:  95%|█████████▍| 606/641 [06:30<00:19,  1.76it/s]  Input points: 18194, keypoints: 512
+  Voxel: 18194 -> 12512 (voxel=1mm)
+precompute SHOT:  95%|█████████▍| 607/641 [06:31<00:19,  1.73it/s]  Input points: 21489, keypoints: 512
+  Voxel: 21489 -> 17380 (voxel=1mm)
+precompute SHOT:  95%|█████████▍| 608/641 [06:31<00:20,  1.63it/s]  Input points: 21048, keypoints: 512
+  Voxel: 21048 -> 14212 (voxel=1mm)
+precompute SHOT:  95%|█████████▌| 609/641 [06:32<00:19,  1.61it/s]  Input points: 20081, keypoints: 512
+  Voxel: 20081 -> 15645 (voxel=1mm)
+precompute SHOT:  95%|█████████▌| 610/641 [06:33<00:18,  1.70it/s]  Input points: 20280, keypoints: 512
+  Voxel: 20280 -> 12153 (voxel=1mm)
+precompute SHOT:  95%|█████████▌| 611/641 [06:33<00:16,  1.78it/s]  Input points: 16544, keypoints: 512
+  Voxel: 16544 -> 11828 (voxel=1mm)
+precompute SHOT:  95%|█████████▌| 612/641 [06:34<00:15,  1.82it/s]  Input points: 22322, keypoints: 512
+  Voxel: 22322 -> 16390 (voxel=1mm)
+precompute SHOT:  96%|█████████▌| 613/641 [06:34<00:15,  1.79it/s]  Input points: 17913, keypoints: 512
+  Voxel: 17913 -> 12755 (voxel=1mm)
+precompute SHOT:  96%|█████████▌| 614/641 [06:35<00:14,  1.84it/s]  Input points: 22231, keypoints: 512
+  Voxel: 22231 -> 16580 (voxel=1mm)
+precompute SHOT:  96%|█████████▌| 615/641 [06:35<00:14,  1.75it/s]  Input points: 24840, keypoints: 512
+  Voxel: 24840 -> 19770 (voxel=1mm)
+precompute SHOT:  96%|█████████▌| 616/641 [06:36<00:14,  1.71it/s]  Input points: 23793, keypoints: 512
+  Voxel: 23793 -> 18922 (voxel=1mm)
+precompute SHOT:  96%|█████████▋| 617/641 [06:37<00:15,  1.59it/s]  Input points: 24685, keypoints: 512
+  Voxel: 24685 -> 19222 (voxel=1mm)
+precompute SHOT:  96%|█████████▋| 618/641 [06:37<00:14,  1.55it/s]  Input points: 21846, keypoints: 512
+  Voxel: 21846 -> 14849 (voxel=1mm)
+precompute SHOT:  97%|█████████▋| 619/641 [06:38<00:14,  1.56it/s]  Input points: 20737, keypoints: 512
+  Voxel: 20737 -> 13092 (voxel=1mm)
+precompute SHOT:  97%|█████████▋| 620/641 [06:39<00:13,  1.57it/s]  Input points: 22576, keypoints: 512
+  Voxel: 22576 -> 17924 (voxel=1mm)
+precompute SHOT:  97%|█████████▋| 621/641 [06:39<00:12,  1.61it/s]  Input points: 25612, keypoints: 512
+  Voxel: 25612 -> 18317 (voxel=1mm)
+precompute SHOT:  97%|█████████▋| 622/641 [06:40<00:12,  1.55it/s]  Input points: 19486, keypoints: 512
+  Voxel: 19486 -> 13417 (voxel=1mm)
+precompute SHOT:  97%|█████████▋| 623/641 [06:40<00:11,  1.62it/s]  Input points: 18174, keypoints: 512
+  Voxel: 18174 -> 13309 (voxel=1mm)
+precompute SHOT:  97%|█████████▋| 624/641 [06:41<00:10,  1.65it/s]  Input points: 22200, keypoints: 512
+  Voxel: 22200 -> 16588 (voxel=1mm)
+precompute SHOT:  98%|█████████▊| 625/641 [06:42<00:09,  1.62it/s]  Input points: 22091, keypoints: 512
+  Voxel: 22091 -> 16965 (voxel=1mm)
+precompute SHOT:  98%|█████████▊| 626/641 [06:42<00:09,  1.62it/s]  Input points: 22390, keypoints: 512
+  Voxel: 22390 -> 14774 (voxel=1mm)
+precompute SHOT:  98%|█████████▊| 627/641 [06:43<00:08,  1.66it/s]  Input points: 20671, keypoints: 512
+  Voxel: 20671 -> 12521 (voxel=1mm)
+precompute SHOT:  98%|█████████▊| 628/641 [06:43<00:07,  1.70it/s]  Input points: 24139, keypoints: 512
+  Voxel: 24139 -> 16600 (voxel=1mm)
+precompute SHOT:  98%|█████████▊| 629/641 [06:44<00:07,  1.57it/s]  Input points: 21979, keypoints: 512
+  Voxel: 21979 -> 17069 (voxel=1mm)
+precompute SHOT:  98%|█████████▊| 630/641 [06:45<00:06,  1.59it/s]  Input points: 24568, keypoints: 512
+  Voxel: 24568 -> 18115 (voxel=1mm)
+precompute SHOT:  98%|█████████▊| 631/641 [06:45<00:06,  1.52it/s]  Input points: 21892, keypoints: 512
+  Voxel: 21892 -> 17306 (voxel=1mm)
+precompute SHOT:  99%|█████████▊| 632/641 [06:46<00:05,  1.59it/s]  Input points: 22406, keypoints: 512
+  Voxel: 22406 -> 15661 (voxel=1mm)
+precompute SHOT:  99%|█████████▉| 633/641 [06:47<00:04,  1.61it/s]  Input points: 19637, keypoints: 512
+  Voxel: 19637 -> 12610 (voxel=1mm)
+precompute SHOT:  99%|█████████▉| 634/641 [06:47<00:04,  1.67it/s]  Input points: 23699, keypoints: 512
+  Voxel: 23699 -> 15423 (voxel=1mm)
+precompute SHOT:  99%|█████████▉| 635/641 [06:48<00:03,  1.59it/s]  Input points: 21703, keypoints: 512
+  Voxel: 21703 -> 14101 (voxel=1mm)
+precompute SHOT:  99%|█████████▉| 636/641 [06:49<00:03,  1.59it/s]  Input points: 21786, keypoints: 512
+  Voxel: 21786 -> 13696 (voxel=1mm)
+precompute SHOT:  99%|█████████▉| 637/641 [06:49<00:02,  1.58it/s]  Input points: 21286, keypoints: 512
+  Voxel: 21286 -> 15999 (voxel=1mm)
+precompute SHOT: 100%|█████████▉| 638/641 [06:50<00:01,  1.63it/s]  Input points: 18020, keypoints: 512
+  Voxel: 18020 -> 12773 (voxel=1mm)
+precompute SHOT: 100%|█████████▉| 639/641 [06:50<00:01,  1.71it/s]  Input points: 20250, keypoints: 512
+  Voxel: 20250 -> 15402 (voxel=1mm)
+precompute SHOT: 100%|█████████▉| 640/641 [06:51<00:00,  1.67it/s]  Input points: 23238, keypoints: 512
+  Voxel: 23238 -> 15340 (voxel=1mm)
+precompute SHOT: 100%|██████████| 641/641 [06:52<00:00,  1.60it/s]precompute SHOT: 100%|██████████| 641/641 [06:52<00:00,  1.56it/s]
+
+Done: 640 new, 1 skipped, 641 total target

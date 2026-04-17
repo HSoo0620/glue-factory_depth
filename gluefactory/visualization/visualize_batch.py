@@ -72,7 +72,7 @@ def _classify_match_colors(kpm0, kpm1, csv_path, gt_radius=3):
     colors = []
 
     if csv_path is None or not Path(csv_path).exists():
-        return ["red"] * n
+        return [[1.0, 0.0, 0.0]] * n
 
     corr = pd.read_csv(csv_path)
     all_master_xy = corr[["master_x", "master_y"]].values.astype(np.float32)

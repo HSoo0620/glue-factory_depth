@@ -53,6 +53,7 @@ def get_best_checkpoint(exper):
 
 def delete_old_checkpoints(dir_, num_keep):
     """Delete all but the num_keep last saved checkpoints."""
+    # 일반 체크포인트 정리
     ckpts = list_checkpoints(dir_)
     ckpts = sorted(ckpts)[::-1]
     kept = 0
@@ -62,6 +63,16 @@ def delete_old_checkpoints(dir_, num_keep):
             ckpt[1].unlink()
         else:
             kept += 1
+
+    # best 체크포인트 정리 (checkpoint_best.tar 제외, 최근 num_keep개만 유지)
+    best_ckpts = sorted(
+        [p for p in dir_.glob("checkpoint_best_*.tar")],
+        key=lambda p: p.stat().st_mtime,
+        reverse=True,
+    )
+    for old_best in best_ckpts[num_keep:]:
+        logger.info(f"Deleting old best checkpoint {old_best.name}")
+        old_best.unlink()
 
 
 def load_experiment(
@@ -128,9 +139,14 @@ def save_experiment(
     logger.info(f"Saving checkpoint {cp_name}")
     cp_path = str(output_dir / cp_name)
     torch.save(checkpoint, cp_path)
-    if cp_name != "checkpoint_best.tar" and results[conf.train.best_key] < best_eval:
-        best_eval = results[conf.train.best_key]
-        logger.info(f"New best val: {conf.train.best_key}={best_eval}")
-        shutil.copy(cp_path, str(output_dir / "checkpoint_best.tar"))
+    best_key_mode = conf.train.get("best_key_mode", "min")
+    if cp_name != "checkpoint_best.tar":
+        is_best = (results[conf.train.best_key] > best_eval
+                   if best_key_mode == "max"
+                   else results[conf.train.best_key] < best_eval)
+        if is_best:
+            best_eval = results[conf.train.best_key]
+            logger.info(f"New best val: {conf.train.best_key}={best_eval}")
+            shutil.copy(cp_path, str(output_dir / "checkpoint_best.tar"))
     delete_old_checkpoints(output_dir, conf.train.keep_last_checkpoints)
     return best_eval
