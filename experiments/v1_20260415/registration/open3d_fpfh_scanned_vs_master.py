@@ -47,6 +47,46 @@ PARAM_PRESETS = {
 }
 
 
+def preprocess_point_cloud(pts_mm: np.ndarray, voxel: float, normal_r: float,
+                           fpfh_r: float):
+    """mm PCD → (downsampled PCD, FPFH feature).
+
+    Open3D KDTreeSearchParamHybrid: 반지름 + max_nn 제한.
+    """
+    pcd = o3d.geometry.PointCloud()
+    pcd.points = o3d.utility.Vector3dVector(pts_mm.astype(np.float64))
+    pcd_down = pcd.voxel_down_sample(voxel)
+    pcd_down.estimate_normals(
+        o3d.geometry.KDTreeSearchParamHybrid(radius=normal_r, max_nn=30))
+    fpfh = o3d.pipelines.registration.compute_fpfh_feature(
+        pcd_down,
+        o3d.geometry.KDTreeSearchParamHybrid(radius=fpfh_r, max_nn=100))
+    return pcd_down, fpfh
+
+
+def execute_global_registration(src_down, dst_down, src_fpfh, dst_fpfh,
+                                distance_threshold: float):
+    """RANSAC feature-matching 전역 정합.
+
+    open3d_fpfh_func.py 기준 파라미터 그대로:
+    - PointToPoint (scale=False)
+    - n_ransac=3
+    - CorrespondenceCheckerBasedOnEdgeLength(0.9) + Distance(distance_th)
+    - convergence: (max_iter=100000, confidence=0.999)
+    """
+    return o3d.pipelines.registration.registration_ransac_based_on_feature_matching(
+        src_down, dst_down, src_fpfh, dst_fpfh, True,
+        distance_threshold,
+        o3d.pipelines.registration.TransformationEstimationPointToPoint(False),
+        3, [
+            o3d.pipelines.registration.CorrespondenceCheckerBasedOnEdgeLength(0.9),
+            o3d.pipelines.registration.CorrespondenceCheckerBasedOnDistance(
+                distance_threshold),
+        ],
+        o3d.pipelines.registration.RANSACConvergenceCriteria(100000, 0.999),
+    )
+
+
 def resolve_params(args) -> dict:
     """param_mode preset + 개별 override → 최종 파라미터 dict.
 
