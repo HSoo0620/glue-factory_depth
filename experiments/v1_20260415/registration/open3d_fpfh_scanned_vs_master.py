@@ -200,8 +200,116 @@ def main():
     parser = build_arg_parser()
     args = parser.parse_args()
     params = resolve_params(args)
-    print(f"params: {params}")
-    # TODO(Task 4): 본격적인 실행 플로우
+
+    master_path = Path(args.master) if args.master else MASTER_PATH
+    rotate_master = not args.no_rotate
+
+    if args.output_dir:
+        out_dir = ROOT / args.output_dir
+    else:
+        out_dir = (V1_DIR / "results"
+                   / f"scanned_vs_open3d_fpfh_{args.param_mode}")
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    print("=" * 60)
+    print(f"[1] 입력 로드 (param_mode={args.param_mode}, params={params})")
+    import cv2
+    scan_raw = cv2.imread(str(SCAN_PATH), cv2.IMREAD_UNCHANGED)
+    master_raw = cv2.imread(str(master_path), cv2.IMREAD_UNCHANGED)
+    if scan_raw is None:
+        raise FileNotFoundError(SCAN_PATH)
+    if master_raw is None:
+        raise FileNotFoundError(master_path)
+    if rotate_master:
+        master_raw = cv2.rotate(master_raw, cv2.ROTATE_180)
+    print(f"  scan:   {scan_raw.shape}")
+    print(f"  master: {master_raw.shape}  "
+          f"({'rotated 180°' if rotate_master else 'no rotate'})  "
+          f"[{master_path.name}]")
+
+    print("\n[2] Preprocessing scanned (floor mask + bilateral)")
+    scan_masked, info = mask_scanned_table(scan_raw)
+    if info.get("applied"):
+        print(f"  floor mask: peak={info['peak_center']}  "
+              f"band=[{info['band_low']}, {info['band_high']}]  "
+              f"masked={info['fraction_masked'] * 100:.1f}%")
+    scan_bilat = apply_bilateral(scan_masked)
+
+    print("\n[3] zmap → mm PCD (erode=5)")
+    src_pts_mm = zmap_to_pcd_mm(scan_bilat)
+    dst_pts_mm = zmap_to_pcd_mm(master_raw)
+    print(f"  scan:   {len(src_pts_mm)} pts")
+    print(f"  master: {len(dst_pts_mm)} pts")
+
+    print("\n[4] Open3D preprocess + RANSAC FPFH (timed)")
+    t0 = time.perf_counter()
+    src_down, src_fpfh = preprocess_point_cloud(
+        src_pts_mm, params["voxel"], params["normal_radius"], params["fpfh_radius"])
+    dst_down, dst_fpfh = preprocess_point_cloud(
+        dst_pts_mm, params["voxel"], params["normal_radius"], params["fpfh_radius"])
+    n_src_down = len(src_down.points)
+    n_dst_down = len(dst_down.points)
+    print(f"  downsample: src={n_src_down} pts, dst={n_dst_down} pts "
+          f"(voxel={params['voxel']}mm)")
+
+    result = execute_global_registration(
+        src_down, dst_down, src_fpfh, dst_fpfh, params["distance_threshold"])
+    elapsed_s = time.perf_counter() - t0
+
+    fitness = float(result.fitness)
+    inlier_rmse = float(result.inlier_rmse)
+    n_corr = int(len(result.correspondence_set))
+    T = np.asarray(result.transformation, dtype=np.float64)
+    R_est = T[:3, :3]
+    t_est = T[:3, 3]
+    print(f"  fitness={fitness:.4f}  inlier_rmse={inlier_rmse:.3f} mm  "
+          f"n_corr={n_corr}  elapsed={elapsed_s:.2f}s")
+
+    print("\n[5] Visualization (15k sample per cloud)")
+    pc_src = _sample_pcd_mm(scan_bilat, N_SAMPLE_PTS, seed=args.seed)
+    pc_dst = _sample_pcd_mm(master_raw, N_SAMPLE_PTS, seed=args.seed)
+    pc_est = (R_est @ pc_src.T).T + t_est
+
+    zf = np.array([1.0, 1.0, -1.0])
+    title_reg = (f"Open3D FPFH ({args.param_mode})  |  "
+                 f"voxel={params['voxel']:.2g} nr={params['normal_radius']:.2g} "
+                 f"fr={params['fpfh_radius']:.2g} dth={params['distance_threshold']:.2g}  |  "
+                 f"fitness={fitness:.3f} rmse={inlier_rmse:.2f}mm corr={n_corr}  "
+                 f"elapsed={elapsed_s:.1f}s")
+    _plot_registration(pc_dst * zf, pc_src * zf, pc_est * zf,
+                       title_reg, out_dir / "reg_open3d_fpfh.png",
+                       dst_label="master (synthetic)",
+                       src_label="input (scan)")
+    _plot_overlay(pc_dst * zf, pc_est * zf,
+                  f"Overlay  |  {title_reg.split('|', 1)[1].strip()}",
+                  out_dir / "overlay_open3d_fpfh.png",
+                  dst_label="master (synthetic)",
+                  src_label="aligned scan")
+
+    print("\n[6] Save result.json")
+    result_json = {
+        "param_mode": args.param_mode,
+        "voxel": params["voxel"],
+        "normal_radius": params["normal_radius"],
+        "fpfh_radius": params["fpfh_radius"],
+        "distance_threshold": params["distance_threshold"],
+        "fitness": fitness,
+        "inlier_rmse": inlier_rmse,
+        "n_correspondences": n_corr,
+        "n_src_down": n_src_down,
+        "n_dst_down": n_dst_down,
+        "elapsed_s": elapsed_s,
+        "master_path": str(master_path),
+        "scan_path": str(SCAN_PATH),
+        "rotate_master": rotate_master,
+        "transformation": T.tolist(),
+    }
+    json_path = out_dir / "result.json"
+    with open(json_path, "w") as f:
+        json.dump(result_json, f, indent=2)
+    print(f"  Saved: {json_path}")
+
+    print(f"\nDone! → {out_dir}/")
 
 
 if __name__ == "__main__":
