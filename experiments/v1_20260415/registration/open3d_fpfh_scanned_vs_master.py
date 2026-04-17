@@ -87,6 +87,74 @@ def execute_global_registration(src_down, dst_down, src_fpfh, dst_fpfh,
     )
 
 
+def _plot_registration(pc_dst, pc_src, pc_est,
+                       title_line: str, output_path: Path,
+                       dst_label="master (synthetic)",
+                       src_label="input (scan)"):
+    """2×3 grid: before (dst vs src) / after (dst vs est) × top/front/side.
+
+    title_line: suptitle 한 줄 (예: "Open3D FPFH v1 | fitness=0.45 | ...").
+    """
+    fig, axes = plt.subplots(2, 3, figsize=(18, 11))
+    s, alpha = 0.5, 0.6
+    labels_row = ["Before registration", "After (estimated R,t)"]
+    labels_col = ["Top-down (X, Y)", "Front (X, Z)", "Side (Y, Z)"]
+    col_axes = [(0, 1), (0, 2), (1, 2)]
+    C_M, C_I = "lightskyblue", "crimson"
+    pairs = [(pc_dst, pc_src), (pc_dst, pc_est)]
+
+    for row, (pa, pb) in enumerate(pairs):
+        for col, (xi, yi) in enumerate(col_axes):
+            ax = axes[row, col]
+            ax.scatter(pa[:, xi], pa[:, yi], s=s, c=C_M, alpha=alpha,
+                       label=dst_label)
+            ax.scatter(pb[:, xi], pb[:, yi], s=s, c=C_I, alpha=alpha,
+                       label=src_label)
+            ax.set_aspect("equal")
+            ax.tick_params(labelsize=7)
+            if row == 0:
+                ax.set_title(labels_col[col], fontsize=11)
+            if col == 0:
+                ax.set_ylabel(labels_row[row], fontsize=11, fontweight="bold")
+    for row in range(2):
+        for col in range(3):
+            axes[row, col].invert_yaxis()
+
+    fig.suptitle(title_line, fontsize=13, fontweight="bold")
+    fig.tight_layout(rect=[0, 0, 1, 0.96])
+    fig.savefig(output_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  Saved: {output_path.name}")
+
+
+def _plot_overlay(pc_dst, pc_est, title_line: str, output_path: Path,
+                  dst_label="master (synthetic)",
+                  src_label="aligned scan"):
+    """1×3 overlay: aligned-est 와 master 겹쳐 그리기."""
+    fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+    s, alpha = 0.5, 0.6
+    cols = [(0, 1), (0, 2), (1, 2)]
+    names = ["Top-down (X, Y)", "Front (X, Z)", "Side (Y, Z)"]
+    for col, (xi, yi) in enumerate(cols):
+        ax = axes[col]
+        ax.scatter(pc_dst[:, xi], pc_dst[:, yi], s=s, c="lightskyblue",
+                   alpha=alpha, label=dst_label)
+        ax.scatter(pc_est[:, xi], pc_est[:, yi], s=s, c="crimson",
+                   alpha=alpha, label=src_label)
+        ax.set_aspect("equal")
+        ax.set_title(names[col], fontsize=11)
+        ax.tick_params(labelsize=7)
+        if col == 0:
+            ax.legend(markerscale=5, fontsize=9)
+    for ax in axes:
+        ax.invert_yaxis()
+    fig.suptitle(title_line, fontsize=12, fontweight="bold")
+    fig.tight_layout(rect=[0, 0, 1, 0.94])
+    fig.savefig(output_path, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+    print(f"  Saved: {output_path.name}")
+
+
 def resolve_params(args) -> dict:
     """param_mode preset + 개별 override → 최종 파라미터 dict.
 
