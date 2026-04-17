@@ -207,8 +207,9 @@ def main():
     if args.output_dir:
         out_dir = ROOT / args.output_dir
     else:
-        out_dir = (V1_DIR / "results"
-                   / f"scanned_vs_open3d_fpfh_{args.param_mode}")
+        rotate_tag = "rotated" if rotate_master else "norotate"
+        out_dir = (V1_DIR / "results" / "open3d_fpfh"
+                   / f"{args.param_mode}_{rotate_tag}")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     print("=" * 60)
@@ -256,12 +257,10 @@ def main():
         src_down, dst_down, src_fpfh, dst_fpfh, params["distance_threshold"])
     elapsed_s = time.perf_counter() - t0
 
-    fitness = float(result.fitness)
-    n_corr = int(len(result.correspondence_set))
     T = np.asarray(result.transformation, dtype=np.float64)
     R_est = T[:3, :3]
     t_est = T[:3, 3]
-    print(f"  fitness={fitness:.4f}  n_corr={n_corr}  elapsed={elapsed_s:.2f}s")
+    print(f"  elapsed={elapsed_s:.2f}s")
 
     print("\n[5] Visualization (15k sample per cloud)")
     pc_src = _sample_pcd_mm(scan_bilat, N_SAMPLE_PTS, seed=args.seed)
@@ -269,10 +268,10 @@ def main():
     pc_est = (R_est @ pc_src.T).T + t_est
 
     zf = np.array([1.0, 1.0, -1.0])
-    title_reg = (f"Open3D FPFH ({args.param_mode})  |  "
+    rotate_tag_title = "rotated 180°" if rotate_master else "no rotate"
+    title_reg = (f"Open3D FPFH ({args.param_mode}, master {rotate_tag_title})  |  "
                  f"voxel={params['voxel']:.2g} nr={params['normal_radius']:.2g} "
                  f"fr={params['fpfh_radius']:.2g} dth={params['distance_threshold']:.2g}  |  "
-                 f"fitness={fitness:.3f} corr={n_corr}  "
                  f"elapsed={elapsed_s:.1f}s")
     _plot_registration(pc_dst * zf, pc_src * zf, pc_est * zf,
                        title_reg, out_dir / "reg_open3d_fpfh.png",
@@ -291,8 +290,6 @@ def main():
         "normal_radius": params["normal_radius"],
         "fpfh_radius": params["fpfh_radius"],
         "distance_threshold": params["distance_threshold"],
-        "fitness": fitness,
-        "n_correspondences": n_corr,
         "n_src_down": n_src_down,
         "n_dst_down": n_dst_down,
         "elapsed_s": elapsed_s,
