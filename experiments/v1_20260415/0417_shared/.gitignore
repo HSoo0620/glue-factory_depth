@@ -8,3 +8,5 @@ __pycache__/
 .pytest_cache/
 # 사용자 로컬 예제 결과
 examples/_out/
+# Phase 3 수치 비교용 Linux reference (환경별 생성, 사용자가 `git add -f` 로 명시 포함)
+tests/fixtures/shot_master_linux_*.npy

@@ -49,13 +49,46 @@ python -c "import shot_module; print(dir(shot_module))"
 ```
 Expected: `extract_shot_at_keypoints` 가 리스트에 포함. `ImportError: DLL load failed` 시 PCL 설치/DLL 경로 재점검.
 
-**Phase 2: extract 호출**
+**Phase 2: v1 API (`extract_shot_at_keypoints`) 검증**
+
+`pybind_shot_window/extract_shot.py` 는 v5 파라미터 용이라 v1 배포 검증에는 부적합.
+대신 배포 패키지가 실제로 사용하는 API 를 호출하는지 확인:
+
 ```powershell
-python pybind_shot_window/extract_shot.py
+python -c "import shot_module; print('functions:', [f for f in dir(shot_module) if not f.startswith('_')])"
 ```
-Expected: `points.shape = (M, 3)`, `descriptors.shape = (M, 352)`, `num_valid_desc > 0`.
+Expected 출력에 `extract_shot_at_keypoints` 포함.
+
+이어서 배포 코드 경로로 compute_shot 까지 돌려본다:
+
+```powershell
+python -c "
+import sys; sys.path.insert(0, '.')
+from depth_registration.preprocessing import load_depth_raw, preprocess_master
+from depth_registration.iss import detect_iss_mm
+from depth_registration.descriptors.shot import compute_shot
+from depth_registration.params import DEFAULT_MASTER_PATH
+import numpy as np
+z = load_depth_raw(DEFAULT_MASTER_PATH)
+pts = preprocess_master(z)
+kp = detect_iss_mm(pts, seed=0)
+desc = compute_shot(pts, kp)
+norms = np.linalg.norm(desc, axis=1)
+print(f'desc={desc.shape}, unit-norm rows={(np.isclose(norms, 1.0, atol=1e-3)).sum()}/512')
+"
+```
+Expected: `desc=(512, 352)`, `unit-norm rows=512/512` (PCL 이 자동 unit-sphere 정규화).
 
 **Phase 3: Linux 결과와 수치 일치**
-Linux 측에서 동일 master PNG 로 계산한 `.npy` 를 전달받아 평균 L2 거리 비교. 허용 오차 `1e-3` (초기 가이드라인, 구현 시 조정).
+
+Linux 에서 미리 생성된 `tests/fixtures/shot_master_linux_reference.npy` 와 비교.
+(이 파일은 `.gitignore` 대상이라 repo 에 없음 — 본인에게서 별도 전달받아
+동일 경로에 배치)
+
+```powershell
+python examples/verify_shot_phase3.py
+```
+Expected: `[PASS] mean L2 <= 1e-3`. 실패 시 ISS keypoint 순서 차이 가능성 존재
+(v1 detect_iss_mm 은 seed=0 결정적이나 플랫폼 간 tie-break 로 미세 순서 차 가능).
 
 Phase 1~3 모두 통과한 뒤에만 통합 릴리즈가 승인된다 (spec §16 단계 11~13).
