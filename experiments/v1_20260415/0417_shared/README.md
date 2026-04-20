@@ -3,6 +3,11 @@
 **목적:** v1_20260415 ISS + FPFH/SHOT + LightGlue 모델을 Python GUI 에서 `import` 하여
 scanned depth 이미지를 master 좌표계로 정합하는 패키지.
 
+> **처음 쓰는 사용자**는 [`docs/USAGE.md`](docs/USAGE.md) 를 먼저 — 입력 규격, 결과 해석,
+> GUI 통합 흐름, 트러블슈팅이 한 문서에 정리돼 있다.
+> **코드 구조가 궁금하면** [`docs/STRUCTURE.md`](docs/STRUCTURE.md) — 어느 파일이 어떤 역할을
+> 하는지, 데이터가 어떻게 흐르는지 지도로 정리. 이 README 는 개발자용 요약이다.
+
 ## TL;DR
 
 ```python
